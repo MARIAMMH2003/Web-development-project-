@@ -1,0 +1,167 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins','sans-serif';
+}*/
+body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;/* aligns all content in the center of the page*/
+    background-color: rgb(126, 229, 229);
+}
+.container{
+    position: relative;
+    max-width: 440px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;/*curves of the border of the container*/
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    align-items: center;
+}
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+width: 200%;
+transition: height 0.2s ease;
+
+}
+
+.container .form{
+    width: 50%;
+padding: 10px;
+background-color: #fff;
+transition: margin-left 0.18s ease;
+
+}
+.container.active .login{
+   
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease,opacity 0.15s ease;
+    }
+
+   
+ .container .signup{
+ 
+   margin-left: -20px;/*redues the left margin of the content*/
+        opacity: 0;
+        transition: opacity 0.09s ease;
+    }
+ .container.active .signup{/*both of containr signup implement forms above each other*/
+   
+    opacity: 1;
+           transition: opacity 0.2s ease;
+        
+    }
+
+
+.container.active .forms{
+    height:600px ;
+    }
+.container .form .title{
+    position: relative;/* without impacting the other elements's layout*/
+    font-size: 35px;
+    font-weight: 600;
+    
+    
+}
+.form .input-field{
+  position: relative;
+  height: 50px;
+    width: 100%;
+    margin-top: 30px;   
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    padding: 0 35px;
+    border:none; /*removing the borders of the field boxes*/
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;/*fields underline*/
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.input-field input:is(:focus, :valid){
+    border-bottom-color:rgb(13, 67, 67);
+}
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*items are distributed along the main axis with the first item aligning to the start edge and the last iem is aligned to the end edge*/
+    margin-top: 20px;
+    padding: 2px 10px 0px 4px;
+
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+     align-items: center;
+     
+
+}
+.checkbox-content input{
+    margin: 0 8px -2px 4px;/*spaces around the checkbox*/
+    accent-color: blue;/*the color of the checkbox once clicked*/
+}
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+.form a.text{
+    color: blue;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .button{
+    margin-top: 35px;
+
+}
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size:17px;
+    font-weight: 500;
+    letter-spacing: 1px;/*spaces between the letters*/
+    border-radius: 8px;
+    background-color: rgb(13, 67, 67);
+cursor: pointer;
+transition: all 0.3s eaase;
+margin-left: 25px;
+}
+.button input:hover{
+     background-color:rgb(13, 67, 67);
+     margin-left: 20px;
+}
+.form .login-signup{
+    margin-top: 30px;
+text-align: center;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);/*moving the icons a little down*/
+color:#ccc;
+font-size: 17px ;
+
+}
+.input-field input:is(:focus, :valid)~i{
+   color:rgb(13, 67, 67);
+}
+.row {
+font-size: 14px;
+font-weight: 60;
+ margin-top: 20px;
+ margin-left: 40px;
+}
+
+/*el tags btt7t mn 8er .*/
