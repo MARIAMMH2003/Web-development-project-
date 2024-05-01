@@ -35,3 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const search = document.getElementById('searchInput');
+  const museum = document.querySelectorAll('.museums-slide');
+  const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+
+  search.addEventListener('input', function() {
+    const searchTerm = search.value.toLowerCase().trim();
+    museum.forEach((slide, index) => {
+      const museumName = slide.querySelector('.museum-name').innerText.toLowerCase();
+      if (museumName.includes(searchTerm)) {
+        slide.classList.add('highlighted');
+        bullets[index].click(); 
+      } else {
+        slide.classList.remove('highlighted');
+      }
+    });
+  });
+});
