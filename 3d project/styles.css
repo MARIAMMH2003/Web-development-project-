@@ -1,0 +1,72 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for Highlight Section */
+.highlight-section {
+    color: white; /* Change text color */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow cards to wrap to the next row */
+    justify-content: center; /* Center cards horizontally */
+    max-width: 900px; /* Limit width to fit three cards per row */
+    margin: 0 auto; /* Center the container */
+}
+
+.swiper-slide {
+    width: 25%; /* Show 4 cards per slide */
+    flex-shrink: 0; /* Prevent shrinking of slides */
+}
+
+.card {
+    background-color: transparent; /* Make background completely transparent */
+    margin: 0 5px; /* Adjust margin */
+}
+
+.card-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-content img {
+    transform: scale(1.1);
+}
+
+.card-title {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.3s, background-color 0.3s;
+    opacity: 0; /* Initially hidden */
+    margin-top: 10px; /* Add space between card and title */
+    font-size: 20px; /* Larger font size */
+}
+
+.card:hover .card-title {
+    opacity: 1; /* Show on hover */
+}
+
