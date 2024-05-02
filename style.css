@@ -811,3 +811,14 @@ body{
         .swiper-container h2{
             font-size: 15px;
         }
+        
+        .map-container {
+       background-color: #000;
+       justify-content: center;
+      }
+      
+      #map {
+          width: 100%; /* Set the width of the map to fill the container */
+          height: 200px; /* Set the height of the map to fill the container */
+          justify-content: center;
+      }
