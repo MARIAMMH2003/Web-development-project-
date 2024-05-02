@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: #e6d8af;
+  background:beige;
 }
 
 .container {
@@ -52,9 +52,10 @@ body {
 
 .text-header {
   font-size: 3rem;
-  color: #704830;
+  color:#8a6252 ;
   padding: 2rem 0;
   text-align: center;
+  
 }
 
 #museums {
@@ -137,7 +138,7 @@ transform: scale(1.1);
 }
 
 .rating ion-icon {
-  color:#704830;
+  color:#8a6252;
 }
 
 .swiper-slide-shadow-left,
@@ -187,7 +188,7 @@ transform: scale(1.1);
 }
 
 .museums-slider-control .slider-arrow {
-  background: var(--white);
+  background: #867666;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
@@ -216,7 +217,7 @@ transform: scale(1.1);
 }
 
 .museums-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: #704830;
+  background: #8a6252;
 }
 h1{
     font-size: 15px;
@@ -235,3 +236,575 @@ h3{
   box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5); 
  
 }
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
+
+#comments-section{
+background: beige;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+p{
+    line-height: 1.5;
+}
+body{
+    height: 100%;
+    width: 100%;
+    padding-top: 3rem;
+    background-color: beige;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+button{
+    cursor: pointer;
+}
+button:hover{
+    filter: saturate(80%);
+}
+.bu-primary{
+    background-color: #8a6252;
+    color: #867666;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 4px;
+}
+.comment-section{
+    padding: 0 1rem;
+}
+
+.container{
+    border-radius:10px;
+    padding: 1.5rem;
+    background-color: #d2b48c;
+    
+  
+}
+.comments-wrp {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    margin-right: 20px;
+}
+.comment-section{
+    max-width: 75ch;
+    margin: auto;
+    margin-top: 1rem;
+}
+.comment{
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-areas: 
+        "score user controls"
+        "score comment comment"
+        "score comment comment"
+    ;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    row-gap: 1rem;
+    color: #584036;
+}
+
+
+.c-text{
+    grid-area: comment;
+    width: 100%;
+}
+.c-user{
+    width: 100%;
+    grid-area: user;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.usr-name{
+    color:  #8a6252;
+    font-weight: 700;
+}
+.usr-img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.c-controls{
+    display: flex;
+    gap: 1rem;
+    color: #8a6252;
+    grid-area: controls;
+    align-self: center;
+    justify-self: flex-end;
+}
+.c-controls a{
+    align-items: center;
+}
+.edit , .reply{
+    color: #8a6252;
+}
+.edit{
+    display: none;
+}
+.delete{
+    color: #8c3211;
+    display: none;
+}
+.control-icon{
+    margin-right: .5rem;
+}
+
+.replies{
+    display: flex;
+    margin-left: 2.5rem;
+    padding-left: 2.4rem;
+    border-left: 1px solid beige;
+}
+
+.reply-to{
+    color:#8a6252;
+    font-weight: 500;
+}
+
+.reply-input{
+    display: grid;
+    margin-bottom: 1rem;
+    grid-template-areas: "avatar input button";
+    grid-template-columns: min-content auto min-content;
+    justify-items: center;
+    gap: 1rem;
+    min-height: 9rem;
+}
+.reply-input img{
+    grid-area: avatar;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.reply-input button{
+    grid-area: button;
+    align-self: flex-start;
+}
+.reply-input textarea{
+    grid-area: input;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #e6d8af ;
+    border-radius: 4px;
+    resize: none;
+    
+}
+
+.this-user .usr-name::after{
+    font-weight: 400;
+    content: "you";
+    color:#867666;
+    background-color: #8a6252;
+    padding: 0 .4rem;
+    padding-bottom: .2rem;
+    font-size: .8rem;
+    margin-left: .5rem;
+    border-radius: 2px;
+}
+
+.this-user .reply{
+    display: none;
+}
+.this-user .edit , .this-user .delete{
+    display: flex;
+}
+
+@media screen and (max-width:640px) {
+    .container{
+        padding: .75rem;
+    }
+    .replies{
+        padding-left: 1rem;
+        margin-left: .5rem;
+    }
+    .comment{
+        grid-template-areas: 
+            "user user user"
+            "comment comment comment"
+            "score ... controls"
+        ;
+
+        gap: .5rem;
+    }
+    .c-score{
+        flex-direction: row;
+        width: auto;
+    }
+    .reply-input{
+        grid-template-areas: 
+            "input input input"
+            "avatar ... button"
+        ;
+        grid-template-rows: auto min-content;
+        align-items: center;
+        gap: .5rem;
+    }
+    .reply-input img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .reply-input textarea{
+        height: 6rem;
+        padding: .5rem;
+        align-self: stretch;
+    }
+}
+
+
+.modal-wrp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.3);
+}
+
+.modal{
+    padding: 1.5rem;
+    max-width: 32ch;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "heading heading"
+    "body body"
+    "no yes";
+}
+
+.invisible{
+    display: none;
+}
+
+.modal h3{
+    grid-area: heading;
+    color:  #8a6252;
+}
+.modal button{
+    color: #867666;
+    padding: .75rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+}
+.modal p{
+    grid-area: body;
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.modal .yes{
+    grid-area: yes;
+    background-color: #8c3211;
+}
+.modal .no{
+    background-color: var(--Grayish-Blue);
+    grid-area: no;
+}
+header {
+    background-color: #000;
+    color:#8a6252;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 2.5px;
+}
+
+nav a {
+  
+    color: #8a6252;
+    text-decoration: none;
+    margin: 0 10px;
+}
+a:hover{
+    color:#867666;
+    text-decoration: underline;
+}
+
+/* Main content styles */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#bar {
+    position: fixed;
+    top: calc(150vh - 50px); /* Adjust the value according to the height of the navigation bar */
+    width: 100%;
+    background:beige; /* Adjust background color as needed */
+    z-index: 9999;
+    height: 20px;
+  
+  
+}
+#bar a{
+    font-size: 10px;
+}
+#ahh{
+
+    background: beige;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom:solid #867666 2px ;
+    text-size-adjust: 5px;
+    width: 100%;
+   
+
+}
+
+
+#paragraph{
+    font-size: 10px;
+}
+
+/* Blurry container styles */
+.blurry-container {
+    position: relative;
+    height: 550px; /* Adjust height as needed */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.blurry-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(5px); /* Adjust blur effect */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+.text-overlay h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    font-size: 18px;
+}
+
+
+
+/* Upcoming events styles */
+.reviews-section {
+    background-color:beige;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 550px;
+}
+
+/* Footer styles */
+
+hr{
+    color:rgba(167, 143, 113, 0.6);
+    border: none; 
+    border-top: 2px solid #867666; 
+    margin: 20px 0;
+
+}
+.before-hr {
+            display: inline-block; /* Make the element inline */
+            margin-left: 44px; /* Add some spacing between the text and the hr */
+            padding-top: 20px;
+            color:  #867666;
+            
+        }
+
+#line {
+            display: inline-block; /* Make the hr inline */
+            width: 75%; /* Adjust the width as needed */
+            vertical-align: middle; /* Align the hr vertically with the text */
+        
+        }
+        .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.image-container {
+    margin: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+}
+
+.caption {
+    margin-top: 5px;
+    font-style: italic;
+}
+.overview{
+   
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+/*===Product-slider=================================*/
+
+        /* Add your custom CSS styles here */
+        .famous-monuments {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 650px;
+         
+            background-color:#d2b48c;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px;
+        
+            font-style: bold;
+            font-size: 25px;
+            padding: 10px;
+           
+        }
+        .swiper-container {
+            width: 100%;
+            overflow: hidden; /* Prevent the slider from overflowing */
+        }
+        
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            
+            width: 200px; /* Adjust the width of each slide */
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            
+        
+        }
+        
+        .swiper-text {
+            text-align: center;
+        }
+      
+       
+        .swiper-wrapper {
+            display: flex;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: 50px;
+          height: 50px;
+          background-color: #a68263; /* Background color of the arrows */
+          border-radius: 50%; /* Makes the arrows circular */
+          border: 2px solid #8a6252; /* Border color */
+          color: #8a6252; /* Arrow color */
+          font-size: 5px; /* Font size of the arrows */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        
+           
+          }
+          
+          .swiper-button-next,
+        .swiper-button-prev  ion-icon {
+            font-size: 2rem;
+            color: #222224;
+          }
+          
+          
+          
+         
+          
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+          background-color:beige; /* Hover background color */
+          color:#000; /* Hover color */
+        }
+        
+
+     
+       
+        .section-content {
+            padding: 20px;
+            position: relative; /* Add relative positioning to the section content */
+        }
+        
+        .ticket-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 40px;
+            margin: 20px;
+            display: inline-block;
+            width: calc(30% - 20px); /* Adjust width as needed */
+            vertical-align: top;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+        }
+        
+        .ticket-box h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 15px;
+            padding-bottom: 2px;
+        }
+        
+        .ticket-box p {
+            color: #666;
+            font-size: 10px;
+            padding-bottom: 4px;
+        }
+        
+        .ticket-box button {
+            background-color:#8a6252;
+            color: beige;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .ticket-box button:hover {
+            background-color: #06752d;
+        }
+        .swiper-container p{
+        font-size: 10px;
+        color: #584036;
+        }
+        .swiper-container h2{
+            font-size: 15px;
+        }
