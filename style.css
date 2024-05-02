@@ -136,6 +136,9 @@ transform: scale(1.1);
   display: flex;
   gap: 1rem;
 }
+.museum-name{
+  text-align: left;
+}
 
 .rating ion-icon {
   color:#8a6252;
@@ -279,10 +282,10 @@ button:hover{
     padding: 0 1rem;
 }
 
-.container{
+.comment-container{
     border-radius:10px;
     padding: 1.5rem;
-    background-color: #d2b48c;
+    background-color: black;
     
   
 }
@@ -682,7 +685,7 @@ body{
             overflow: hidden;
             height: 650px;
          
-            background-color:#d2b48c;
+            background-color: #000000;
             font-family: Arial, Helvetica, sans-serif;
             padding: 15px;
         
@@ -713,7 +716,7 @@ body{
         .swiper-text {
             text-align: center;
         }
-      
+     
        
         .swiper-wrapper {
             display: flex;
@@ -803,7 +806,7 @@ body{
         }
         .swiper-container p{
         font-size: 10px;
-        color: #584036;
+        color: beige;
         }
         .swiper-container h2{
             font-size: 15px;
