@@ -136,14 +136,6 @@ links.forEach(function(link) {
 
       
 }
-window.addEventListener('load', function() {
-    var contain = document.querySelector('.container');
-    var middleLocation = document.querySelector('.location:nth-child(5)'); 
-    var middlepos = middleLocation.getBoundingClientRect(); 
-
-    contain.scrollLeft = middlepos.left - (window.innerWidth - middlepos.width) / 2; 
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const search = document.getElementById('searchInput');
