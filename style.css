@@ -37,7 +37,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background:beige;
+  background:  linear-gradient( to right, beige,rgb(199, 187, 159) );
 }
 
 .container {
@@ -135,13 +135,15 @@ transform: scale(1.1);
   padding-top: 1rem;
   display: flex;
   gap: 1rem;
+  
 }
 .museum-name{
   text-align: left;
 }
 
 .rating ion-icon {
-  color:#8a6252;
+  color: rgba(255, 217, 0, 0.759) ;
+
 }
 
 .swiper-slide-shadow-left,
@@ -242,277 +244,17 @@ h3{
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap");
 
 #comments-section{
-background: beige;
-}
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
-  font-size: 16px;
-}
-p{
-    line-height: 1.5;
-}
-body{
-    height: 100%;
-    width: 100%;
-    padding-top: 3rem;
-    background-color: beige;
-}
-a{
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: 500;
-}
-button{
-    cursor: pointer;
-}
-button:hover{
-    filter: saturate(80%);
-}
-.bu-primary{
-    background-color: #8a6252;
-    color: #867666;
-    border: none;
-    padding: .75rem 1.5rem;
-    border-radius: 4px;
-}
-.comment-section{
-    padding: 0 1rem;
-}
-
-.comment-container{
-    border-radius:10px;
-    padding: 1.5rem;
-    background-color: black;
-    
-  
-}
-.comments-wrp {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    margin-right: 20px;
-}
-.comment-section{
-    max-width: 75ch;
-    margin: auto;
-    margin-top: 1rem;
-}
-.comment{
-    margin-bottom: 1rem;
-    display: grid;
-    grid-template-areas: 
-        "score user controls"
-        "score comment comment"
-        "score comment comment"
-    ;
-    grid-template-columns: auto 1fr auto;
-    gap: 1.5rem;
-    row-gap: 1rem;
-    color: #584036;
+background: linear-gradient( to right, beige,rgb(199, 187, 159) );
+padding-bottom: 10px;
+margin-bottom: 10px;
 }
 
 
-.c-text{
-    grid-area: comment;
-    width: 100%;
-}
-.c-user{
-    width: 100%;
-    grid-area: user;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.usr-name{
-    color:  #8a6252;
-    font-weight: 700;
-}
-.usr-img{
-    height: 2rem;
-    width: 2rem;
-}
-
-.c-controls{
-    display: flex;
-    gap: 1rem;
-    color: #8a6252;
-    grid-area: controls;
-    align-self: center;
-    justify-self: flex-end;
-}
-.c-controls a{
-    align-items: center;
-}
-.edit , .reply{
-    color: #8a6252;
-}
-.edit{
-    display: none;
-}
-.delete{
-    color: #8c3211;
-    display: none;
-}
-.control-icon{
-    margin-right: .5rem;
-}
-
-.replies{
-    display: flex;
-    margin-left: 2.5rem;
-    padding-left: 2.4rem;
-    border-left: 1px solid beige;
-}
-
-.reply-to{
-    color:#8a6252;
-    font-weight: 500;
-}
-
-.reply-input{
-    display: grid;
-    margin-bottom: 1rem;
-    grid-template-areas: "avatar input button";
-    grid-template-columns: min-content auto min-content;
-    justify-items: center;
-    gap: 1rem;
-    min-height: 9rem;
-}
-.reply-input img{
-    grid-area: avatar;
-    height: 2.5rem;
-    width: 2.5rem;
-}
-.reply-input button{
-    grid-area: button;
-    align-self: flex-start;
-}
-.reply-input textarea{
-    grid-area: input;
-    padding: 1rem;
-    width: 100%;
-    border: 1px solid #e6d8af ;
-    border-radius: 4px;
-    resize: none;
-    
-}
-
-.this-user .usr-name::after{
-    font-weight: 400;
-    content: "you";
-    color:#867666;
-    background-color: #8a6252;
-    padding: 0 .4rem;
-    padding-bottom: .2rem;
-    font-size: .8rem;
-    margin-left: .5rem;
-    border-radius: 2px;
-}
-
-.this-user .reply{
-    display: none;
-}
-.this-user .edit , .this-user .delete{
-    display: flex;
-}
-
-@media screen and (max-width:640px) {
-    .container{
-        padding: .75rem;
-    }
-    .replies{
-        padding-left: 1rem;
-        margin-left: .5rem;
-    }
-    .comment{
-        grid-template-areas: 
-            "user user user"
-            "comment comment comment"
-            "score ... controls"
-        ;
-
-        gap: .5rem;
-    }
-    .c-score{
-        flex-direction: row;
-        width: auto;
-    }
-    .reply-input{
-        grid-template-areas: 
-            "input input input"
-            "avatar ... button"
-        ;
-        grid-template-rows: auto min-content;
-        align-items: center;
-        gap: .5rem;
-    }
-    .reply-input img{
-        height: 2rem;
-        width: 2rem;
-    }
-    .reply-input textarea{
-        height: 6rem;
-        padding: .5rem;
-        align-self: stretch;
-    }
-}
 
 
-.modal-wrp{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0,0,0,.3);
-}
 
-.modal{
-    padding: 1.5rem;
-    max-width: 32ch;
-    display: grid;
-    gap: 1rem;
-    grid-template-areas: 
-    "heading heading"
-    "body body"
-    "no yes";
-}
 
-.invisible{
-    display: none;
-}
 
-.modal h3{
-    grid-area: heading;
-    color:  #8a6252;
-}
-.modal button{
-    color: #867666;
-    padding: .75rem;
-    border-radius: 8px;
-    border: none;
-    font-weight: 500;
-}
-.modal p{
-    grid-area: body;
-    color: var(--Grayish-Blue);
-    line-height: 1.5;
-}
-.modal .yes{
-    grid-area: yes;
-    background-color: #8c3211;
-}
-.modal .no{
-    background-color: var(--Grayish-Blue);
-    grid-area: no;
-}
 header {
     background-color: #000;
     color:#8a6252;
@@ -522,8 +264,9 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    margin: 10px;
-    padding: 2.5px;
+   
+  
+    
 }
 
 nav a {
@@ -547,7 +290,7 @@ a:hover{
     position: fixed;
     top: calc(150vh - 50px); /* Adjust the value according to the height of the navigation bar */
     width: 100%;
-    background:beige; /* Adjust background color as needed */
+    background:linear-gradient( to right, beige,rgb(199, 187, 159) ); /* Adjust background color as needed */
     z-index: 9999;
     height: 20px;
   
@@ -558,7 +301,7 @@ a:hover{
 }
 #ahh{
 
-    background: beige;
+    background: linear-gradient( to right, beige,rgb(199, 187, 159) );
     padding-bottom: 10px;
     padding-top: 10px;
     border-bottom:solid #867666 2px ;
@@ -612,7 +355,7 @@ a:hover{
 
 /* Upcoming events styles */
 .reviews-section {
-    background-color:beige;
+    background-color:linear-gradient( to right, beige,rgb(199, 187, 159) );
     padding: 20px;
     margin-bottom: 20px;
     height: 550px;
@@ -623,7 +366,7 @@ a:hover{
 hr{
     color:rgba(167, 143, 113, 0.6);
     border: none; 
-    border-top: 2px solid #867666; 
+ 
     margin: 20px 0;
 
 }
@@ -721,16 +464,17 @@ body{
         .swiper-wrapper {
             display: flex;
         }
+     
         
         .swiper-button-next,
         .swiper-button-prev {
           width: 50px;
           height: 50px;
-          background-color: #a68263; /* Background color of the arrows */
+          background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
           border-radius: 50%; /* Makes the arrows circular */
-          border: 2px solid #8a6252; /* Border color */
-          color: #8a6252; /* Arrow color */
-          font-size: 5px; /* Font size of the arrows */
+          border: 2px solid black; /* Border color */
+          color: beige; /* Arrow color */
+          
           display: flex;
           justify-content: center;
           align-items: center;
@@ -741,7 +485,7 @@ body{
           
           .swiper-button-next,
         .swiper-button-prev  ion-icon {
-            font-size: 2rem;
+            font-size: 1rem;
             color: #222224;
           }
           
@@ -751,8 +495,8 @@ body{
           
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
-          background-color:beige; /* Hover background color */
-          color:#000; /* Hover color */
+          background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
+          color:black; /* Hover color */
         }
         
 
@@ -811,14 +555,255 @@ body{
         .swiper-container h2{
             font-size: 15px;
         }
-        
-        .map-container {
-       background-color: #000;
-       justify-content: center;
-      }
       
-      #map {
-          width: 100%; /* Set the width of the map to fill the container */
-          height: 200px; /* Set the height of the map to fill the container */
+        
+     
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+      
+        .footer-container{
+          max-width: 1170px;
+          margin:auto;
+        }
+        .row{
+          display: flex;
+          flex-wrap: wrap;
+        }
+        ul{
+          list-style: none;
+        }
+        .footer{
+          background-color: black;
+            padding: 70px 0;
+        }
+        #footer-col1{
+           width: 70%;
+           padding: 0 30px;
+        }
+        #footer-col2{
+          width: 30%;
+          padding: 0 30px;
+        }
+        #footer-col3{
+          width: 30%;
+          padding: 0 600px;
+        }
+        
+        .footer-col h4{
+          font-size: 18px;
+          color: beige;
+          text-transform: capitalize;
+          margin-bottom: 35px;
+          font-weight: 500;
+          position: relative;
+        }
+        .footer-col h4::before{
+          content: '';
+          position: absolute;
+          left:0;
+          bottom: -10px;
+          background-color:#644f3a76;
+          height: 2px;
+          box-sizing: border-box;
+          width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+          margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+          font-size: 16px;
+          text-transform: capitalize;
+          color: beige;
+          text-decoration: none;
+          font-weight: 300;
+          color: #bbbbbb;
+          display: block;
+          transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+          color: beige;
+          padding-left: 8px;
+        }
+        .footer-col .social-links a{
+          display: inline-block;
+          height: 40px;
+          width: 40px;
+          background-color: rgba(255,255,255,0.2);
+          margin:0 10px 10px 0;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 50%;
+          color: beige;
+          transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+          color: #24262b;
+          background-color: #ffffff;
+        }
+        .map-container {
+         
           justify-content: center;
-      }
+         }
+         
+         #map {
+             width: 90%; /* Set the width of the map to fill the container */
+             height: 200px; /* Set the height of the map to fill the container */
+             justify-content: center;
+         }
+        
+        /*responsive*/
+        @media(max-width: 767px){
+          .footer-col{
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        }
+        @media(max-width: 574px){
+          .footer-col{
+            width: 100%;
+        }
+        }
+        
+        
+        
+        
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #867666;
+  --primary-color-dark: #867666;
+  --text-dark: beige;
+  --white:black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-image: url("assets/bg.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+}
+
+.container-comment {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+}
+
+.container__left h1 {
+  margin-top: 85px;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.container__left p {
+  color: var(black);
+  margin-bottom: 1rem;
+  font-size: 13px;
+}
+
+
+.container__right {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  flex-direction: column; 
+}
+
+.card img {
+  max-width: 75px;
+  border-radius: 100%;
+}
+
+.card__content {
+  display: flex;
+  gap: 1rem;
+  font-size: 9px;
+}
+
+.card__content span i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.card__details p {
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 11px;
+}
+
+.card__details h4 {
+  text-align: right;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (width < 1200px) {
+  .container {
+    gap: 3rem;
+  }
+}
+
+@media (width < 900px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container__right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 750px) {
+  .container__right {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.star{
+  color: rgba(255, 217, 0, 0.759) ;
+}
+
+
+.card form {
+  display: flex;
+  flex-direction: column; /* Ensure child elements stack vertically */
+}
+
+textarea {
+  width: 100%; /* Take up the whole width of the container */
+  margin-bottom: 10px; /* Add some spacing between textarea and buttons */
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
