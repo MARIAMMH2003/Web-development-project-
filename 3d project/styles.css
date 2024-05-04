@@ -9,6 +9,9 @@ body, h1, h2, h3, p, ul {
     color: white; /* Change text color */
     padding: 50px 0;
     text-align: center;
+    /* zeina */
+    position: relative; 
+    /* zeina */
 }
 
 .section-title {
@@ -68,5 +71,12 @@ body, h1, h2, h3, p, ul {
 
 .card:hover .card-title {
     opacity: 1; /* Show on hover */
+}
+
+
+.searchcontainer {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
 }
 
