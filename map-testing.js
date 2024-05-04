@@ -136,5 +136,34 @@ links.forEach(function(link) {
 
       
 }
+window.addEventListener('load', function() {
+    var contain = document.querySelector('.container');
+    var middleLocation = document.querySelector('.location:nth-child(5)'); 
+    var middlepos = middleLocation.getBoundingClientRect(); 
 
- 
+    contain.scrollLeft = middlepos.left - (window.innerWidth - middlepos.width) / 2; 
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const search = document.getElementById('searchInput');
+    const museums = document.querySelectorAll('.location');
+
+    search.addEventListener('input', function() {
+        const searchTerm = search.value.toLowerCase().trim();
+        museums.forEach(museum => {
+            const museumName = museum.querySelector('.link').innerText.toLowerCase();
+            if (museumName.includes(searchTerm)) {
+                museum.style.display = 'block';
+            } else {
+                museum.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+
+
+
+
