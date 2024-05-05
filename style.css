@@ -38,12 +38,16 @@ html {
 body {
   font-size: 1.6rem;
   background:  linear-gradient( to right, beige,rgb(199, 187, 159) );
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;
+  margin-top: -30px;
 }
 
 .text-center {
@@ -64,14 +68,14 @@ body {
 
 @media (max-width:1440px) {
   #museums {
-    padding: 1rem 0;
+    padding: 4rem 0;
   }
 }
 
 #museums .museums-slider {
   height: 40rem;
   padding: 2rem 0;
-  position: relative;
+  margin-left: -50px;
 }
 
 @media (max-width:500px) {
@@ -83,7 +87,6 @@ body {
 .museums-slide {
   width: 25rem;
   height: 28rem;
-  position: relative;
 }
 
 @media (max-width:500px) {
@@ -110,7 +113,7 @@ transform: scale(1.1);
 }
 
 .museums-slide .museums-slide-content {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   right: 0;
@@ -146,84 +149,40 @@ transform: scale(1.1);
 
 }
 
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
-}
-
-.museums-slider-control {
+#museums {
   position: relative;
-  bottom: 2rem;
+  height: 480px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
+  border-radius: 50%; /* Makes the arrows circular */
+  border: 2px solid black; /* Border color */
+  color: beige; /* Arrow color */
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.museums-slider-control .swiper-button-next {
-  left: 58% !important;
-  transform: translateX(-58%) ;
-}
-
-@media (max-width:990px) {
-  .museums-slider-control .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%);
+  align-items: center;
+  cursor: pointer;
+font-size: 10px;
+   
   }
+  
+
+
+
+  
+ 
+  
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
+  color:black; /* Hover color */
 }
 
-@media (max-width:450px) {
-  .museums-slider-control .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) ;
-  }
-}
 
-@media (max-width:990px) {
-  .museums-slider-control .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) ;
-  }
-}
 
-@media (max-width:450px) {
-  .museums-slider-control .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) ;
-  }
-}
-
-.museums-slider-control .slider-arrow {
-  background: #867666;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  left: 42%;
-  transform: translateX(-42%);
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.museums-slider-control .slider-arrow ion-icon {
-  font-size: 2rem;
-  color: #222224;
-}
-
-.museums-slider-control .slider-arrow::after {
-  content: '';
-}
-
-.museums-slider-control .swiper-pagination {
-  position: relative;
-  width: 15rem;
-  bottom: 1rem;
-}
-
-.museums-slider-control .swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.museums-slider-control .swiper-pagination .swiper-pagination-bullet-active {
-  background: #8a6252;
-}
 h1{
     font-size: 15px;
 }
@@ -319,9 +278,11 @@ a:hover{
 /* Blurry container styles */
 .blurry-container {
     position: relative;
-    height: 550px; /* Adjust height as needed */
+    height: 350px; /* Adjust height as needed */
     margin-bottom: 20px;
     text-align: left;
+  
+
 }
 
 .blurry-background {
@@ -406,19 +367,17 @@ hr{
     margin-top: 5px;
     font-style: italic;
 }
-.overview{
+#overview{
    
     font-family: Arial, sans-serif;
     font-size: 18px;
+    margin-top:250px;
+
 }
 a{
     text-decoration: none;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-}
- 
+
 /*===Product-slider=================================*/
 
         /* Add your custom CSS styles here */
@@ -465,40 +424,7 @@ body{
             display: flex;
         }
      
-        
-        .swiper-button-next,
-        .swiper-button-prev {
-          width: 50px;
-          height: 50px;
-          background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
-          border-radius: 50%; /* Makes the arrows circular */
-          border: 2px solid black; /* Border color */
-          color: beige; /* Arrow color */
-          
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        
-           
-          }
-          
-          .swiper-button-next,
-        .swiper-button-prev  ion-icon {
-            font-size: 1rem;
-            color: #222224;
-          }
-          
-          
-          
-         
-          
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
-          color:black; /* Hover color */
-        }
-        
+    
 
      
        
@@ -512,13 +438,12 @@ body{
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 40px;
-            margin: 20px;
+            margin-top: 0;
             display: inline-block;
             width: calc(30% - 20px); /* Adjust width as needed */
-            vertical-align: top;
+            margin-right: 20px;
             position: absolute;
-            top: 0;
-            right: 0;
+            top: -220px;            right: 0;
             text-align: center;
         }
         
@@ -668,22 +593,10 @@ body{
         
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
-:root {
-  --primary-color: #867666;
-  --primary-color-dark: #867666;
-  --text-dark: beige;
-  --white:black;
-}
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Roboto", sans-serif;
-}
+
+
 
 header {
   background-image: url("assets/bg.png");
@@ -708,12 +621,12 @@ header {
   margin-bottom: 4rem;
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--primary-color);
+  color: #867666;
   font-size: 20px;
 }
 
 .container__left p {
-  color: var(black);
+  color:#000;
   margin-bottom: 1rem;
   font-size: 13px;
 }
@@ -729,7 +642,7 @@ header {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  background-color: var(--white);
+  background-color: black;
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -749,19 +662,19 @@ header {
 
 .card__content span i {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: #867666;
 }
 
 .card__details p {
   font-style: italic;
-  color: var(--text-dark);
+  color: beige;
   margin-bottom: 1rem;
   font-size: 11px;
 }
 
 .card__details h4 {
   text-align: right;
-  color: var(--primary-color);
+  color: #867666;
   font-size: 1rem;
   font-weight: 500;
 }

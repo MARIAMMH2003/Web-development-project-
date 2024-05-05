@@ -160,3 +160,64 @@ function openImagePreview() {
 
     imageTab.document.write(imageHTML);
 }
+var modals = document.querySelectorAll(".modal");
+var editBtns = document.querySelectorAll(".edit-btn");
+var spans = document.querySelectorAll(".close");
+
+editBtns.forEach(function(btn, index) {
+    btn.addEventListener("click", function() {
+        modals[index].style.display = "block";
+    });
+});
+
+spans.forEach(function(span, index) {
+    span.onclick = function() {
+        modals[index].style.display = "none";
+    };
+});
+
+window.onclick = function(event) {
+    modals.forEach(function(modal) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+};
+
+var previews = document.querySelectorAll("#preview");
+var fileInputs = document.querySelectorAll("#image");
+
+fileInputs.forEach(function(input, index) {
+    input.addEventListener("change", function() {
+        var file = this.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            previews[index].src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    });
+});
+
+var museumsSlider = new Swiper('.museums-slider', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
