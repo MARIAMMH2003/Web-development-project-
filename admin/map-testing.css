@@ -1,0 +1,79 @@
+
+body{
+    background-color: black;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    max-width: 200%;
+    height: 370px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    padding: 10px; 
+    white-space: nowrap;
+}
+
+.content a {
+    text-decoration: none;
+    text-align: center;
+color: aliceblue;
+}
+
+.location {
+    margin-right: 10px;
+}
+
+.location-info {
+    display: none;
+    color: aliceblue;
+}
+
+.content {
+    margin-bottom: 10px;
+}
+
+
+.content img {
+    width: 95%;
+    height: 200px; 
+    border-radius: 7px;
+    display: flex; 
+    margin: 0 auto;
+}
+.show-btn {
+    background-color: #e0b367; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.search-container {
+    position: relative;
+}
+#searchInput{
+background-color: black;
+border: none;
+color: aliceblue;
+
+}
+#searchLogo{
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    left: 130px; 
+    transform: translateY(-50%);
+}

@@ -50,6 +50,7 @@ body {
   margin-top: -30px;
 }
 
+
 .text-center {
   text-align: center;
 }
@@ -720,8 +721,6 @@ textarea {
   display: flex;
   justify-content: flex-end; /* Align buttons to the right */
 }
-
-
 #searchInput {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));
   border: none;
