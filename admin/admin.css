@@ -126,7 +126,7 @@ html {
 .card-footer button:hover {
     background-color: #0056b3;
 }
-.modal {
+.modal,#addModal {
     display: none;
     position: absolute;
     left: 0;
@@ -134,7 +134,30 @@ html {
    
    
 }
+.addModal-content h2{
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
 
+}
+.addModal-content label{
+  text-align: left;
+  color:#8a6252;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.addModal-content{
+
+  text-align: left;
+  background-color:#080808ca;
+  margin: 15% auto;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  overflow: hidden;
+}
 .modal-content h2{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -142,10 +165,10 @@ html {
 }
 .modal-content label{
   text-align: left;
-    color: black;
+    color:#8a6252;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#input1,#input2,#input3,#input4,#input5,#input6,#input7,#input8,#input9{
+#input1,#input2,#input3,#input4,#input5,#input6,#input7,#input8,#input9,#input10{
     background-color:  rgba(245, 245, 220, 0.814);
     color: black;
     border: solid 2px rgba(0, 0, 0, 0.881);
@@ -153,15 +176,17 @@ html {
 }
 .modal-content {
   text-align: left;
-    background-color:#867666ca;
+    background-color:#080808ca;
     margin: 15% auto;
-    padding: 30px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     border: 1px solid #888;
     width: 80%;
     overflow: hidden;
 }
 
-.close {
+.close,.close-btn {
     color: #aaa;
     float: right;
     margin-top: -10px;
@@ -170,8 +195,10 @@ html {
     font-weight: bold;
 }
 
+
 .close:hover,
-.close:focus {
+.close:focus,.close-btn:hover,
+.close-btn:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -179,165 +206,6 @@ html {
 
 
   
-  body {
-    font-size: 1.6rem;
-    background:  linear-gradient( to right, beige,rgb(199, 187, 159) );
-    margin: 0px;
-    padding: 0px;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .container {
-    max-width: 124rem;
-    padding: 0 1rem;
-    margin: 0 auto;
-    margin-top: -30px;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .text-header {
-    font-size: 3rem;
-    color:#8a6252 ;
-    padding: 2rem 0;
-    text-align: center;
-    
-  }
-  
-  #museums {
-    padding: 2rem 0;
-  }
-  
-  @media (max-width:1440px) {
-    #museums {
-      padding: 4rem 0;
-    }
-  }
-  
-  #museums .museums-slider {
-    height: 40rem;
-    padding: 2rem 0;
-    margin-left: -50px;
-  }
-  
-  @media (max-width:500px) {
-    #museums .museums-slider {
-      height: 35rem;
-    }
-  }
-  
-  .museums-slide {
-    width: 25rem;
-    height: 28rem;
-  }
-  
-  @media (max-width:500px) {
-    .museums-slide {
-      width: 28rem ;
-      height: 36rem;
-    }
-    .museums-slide  .museums-slide-img img {
-      width: 25rem ;
-      height: 28rem ;
-    }
-  }
-  
-  .museums-slide  .museums-slide-img img {
-    width: 30rem;
-    height: 32rem;
-    border-radius: 2rem;
-    object-fit: cover;
-    border-radius: 2rem;
-    transition: transform 0.3s ease;
-  }
-  .museums-slide .museums-slide-img img:hover {
-  transform: scale(1.1); 
-  }
-  
-  .museums-slide .museums-slide-content {
-    position: relative;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .museums-slide-content  {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    color:  #867666;
-  }
-  
-  .museums-slide-content .museums-slide-content-bottom {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color:  #867666;
-  }
-  
-  .museum-rating {
-    padding-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    
-  }
-  .museum-name{
-    text-align: left;
-  }
-  
-  .rating ion-icon {
-    color: rgba(255, 217, 0, 0.759) ;
-  
-  }
-  
-  #museums {
-    position: relative;
-    height: 480px;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 50px;
-    height: 50px;
-    background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
-    border-radius: 50%; /* Makes the arrows circular */
-    border: 2px solid black; /* Border color */
-    color: beige; /* Arrow color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  font-size: 10px;
-     
-    }
-    
-  
-  
-  
-    
-   
-    
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
-    color:black; /* Hover color */
-  }
-  
-  
-  
-  h1{
-      font-size: 15px;
-  }
-  h2{
-     font-size:  20px;
-     /*background-color: #e6d8af;*/
-     color: beige;
-  }
-  h3{
-      font-size: 15px;
-  }
   
   
   .edit-btn ,.delete-btn,.inner-buttons ,.add-btn{
@@ -355,7 +223,7 @@ html {
     margin-top: 1rem; 
   }
 
- .edit-btn:hover,.add-btn:hover {
+ .edit-btn:hover,.add-btn:hover,.inner-buttons:hover {
     background-color:#867666bd;
     text-decoration:underline;
 }
@@ -379,24 +247,6 @@ html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-}
-
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
 }
 
 
@@ -432,11 +282,7 @@ body {
   padding: 2rem 0;
 }
 
-@media (max-width:1440px) {
-  #museums {
-    padding: 4rem 0;
-  }
-}
+
 
 #museums .museums-slider {
   height: 40rem;
@@ -517,7 +363,7 @@ transform: scale(1.1);
 
 #museums {
   position: relative;
-  height: 480px;
+  height: 490px;
 }
 .swiper-button-next,
 .swiper-button-prev {
@@ -1082,6 +928,17 @@ textarea {
 .btn-group {
   display: flex;
   justify-content: left; /* Align  */
+}
+#searchInput {
+  background: linear-gradient(to right, beige, rgb(199, 187, 159));
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.search-container {
+  top: 20px;
+  left: 20px;
+  align-items: center;
 }
 #searchInput {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));

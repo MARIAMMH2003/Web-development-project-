@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Admin Page</title>
     <link rel="stylesheet" href="admin.css">
@@ -42,10 +43,13 @@
     
 
     <section id="museums">
-        <div class="container">
-          <h1 class="text-header">Museums</h1>
-          <input type="text" id="searchInput" placeholder="Search Museums">
-        </div>
+      <div class="serching-container">
+        <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search Museums">
+        <i class="fa-solid fa-magnifying-glass" id="searchLogo"></i>
+      </div>
+        <h1 class="text-header">Museums</h1>
+      </div>
         <div class="container">
           <div class="swiper museums-slider">
             <div class="swiper-wrapper">
@@ -79,7 +83,7 @@
             </div>
         </div>
         <div class="modal-container">
-            <div id="editModal" class="modal">
+            <div id="editModal1" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Edit Museum</h2>
@@ -123,7 +127,7 @@
                     </div>
                 </div>
             </div>
-                <div id="editModal" class="modal">
+                <div id="editModal2"  class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Edit Museum</h2>
@@ -168,7 +172,7 @@
                     </div>
                 </div>
             </div>
-                <div id="editModal" class="modal">
+                <div id="editModal3"  class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Edit Museum</h2>
@@ -213,7 +217,7 @@
                     </div>
                 </div>
             </div>
-                <div id="editModal" class="modal">
+                <div id="editModal4"  class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Edit Museum</h2>
@@ -261,7 +265,7 @@
                     </div>
                 </div>
             </div>
-                <div id="editModal" class="modal">
+                <div id="editModal5"  class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Edit Museum</h2>
@@ -306,7 +310,7 @@
                     </div>
                 </div>
             </div>
-                <div id="editModal" class="modal">
+                <div id="editModal6"  class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Edit Museum</h2>
@@ -351,7 +355,7 @@
                 </div>
             </div>
         </div>
-            <div id="editModal" class="modal">
+            <div id="editModal7"  class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Edit Museum</h2>
@@ -395,7 +399,7 @@
                 </div>
             </div>
         </div>
-            <div id="editModal" class="modal">
+            <div id="editModal8"  class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Edit Museum</h2>
@@ -439,7 +443,7 @@
             </div>
         </div>
     </div>
-        <div id="editModal" class="modal">
+        <div id="editModal9"  class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Edit Museum</h2>
@@ -448,6 +452,9 @@
                     <input id="input9"type="text" id="title" name="title">
                     <label for="image">Image:</label>
                     <input type="file" id="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img id="preview" src="https://i.pinimg.com/564x/55/76/60/557660e4518a38c3a0a058a3b58b03a2.jpg" alt="Image Preview">
+                  </div>  
                     <button class="inner-buttons" type="submit">Save Changes</button>
                 </form>
             </div>
@@ -456,10 +463,9 @@
           </div>
         
           <div class="swiper-slide museums-slide">
-            <a href="Greco-RomanMuseumOfAlexandria.html">
           <div class="museums-slide-img">
-            <img src="https://www.svgrepo.com/show/114383/white-plus-inside-a-black-square-symbol.svg" alt=" Greco-Roman Museum Of Alexandria">
-          </div></a>
+            <img src="https://www.svgrepo.com/show/114383/white-plus-inside-a-black-square-symbol.svg" alt=" add museum">
+          </div>
           <div class="museums-slide-content">
             
             <div class="museums-slide-content-bottom">
@@ -467,20 +473,23 @@
              Add Museum             </h2>
              
               <div class="buttons">
-                <button class="edit-btn">Add</button>
+                <button class="add-btn" onclick="openAddPopup()">Add</button>
               
             </div>
         </div>
     </div>
-        <div id="editModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>ADD Museum</h2>
-                <form id="editForm" action="add.php" method="post" enctype="multipart/form-data">
+        <div id="addModal" >
+            <div class="addModal-content">
+              <span class="close-btn">&times;</span>
+              <h2>Add Museum</h2>
+                <form id="addForm" action="add.php" method="post" enctype="multipart/form-data">
                     <label for="title">Title:</label>
-                    <input id="input9"type="text" id="title" name="title">
+                    <input id="input10"type="text" id="title" name="title">
                     <label for="image">Image:</label>
                     <input type="file" id="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img id="preview" src="https://i.pinimg.com/564x/55/76/60/557660e4518a38c3a0a058a3b58b03a2.jpg" alt="Image Preview">
+                  </div>  
                     <button class="inner-buttons" type="submit">Save </button>
                 </form>
             </div>

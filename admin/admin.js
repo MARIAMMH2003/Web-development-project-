@@ -161,20 +161,35 @@ function openImagePreview() {
     imageTab.document.write(imageHTML);
 }
 var modals = document.querySelectorAll(".modal");
-var editBtns = document.querySelectorAll(".edit-btn");
-var addBtns = document.querySelectorAll(".add-btn");
 var spans = document.querySelectorAll(".close");
+var editBtns = document.querySelectorAll(".edit-btn");
+
+var closeBtn = document.querySelector(".close-btn");
+
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("close-btn")) {
+        var addModal = document.getElementById("addModal");
+        addModal.style.display = "none"; 
+    }
+});
+
+
+function openAddPopup() {
+    var addModal = document.getElementById("addModal");
+
+    addModal.style.display = "block";
+}
+
+
+
 
 editBtns.forEach(function(btn, index) {
     btn.addEventListener("click", function() {
         modals[index].style.display = "block";
     });
 });
-addBtns.forEach(function(btn, index) {
-    btn.addEventListener("click", function() {
-        modals[index].style.display = "block";
-    });
-});
+
+
 
 spans.forEach(function(span, index) {
     span.onclick = function() {
@@ -184,9 +199,10 @@ spans.forEach(function(span, index) {
 
 window.onclick = function(event) {
     modals.forEach(function(modal) {
-        if (event.target == modal) {
+        if (event.target == modal ) {
             modal.style.display = "none";
         }
+    
     });
 };
 
