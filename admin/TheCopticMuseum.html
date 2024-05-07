@@ -76,9 +76,73 @@
                       heritage with pride and reverence. <br> <br></ps>
               </div>
               <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+            </div>
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Paragraph</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                 <textarea id="paragraph" rows="20" cols="80">Embracing its rich heritage, the Coptic Museum in Cairo stands as a testament to the
+                        enduring legacy of Egypt's Coptic Christian community. Established in 1908,
+                        the museum is a sanctuary of cultural preservation and enlightenment. Within
+                        its sacred walls, visitors are transported through centuries of Coptic history,
+                        witnessing the evolution of art, faith, and tradition.
+                        
+                        At the heart of the museum's collection lies a treasure trove of artifacts meticulously curated
+                        to celebrate the enduring spirit of the Coptic people. From intricately woven textiles to exquisite icons,
+                        each exhibit tells a story of resilience and devotion. Among its most revered artifacts is the famed
+                        Fayyum portraits, exquisite portraits of ancient Coptic individuals capturing their timeless beauty and grace.
+                        
+                        Yet, the Coptic Museum is more than a mere repository of relics—it is a vibrant hub of cultural exchange
+                        and scholarship. Through innovative exhibitions and educational programs, the museum fosters a deeper understanding
+                        of Coptic heritage and its significance in shaping Egypt's diverse tapestry of cultures.
+                        
+                        As a guardian of Coptic identity and heritage, the museum plays a pivotal role in preserving the legacy
+                        of Egypt's Coptic community. By safeguarding its rich cultural heritage, the museum ensures that the voices
+                        and stories of the Coptic people endure for generations to come, inspiring future generations to embrace their
+                        heritage with pride and reverence. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
             </div>
         </div>
     </section>
@@ -96,43 +160,176 @@
              <div class="swiper-text">
                      <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
                         <p>St. Barbara is among the most popular Christian saints in the East and West. She was locked in a tower by her pagan father, the rich Dioscuros from Nikomedia While he was travelling, Barbara converted to Christianity and eventually was beheaded by her own father.</p>
-                    </div>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8">St. Barbara is among the most popular Christian saints in the East and West. She was locked in a tower by her pagan father, the rich Dioscuros from Nikomedia While he was travelling, Barbara converted to Christianity and eventually was beheaded by her own father. </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
           </div>
           <div class="swiper-slide">
               <img class="image-margin" src="ankh cross.png "alt="Slide 2">
               <div class="swiper-text">
               <!--  <h2>The Narmer Palette</h2>-->
                 <p>Coptic gravestones often depict the deceased with their hands raised in prayer. This example was made for a woman who is dressed in a long garment. A traditional Roman mantle covers her head and shoulders and hangs down over her elbows. </p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8">Coptic gravestones often depict the deceased with their hands raised in prayer. This example was made for a woman who is dressed in a long garment. A traditional Roman mantle covers her head and shoulders and hangs down over her elbows. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
               <img class="image-margin" src="garmnet.png" alt="Slide 3">
               <div class="swiper-text">
                <!-- <h2>The Statue of Ramses II</h2>-->
                 <p>This tunic was a garment commonly worn by males in Greco-Roman civilizations. At the top of this tunic, an arcade encloses figures of dancers and warriors. Below, two vertical panels with warriors and dancers alternate with roundels amid human busts.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> This tunic was a garment commonly worn by males in Greco-Roman civilizations. At the top of this tunic, an arcade encloses figures of dancers and warriors. Below, two vertical panels with warriors and dancers alternate with roundels amid human busts. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
             <img class="image-margin" src="silver casket.png" alt="Slide 3">
             <div class="swiper-text">
              <!-- <h2>The Statue of Khafre</h2>-->
               <p>This precious Bible casket of wood is covered with embossed silver sheets attached by nails. A rombic and floral pattern runs along all four sides. In the centre Virgin Mary with Jesus sitting on her lap are placed in between two Arabic lines.</p>
-          </div>
-        </div> <div class="swiper-slide">
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">This precious Bible casket of wood is covered with embossed silver sheets attached by nails. A rombic and floral pattern runs along all four sides. In the centre Virgin Mary with Jesus sitting on her lap are placed in between two Arabic lines.  </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div> <div class="swiper-slide">
           <img  src="http://www.coptic-cairo.com/museum/selection/fresco/files/page27_7.jpg" alt="Slide 3">
           <div class="swiper-text">
            <!-- <h2>The Bust of Nefertiti</h2>-->
             <p>Excavations at the Monastery of St. Jeremiah in Saqqara have yielded several niches that were pierced into the eastern walls of monks’ cells and served the monks for prayer and contemplation. These niches bear christological scenes showing the enthroned Jesus or Jesus Pantocrator. Two niches are decorated with the Virgin Mary nursing the infant Jesus</p>
-        </div>
-      
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8"> Excavations at the Monastery of St. Jeremiah in Saqqara have yielded several niches that were pierced into the eastern walls of monks’ cells and served the monks for prayer and contemplation. These niches bear christological scenes showing the enthroned Jesus or Jesus Pantocrator. Two niches are decorated with the Virgin Mary nursing the infant Jesus< </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
 </div>
           <!-- Add more swiper-slide divs for additional slides -->
-      </div>
-      <!-- Add pagination and navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                    <!-- Add more swiper-slide divs for additional slides -->
+                </div>
+                <!-- Add pagination and navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
     </section>
 
     

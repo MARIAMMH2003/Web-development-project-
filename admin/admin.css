@@ -106,7 +106,17 @@ html {
     overflow: hidden; 
   }
   
-  
+  .image-preview3{
+    max-width: 200px;
+    max-height: 200px; 
+    overflow: hidden; 
+    margin-right: -40px;
+
+  } 
+  .image-preview3 img{
+    max-width: 80%;
+    max-height: 80%;
+  }
  
   
 .card-footer {
@@ -126,12 +136,12 @@ html {
 .card-footer button:hover {
     background-color: #0056b3;
 }
-.modal,#addModal {
+.modal,#addModal,#picture-edit,#title-edit,#paragraph-edit ,#addModal2{
     display: none;
     position: absolute;
     left: 0;
     top: 0;
-   
+   z-index: 9999;
    
 }
 .addModal-content h2{
@@ -147,23 +157,44 @@ html {
 
 }
 .addModal-content{
-
   text-align: left;
   background-color:#080808ca;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 15px;
   padding-left: 30px;
   padding-right: 30px;
   border: 1px solid #888;
   width: 80%;
-  overflow: hidden;
+  overflow:hidden;
 }
-.modal-content h2{
+.addModal-content2 h2{
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+
+}
+.addModal-content2 label{
+  text-align: left;
+  color:#8a6252;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.addModal-content2{
+  text-align: left;
+  background-color:#080808ca;
+  padding: 10px;
+ margin-left: 166px;
+  border: 1px solid #888;
+  width: 50%;
+  overflow:hidden;
+}
+.modal-content h2,.modal-content1 h2,.modal-content2 h2,.modal-content3 h2,.modal-content4 h2,.addModal-content2 h2{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
-.modal-content label{
+.modal-content label,.modal-content1 label,.modal-content2 label,.modal-content3 label,.modal-content4 label,.addModal-content2 label{
+  font-size: 15px;
   text-align: left;
     color:#8a6252;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -177,16 +208,95 @@ html {
 .modal-content {
   text-align: left;
     background-color:#080808ca;
-    margin: 15% auto;
-    padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%;
-    overflow: hidden;
+    width: 70%;
+
 }
 
-.close,.close-btn {
+.modal-container2{
+  right: 0;
+  position: absolute;
+
+}
+.modal-container{
+left: 0;
+  position: absolute;
+}
+
+.modal-content1 {
+  text-align: left;
+    background-color:#080808ca;
+    margin-left:210px;
+
+ padding: 10px;
+  
+    border: 1px solid #888;
+    width: 45%;
+
+}
+.modal-content2 {
+  text-align: left;
+    background-color:#080808ca;
+    margin-left:440px ;
+  
+ padding: 10px;
+
+    border: 1px solid #888;
+    width: 33%;
+}
+.modal-content3 {
+  text-align: left;
+    background-color:#080808ca;
+ padding: 10px;
+ margin-left: -280px;
+ width:220px;
+
+    border: 1px solid #888;
+}.modal-content4 {
+  width: 80%;
+  text-align: left;
+    background-color:#080808ca;
+ padding: 10px;
+    border: 1px solid #888;
+    margin-left: -35px;
+
+}
+
+.new-class{
+  top: 50%;
+  left: 70%;
+ 
+  padding: 20px;
+  text-align: left;
+  background-color:#080808ca;
+  margin: 15% auto;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  width: calc(60% - 40px); /* Adjust width as needed */
+  margin-right: 20px;
+  position: absolute;
+  text-align: center;
+}
+
+.new-class h2{
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 10px;
+
+}
+.new-class label{
+  color:#8a6252;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
+.close,.close-btn,.close-picture,.close-paragraph,.close-title {
     color: #aaa;
     float: right;
     margin-top: -10px;
@@ -198,13 +308,19 @@ html {
 
 .close:hover,
 .close:focus,.close-btn:hover,
-.close-btn:focus{
+.close-btn:focus,.close-picture:hover,.close-picture:focus,.close-paragraph:hover,.close-paragraph:focus,.close-title:hover,.close-title:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-
-
+#picture-edit,#title-edit{
+  width: 65%;
+  margin-top: -350px;
+}
+#paragraph-edit{
+  width: 65%;
+  margin-top: -350px;
+}
   
   
   
@@ -604,13 +720,14 @@ a{
         }
         .swiper-container {
             width: 100%;
-            overflow: hidden; /* Prevent the slider from overflowing */
+            overflow: hidden;
         }
         
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            
+            position: relative; /* Prevent the slider from overflowing */
+
             width: 200px; /* Adjust the width of each slide */
         }
         .swiper-slide img {
@@ -667,17 +784,20 @@ a{
         }
         
         .ticket-box button {
-            background-color:#8a6252;
-            color: beige;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+          background-color:#8a6252;
+          font-size: 10px;
+          color: beige;
+          border: none;
+          padding: 7px 13px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          margin: 2px;
         }
-        
+      
         .ticket-box button:hover {
-            background-color: #06752d;
+            background-color:#867666bd;
+            text-decoration: underline;
         }
         .swiper-container p{
         font-size: 10px;
@@ -950,4 +1070,32 @@ textarea {
   top: 20px;
   left: 20px;
   align-items: center;
+}
+.toggle-buttons {
+  background-color: rgba(0, 0, 0, 0.2); /* Black background with low opacity */
+}
+
+.toggle {
+  display: block;
+}
+
+.option {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.form {
+  display: none;
+}
+
+.hidden {
+  display: none;
 }

@@ -77,9 +77,75 @@
         
               </div>
               <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">    The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament 
+                        to the city's rich cultural heritage. Housed in a neoclassical building, the museum 
+                        showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. 
+                         Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and 
+                         everyday objects, offering insight into the fusion of Greek and Egyptian cultures 
+                         during this era. 
+   
+                       Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and 
+                        intricately decorated pottery, reflecting the artistic prowess and cultural exchange that 
+                         flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations 
+                          of the city's harbor, shedding light on its maritime past. 
+                       
+                       As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, 
+                        where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of 
+                        royal portraits to the simplicity of household items, each artifact tells a story of the people who once 
+                         inhabited this cosmopolitan city. 
+                       
+                       The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy 
+                        of one of the ancient world's most influential cultural hubs. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
             </div>
         </div>
     </section>
@@ -97,43 +163,176 @@
              <div class="swiper-text">
                      <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
                         <p>The Statue of the god Hermanubis, a fusion deity combining the attributes of Hermes and Anubis, represents the cultural syncretism of Greco-Egyptian religion during the Ptolemaic period. This marble sculpture, dating back to the 2nd century AD, reflects the blending of Greek and Egyptian religious beliefs in ancient Alexandria, symbolizing the diverse cultural landscape of the city.</p>
-                    </div>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Hermanubis, a fusion deity combining the attributes of Hermes and Anubis, represents the cultural syncretism of Greco-Egyptian religion during the Ptolemaic period. This marble sculpture, dating back to the 2nd century AD, reflects the blending of Greek and Egyptian religious beliefs in ancient Alexandria, symbolizing the diverse cultural landscape of the city.  </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
           </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://egymonuments.gov.eg/media/8234/17_a_dsc2520.jpg"alt="Slide 2">
               <div class="swiper-text">
               <!--  <h2>The Narmer Palette</h2>-->
                 <p>The Statue of the god Serapis, crafted during the Ptolemaic period in Egypt, embodies the fusion of Greek and Egyptian religious traditions. Serapis, a deity created by Ptolemy I, symbolizes the synthesis of Egyptian Osiris and Greek Zeus. This monumental statue reflects the cultural exchange and religious syncretism characteristic of Hellenistic Alexandria.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Serapis, crafted during the Ptolemaic period in Egypt, embodies the fusion of Greek and Egyptian religious traditions. Serapis, a deity created by Ptolemy I, symbolizes the synthesis of Egyptian Osiris and Greek Zeus. This monumental statue reflects the cultural exchange and religious syncretism characteristic of Hellenistic Alexandria. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://live.staticflickr.com/65535/51935948687_430c28f122_c.jpg" alt="Slide 3">
               <div class="swiper-text">
                <!-- <h2>The Statue of Ramses II</h2>-->
                 <p>The Statue of the god Mars, an embodiment of strength and warfare in Roman mythology, stands as a testament to the military prowess and imperial aspirations of the Roman Empire. Crafted with exquisite detail, this statue symbolizes Roman military might and the valor of its soldiers.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Mars, an embodiment of strength and warfare in Roman mythology, stands as a testament to the military prowess and imperial aspirations of the Roman Empire. Crafted with exquisite detail, this statue symbolizes Roman military might and the valor of its soldiers. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
             <img class="image-margin" src="https://pbs.twimg.com/media/F8LYQhIXIAAlOv4.jpg" alt="Slide 3">
             <div class="swiper-text">
              <!-- <h2>The Statue of Khafre</h2>-->
               <p>The Statue of Emperor Diocletian, a formidable ruler of the Roman Empire known for his administrative reforms and efforts to stabilize the empire, depicts him in regal attire, embodying power and authority. Erected during his reign, it serves as a lasting tribute to his legacy and influence.</p>
-          </div>
-        </div> <div class="swiper-slide">
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">The Statue of Emperor Diocletian, a formidable ruler of the Roman Empire known for his administrative reforms and efforts to stabilize the empire, depicts him in regal attire, embodying power and authority. Erected during his reign, it serves as a lasting tribute to his legacy and influence.  </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div> <div class="swiper-slide">
           <img  src="https://preview.redd.it/i21grdx6bhm71.jpg?width=640&crop=smart&auto=webp&s=01f50cb18e0c2f8405036465f22f7f52c3781ef7" alt="Slide 3">
           <div class="swiper-text">
            <!-- <h2>The Bust of Nefertiti</h2>-->
             <p>The Statue of Apis Bull, revered in ancient Egyptian culture as a symbol of fertility and strength, represents the deity worshipped in Memphis. Adorned with sacred insignia, this monumental statue honors the divine creature and its role in religious ceremonies, reflecting the spiritual beliefs of the ancient Egyptians.</p>
-        </div>
-      
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8"> The Statue of Apis Bull, revered in ancient Egyptian culture as a symbol of fertility and strength, represents the deity worshipped in Memphis. Adorned with sacred insignia, this monumental statue honors the divine creature and its role in religious ceremonies, reflecting the spiritual beliefs of the ancient Egyptians.  </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
 </div>
           <!-- Add more swiper-slide divs for additional slides -->
-      </div>
-      <!-- Add pagination and navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                    <!-- Add more swiper-slide divs for additional slides -->
+                </div>
+                <!-- Add pagination and navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
     </section>
 
     

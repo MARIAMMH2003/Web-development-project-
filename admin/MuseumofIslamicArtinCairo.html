@@ -82,9 +82,75 @@
         
               </div>
               <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">  "Nestled amidst the bustling streets of Cairo, the Museum of Islamic Arts stands as a timeless 
+                        testament to Egypt's rich and vibrant Islamic heritage. Established in 1903, this architectural 
+                        gem serves as a sanctuary of cultural preservation and enlightenment, inviting visitors on a captivating 
+                         journey through the annals of Islamic civilization. 
+    
+                        Stepping through its majestic gates, visitors are greeted by a treasure trove of artifacts that 
+                         span centuries of Islamic history, art, and culture. From intricate textiles and dazzling ceramics to 
+                         exquisite metalwork and breathtaking manuscripts, each exhibit offers a  glimpse into the diverse and
+                         multifaceted world of Islamic creativity. 
+                        
+                        At the heart of the museum's collection lies a profound reverence for Islamic art and architecture.
+                        Intricately carved woodwork, mesmerizing geometric patterns, and majestic domes evoke the grandeur and splendor 
+                         of Islamic civilization, while delicate calligraphy adorning ancient manuscripts speaks to the profound spiritual 
+                         and intellectual legacy of the Islamic world. 
+                        
+                        Through immersive exhibitions and educational programs, the museum strives to foster a deeper understanding 
+                        and appreciation for the rich tapestry of Islamic culture. From lectures and workshops to guided tours and 
+                        interactive displays, visitors are offered a multitude of opportunities to explore and engage with the fascinating 
+                         history and artistry of the Islamic world. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
             </div>
         </div>
     </section>
@@ -102,43 +168,176 @@
              <div class="swiper-text">
                      <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
                         <p>This kind of table was commonly called a dinner chair by some scholars of Islamic Art, whereas it was most probably used as a Quran holder in the mosques or for carrying the candlesticks during prayer time on both sides of the Miḥrāb. It could have also been used for holding personal accessories. The table takes the shape of a hexagonal prism decorated with vegetal, geometric, animal, and epigraphic motifs quoting Quranic and invocational phrases. A small double-leafed door opens up on one of its sides and is decorated with vegetal elements.</p>
-                    </div>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8"> This kind of table was commonly called a dinner chair by some scholars of Islamic Art, whereas it was most probably used as a Quran holder in the mosques or for carrying the candlesticks during prayer time on both sides of the Miḥrāb. It could have also been used for holding personal accessories. The table takes the shape of a hexagonal prism decorated with vegetal, geometric, animal, and epigraphic motifs quoting Quranic and invocational phrases. A small double-leafed door opens up on one of its sides and is decorated with vegetal elements.  </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
           </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://www.miaegypt.org/en-us/museum/home/gallery-item-details/Upload_Product_Entity_Db_Product_MainImage_8a34cf3823326debe0a4bd52d37979d5.jpg"alt="Slide 2">
               <div class="swiper-text">
               <!--  <h2>The Narmer Palette</h2>-->
                 <p>The Golden Dinar, featuring Mamluk Sultan Baybars I's name, symbolizes economic prosperity and political power during his reign (1260-1277). These gold coins, circulated widely in the Islamic world, are prized artifacts reflecting the Mamluk era's sophistication and stability.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Golden Dinar, featuring Mamluk Sultan Baybars I's name, symbolizes economic prosperity and political power during his reign (1260-1277). These gold coins, circulated widely in the Islamic world, are prized artifacts reflecting the Mamluk era's sophistication and stability. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://www.miaegypt.org/en-us/museum/home/gallery-item-details/Upload_Product_Entity_Db_Product_MainImage_fd64eb232edf3d85acafb8d2811a8c93.jpg" alt="Slide 3">
               <div class="swiper-text">
                <!-- <h2>The Statue of Ramses II</h2>-->
                 <p>Prayer rug, wool and cotton with a central mihrab element and floral decoration.The central area of the prayer rug has a decorative element in the form of a mihrab surmounted by a crenelation as usual in the rugs manufactured in Ladik of Turkey. The frames are decorated with various foliate and geometric ornamentations.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> Prayer rug, wool and cotton with a central mihrab element and floral decoration.The central area of the prayer rug has a decorative element in the form of a mihrab surmounted by a crenelation as usual in the rugs manufactured in Ladik of Turkey. The frames are decorated with various foliate and geometric ornamentations. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
             <img class="image-margin" src="https://www.miaegypt.org/en-us/museum/home/gallery-item-details/Upload_Product_Entity_Db_Product_MainImage_852d8f59de1557241624cb5d31854252.jpg" alt="Slide 3">
             <div class="swiper-text">
              <!-- <h2>The Statue of Khafre</h2>-->
               <p>Ottoman ceramic products ranged from dishes, bowls, ewers and goblets, to perfume bottles, vases, pilgrimage flasks, and lamp suspension eggs. Ottoman ceramics reached high levels of precision and perfection. They became very popular on the European markets. The group from which this specimen derives is attributed to several Turkish cities such as Iznik, Kütahya, and Gallipoli (Canakkale). The artifacts in this group are decorated with under glaze polychromic motifs on white slip depicting tulips, cloves, and lancelet leaves. The vegetal motifs have played a vital role in the Ottoman Arts, and were frequently utilized on the Ottoman artistic products</p>
-          </div>
-        </div> <div class="swiper-slide">
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">Ottoman ceramic products ranged from dishes, bowls, ewers and goblets, to perfume bottles, vases, pilgrimage flasks, and lamp suspension eggs. Ottoman ceramics reached high levels of precision and perfection. They became very popular on the European markets. The group from which this specimen derives is attributed to several Turkish cities such as Iznik, Kütahya, and Gallipoli (Canakkale). The artifacts in this group are decorated with under glaze polychromic motifs on white slip depicting tulips, cloves, and lancelet leaves. The vegetal motifs have played a vital role in the Ottoman Arts, and were frequently utilized on the Ottoman artistic products  </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div><div class="swiper-slide">
           <img  src="https://www.miaegypt.org/en-us/museum/home/gallery-item-details/Upload_Product_Entity_Db_Product_MainImage_5b3e6e86c4fa053c1a0a4919edc2c2aa.jpg" alt="Slide 3">
           <div class="swiper-text">
            <!-- <h2>The Bust of Nefertiti</h2>-->
             <p>This honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din…1223AH.</p>
-        </div>
-      
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8"> This honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din…1223AH. </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
 </div>
           <!-- Add more swiper-slide divs for additional slides -->
-      </div>
-      <!-- Add pagination and navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                    <!-- Add more swiper-slide divs for additional slides -->
+                </div>
+                <!-- Add pagination and navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
     </section>
 
     

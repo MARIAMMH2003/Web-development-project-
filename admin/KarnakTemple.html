@@ -82,9 +82,78 @@
         
               </div>
               <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">    The Karnak Temple Complex stands as one of ancient Egypt's 
+                        most monumental and enduring architectural achievements. Situated near 
+                         Luxor on the east bank of the Nile, Karnak is a vast complex of temples,
+                          chapels, pylons, and other structures that once formed the religious 
+                           center of the ancient Egyptian capital of Thebes. 
+                       
+   
+                       Construction on Karnak began over 4,000 years ago during the Middle 
+                        Kingdom period and continued for over a millennium, with successive pharaohs 
+                         adding to its grandeur. Dedicated primarily to the worship of the god Amun, Karnak 
+                          was believed to be the earthly dwelling place of this important deity. 
+                       
+                       The complex is renowned for its colossal Hypostyle Hall, adorned with 
+                        towering columns intricately carved with hieroglyphs and depictions of 
+                        ancient gods and pharaohs. Other notable features include the Avenue of Sphinxes, 
+                         which once connected Karnak with the nearby Luxor Temple, and the Sacred Lake, used 
+                          for ritual purification ceremonies. 
+                       
+                       Today, Karnak Temple remains a testament to the ingenuity, spirituality, 
+                        and architectural prowess of ancient Egypt. Its towering pylons, majestic obelisks,
+                         and vast courtyards continue to awe visitors from around the world, offering 
+                          a window into the rich cultural heritage of this ancient civilization. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
             </div>
         </div>
     </section>
@@ -106,8 +175,33 @@
                             To the west of the reliefs, on the south end of the Second Pylon, is the Triumphal Inscription of Sheshonq I, the Shishak of the Old Testament. It celebrates the pharaoh's victory over Rehoboam of Judah, the son of Solomon.
                             
                             To the left is a large figure of Amun holding the curved sword of victory in his right hand, and in his left, cords binding five rows of captured cities, each represented by a circuit of walls bearing its name and the upper part of the body of a fettered prisoner</p>
-                    </div>
-          </div>
+                            <div class="buttons">
+                              <button class="edit-btn">Edit</button>
+                              <button class="delete-btn">Delete</button>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="modal-container">
+                      <div id="editModal1" class="modal">
+                          <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <h2>Edit Monument</h2>
+                              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                                  <label for="title">Discription:</label>
+                                  <textarea id="paragraph" rows="4" cols="8">Temple of Amun Reliefs.
+                            
+                                    To the west of the reliefs, on the south end of the Second Pylon, is the Triumphal Inscription of Sheshonq I, the Shishak of the Old Testament. It celebrates the pharaoh's victory over Rehoboam of Judah, the son of Solomon.
+                                    
+                                    To the left is a large figure of Amun holding the curved sword of victory in his right hand, and in his left, cords binding five rows of captured cities, each represented by a circuit of walls bearing its name and the upper part of the body of a fettered prisoner </textarea>                             <label for="image">Image:</label>
+                                  <input type="file" class="image" name="image">
+                                  <div class="image-preview2" id="image-preview">
+                                    <img class="preview" src="" alt="Image Preview">
+                                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                              </form>
+                          </div>
+                      </div>
+              </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://images.squarespace-cdn.com/content/v1/5918854fcd0f68c07c377c68/45fc5841-be1e-4692-a48f-f852403bc135/F0B61787-F33F-4624-8949-10A4DA510BD8.jpg "alt="Slide 2">
               <div class="swiper-text">
@@ -115,36 +209,150 @@
                 <p> the Great Hypostyle Hall, justifiably regarded as one of the wonders of the world.
 
                     This huge hall still exerts an overwhelming effect on everyone who enters. Measuring 103 meters by 52 meters, it covers an area of more than 5,000 square meters.</p>
-            </div>
+                    <div class="buttons">
+                      <button class="edit-btn">Edit</button>
+                      <button class="delete-btn">Delete</button>
+                  </div>
+              </div>
           </div>
+          <div class="modal-container">
+              <div id="editModal1" class="modal">
+                  <div class="modal-content1">
+                      <span class="close">&times;</span>
+                      <h2>Edit Monument</h2>
+                      <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                          <label for="title">Discription:</label>
+                          <textarea id="paragraph" rows="4" cols="8"> the Great Hypostyle Hall, justifiably regarded as one of the wonders of the world.
+
+                            This huge hall still exerts an overwhelming effect on everyone who enters. Measuring 103 meters by 52 meters, it covers an area of more than 5,000 square meters.  </textarea>                             <label for="image">Image:</label>
+                          <input type="file" class="image" name="image">
+                          <div class="image-preview2" id="image-preview">
+                            <img class="preview" src="" alt="Image Preview">
+                        </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                      </form>
+                  </div>
+              </div>
+      </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://live.staticflickr.com/4708/39787731051_f9f19df144_b.jpg" alt="Slide 3">
               <div class="swiper-text">
                <!-- <h2>The Statue of Ramses II</h2>-->
                 <p> you can see the magnificent colossal statue of and the goddess Amaunet, of reddish sandstone, dedicated by Tutankhamun, whose name was later chiseled out and replaced by that of his successor Horemheb.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> you can see the magnificent colossal statue of and the goddess Amaunet, of reddish sandstone, dedicated by Tutankhamun, whose name was later chiseled out and replaced by that of his successor Horemheb. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
             <img class="image-margin" src="https://i.pinimg.com/564x/d3/27/9b/d3279bff4d0de1883fc87d2021375f6b.jpg" alt="Slide 3">
             <div class="swiper-text">
              <!-- <h2>The Statue of Khafre</h2>-->
               <p>Ramses II, or Ramses the Great, ruled ancient Egypt during the New Kingdom period, renowned for his military campaigns, diplomatic skills, and prolific architectural endeavors, including the iconic temples of Abu Simbel and Karnak.</p>
-          </div>
-        </div> <div class="swiper-slide">
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8"> Ramses II, or Ramses the Great, ruled ancient Egypt during the New Kingdom period, renowned for his military campaigns, diplomatic skills, and prolific architectural endeavors, including the iconic temples of Abu Simbel and Karnak. </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div><div class="swiper-slide">
           <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Karnak_Temple%2C_Ram_Road.JPG/800px-Karnak_Temple%2C_Ram_Road.JPG" alt="Slide 3">
           <div class="swiper-text">
            <!-- <h2>The Bust of Nefertiti</h2>-->
             <p>The Avenue of Sphinxes at Karnak Temple is a majestic path lined with sphinx statues, symbolizing the link between the Luxor Temple and Karnak. It served as a ceremonial route for processions during ancient Egyptian festivals and rituals.</p>
-        </div>
-      
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8">The Avenue of Sphinxes at Karnak Temple is a majestic path lined with sphinx statues, symbolizing the link between the Luxor Temple and Karnak. It served as a ceremonial route for processions during ancient Egyptian festivals and rituals.  </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
 </div>
           <!-- Add more swiper-slide divs for additional slides -->
-      </div>
-      <!-- Add pagination and navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                    <!-- Add more swiper-slide divs for additional slides -->
+                </div>
+                <!-- Add pagination and navigation -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
     </section>
 
     

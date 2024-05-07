@@ -76,9 +76,73 @@
         
               </div>
               <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">  The Alexandria National Museum, founded in 2003, stands as a testament to the city's 
+                        rich and diverse history. Situated in a stunning Italianate-style building, it serves as a 
+                        treasure trove of artifacts, spanning various epochs and civilizations. From ancient 
+                        Egyptian relics to artifacts from the Greco-Roman period, Islamic art, 
+                         and Coptic treasures, the museum offers a comprehensive 
+                         journey through Alexandria's past. 
+  
+                       Visitors can immerse themselves in the maritime history of the city, exploring 
+                        exhibits on Alexandria's significance as a hub of trade and culture. The museum also 
+                         showcases the architectural wonders of Alexandria, highlighting its role as a melting pot 
+                          of different cultures and influences. 
+                       
+                       Through its carefully curated exhibits, the Alexandria National Museum provides insights 
+                        into the city's vibrant past, celebrating its cultural heritage and its contributions to human 
+                        civilization. Whether you're interested in ancient history, art, or archaeology, the museum offers 
+                        something for everyone, making it a must-visit destination for anyone seeking to explore the rich tapestry of 
+                        Alexandria's history. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
             </div>
         </div>
     </section>
@@ -93,11 +157,33 @@
       <div class="swiper-wrapper">
           <div class="swiper-slide">
               <img class="image-margin" src="https://i.pinimg.com/564x/53/22/39/532239114dbc0d9ba7573fae6babbd2e.jpg" alt="Slide 1">
+              
              <div class="swiper-text">
                      <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
                         <p> A regal depiction of the iconic queen, showcasing her beauty and power as the last ruler of the Ptolemaic Kingdom of Egypt.
                         </p>
-                    </div>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8"> A regal depiction of the iconic queen, showcasing her beauty and power as the last ruler of the Ptolemaic Kingdom of Egypt.  </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
           </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://live.staticflickr.com/1965/44610813004_5492bdaf2e_b.jpg "alt="Slide 2">
@@ -105,35 +191,142 @@
               <!--  <h2>The Narmer Palette</h2>-->
                 <p>Serapis was a Greco-Egyptian deity who was worshipped as a god of healing, fertility, and the afterlife. The statue is an important artifact reflecting the cultural fusion of the Hellenistic and Egyptian traditions during the Ptolemaic period.
 
-
-
-
-
-
                 </p>
-            </div>
+
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> Serapis was a Greco-Egyptian deity who was worshipped as a god of healing, fertility, and the afterlife. The statue is an important artifact reflecting the cultural fusion of the Hellenistic and Egyptian traditions during the Ptolemaic period.  </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
               <img class="image-margin" src="https://i.pinimg.com/564x/64/2c/51/642c519aed75edaa8ec6a97620cdfa74.jpg" alt="Slide 3">
               <div class="swiper-text">
                <!-- <h2>The Statue of Ramses II</h2>-->
                 <p> The Medusa Mosaic, is a captivating piece depicting the mythical figure of Medusa, known for her hair of snakes and petrifying gaze. This mosaic, intricately crafted with colorful tesserae, reflects the rich artistic heritage of the ancient Mediterranean world, showcasing both beauty and terror.</p>
-            </div>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
           </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Medusa Mosaic, is a captivating piece depicting the mythical figure of Medusa, known for her hair of snakes and petrifying gaze. This mosaic, intricately crafted with colorful tesserae, reflects the rich artistic heritage of the ancient Mediterranean world, showcasing both beauty and terror.  </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
           <div class="swiper-slide">
             <img class="image-margin" src="https://i.pinimg.com/564x/25/ef/ef/25efef146d698e53855e39ba09a992d9.jpg" alt="Slide 3">
             <div class="swiper-text">
              <!-- <h2>The Statue of Khafre</h2>-->
               <p>The Alexandria National Museum houses a collection of Egyptian sarcophagi, which were used to encase and preserve the bodies of the deceased in ancient Egypt. These elaborately decorated coffins often depict scenes from Egyptian mythology and religious beliefs, offering valuable insights into ancient Egyptian culture, burial practices, and beliefs about the afterlife. The sarcophagi serve as important artifacts for studying the funerary customs and religious beliefs of ancient Egypt.</p>
-          </div>
-        </div> <div class="swiper-slide">
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">The Alexandria National Museum houses a collection of Egyptian sarcophagi, which were used to encase and preserve the bodies of the deceased in ancient Egypt. These elaborately decorated coffins often depict scenes from Egyptian mythology and religious beliefs, offering valuable insights into ancient Egyptian culture, burial practices, and beliefs about the afterlife. The sarcophagi serve as important artifacts for studying the funerary customs and religious beliefs of ancient Egypt. </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div> <div class="swiper-slide">
           <img  src="https://st.depositphotos.com/8272416/55833/i/450/depositphotos_558332744-stock-photo-alexandria-egypt-november-2021-ancient.jpg" alt="Slide 3">
           <div class="swiper-text">
            <!-- <h2>The Bust of Nefertiti</h2>-->
             <p>Fine examples of Greek pottery adorned with intricate designs and mythological motifs, illustrating the artistic achievements of ancient Greek civilization.
             </p>
-        </div>
-      
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8">Fine examples of Greek pottery adorned with intricate designs and mythological motifs, illustrating the artistic achievements of ancient Greek civilization.  </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
+</div>
+<div class="swiper-slide">
+  <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+  <div class="swiper-text">
+   <!-- <h2>The Statue of Ramses II</h2>-->
+    <p> The monument discription goes here.</p>
+
+    <div class="buttons">
+      <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+    
+  </div>
+</div>
+</div>
+
+<div class="modal-container2">
+
+
+    <div id="addModal2" >
+      <div class="addModal-content2">
+      <span class="close-btn">&times;</span>
+      <h2>Add Monument</h2>
+      <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+          <label for="title">Discription:</label>
+          <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+          <input type="file" class="image" name="image">
+          <div class="image-preview2" id="image-preview">
+            <img class="preview" src="" alt="Image Preview">
+        </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+      </form>
+  </div></div>
+</div></div></div>
 </div>
           <!-- Add more swiper-slide divs for additional slides -->
       </div>
@@ -184,7 +377,7 @@
                       <p>
                         Captivating artifacts, interactive displays, and engaging tours.
                       </p>
-                      <h4>- Mariam Most</h4>
+                      <h4>- Zeina Mohamed</h4>
                     </div>
                   </div>
                 </div>
@@ -201,33 +394,32 @@
                     <span><i class="ri-double-quotes-l"></i></span>
                     <div class="card__details">
                       <p>
-                        Immersive exhibits, knowledgeable guides, and rich historical insights.
+                        Well-curated collections, stunning architecture, and memorable experiences.
                       </p>
-                      <h4>- Zeina Mohamed</h4>
+                      <h4>- Mariam shaddad</h4>
                     </div>
                   </div>
                 </div>
-              
 	<div class="card">
 	
-	    
-    <div class="rating">
-      <ion-icon name="star"></ion-icon>
-      <ion-icon name="star"></ion-icon>
-      <ion-icon name="star"></ion-icon>
-      <ion-icon name="star"></ion-icon>
-      <ion-icon name="star"></ion-icon>
-    </div>
-    <div class="card__content">
-      <span><i class="ri-double-quotes-l"></i></span>
-      <div class="card__details">
-        <p>
-          Well-curated collections, stunning architecture, and memorable experiences.
-        </p>
-        <h4>- Mariam Shaddad </h4>
-      </div>
-    </div>
-  </div>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+              </div>
+         </div>
       
 
   
@@ -260,7 +452,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="admin"></script>
+    <script src="admin.js"></script>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" >
     </script>
     <script src="map-testing.js"></script>

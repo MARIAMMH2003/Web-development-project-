@@ -172,6 +172,43 @@ document.addEventListener("click", function(event) {
         addModal.style.display = "none"; 
     }
 });
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("close-btn")) {
+        var addModal = document.getElementById("addModal2");
+        addModal.style.display = "none"; 
+    }
+});
+
+document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("close-picture")) {
+        pictureModal = document.getElementById("picture-edit");
+        pictureModal.style.display = "none"; 
+    }
+});document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("close-paragraph")) {
+        var paragraphModal = document.getElementById("paragraph-edit");
+        paragraphModal.style.display = "none"; 
+    }
+});document.addEventListener("click", function(event) {
+    if (event.target.classList.contains("close-title")) {
+        var titleModal = document.getElementById("title-edit");
+        titleModal.style.display = "none"; 
+    }
+});
+function editPicturePopup() {
+    var editPicture = document.getElementById("picture-edit");
+
+    editPicture.style.display = "block";
+}
+function editParagraphPopup() {
+    var editParagraph = document.getElementById("paragraph-edit");
+
+    editParagraph .style.display = "block";
+}function ediTitlePopup() {
+    var editTitle = document.getElementById("title-edit");
+
+    editTitle.style.display = "block";
+}
 
 
 function openAddPopup() {
@@ -180,9 +217,11 @@ function openAddPopup() {
     addModal.style.display = "block";
 }
 
+function openAddPopupMonuments() {
+    var addModal2 = document.getElementById("addModal2");
 
-
-
+    addModal2.style.display = "block";
+}
 editBtns.forEach(function(btn, index) {
     btn.addEventListener("click", function() {
         modals[index].style.display = "block";
@@ -221,6 +260,27 @@ fileInputs.forEach(function(input, index) {
         reader.readAsDataURL(file);
     });
 });
+    function handleImagePreview() {
+        var preview = document.querySelectorAll(".preview");
+        var inputs = document.querySelectorAll(".image");
+
+        inputs.forEach(function(input, index) {
+            input.addEventListener("change", function() {
+                var file = this.files[0];
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    preview[index].src = e.target.result;
+                };
+
+                reader.readAsDataURL(file);
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        handleImagePreview();
+    });
 
 var museumsSlider = new Swiper('.museums-slider', {
     effect: 'coverflow',
@@ -326,3 +386,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+  
+ 
+
