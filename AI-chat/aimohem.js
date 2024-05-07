@@ -16,22 +16,6 @@ login.addEventListener('click',()=>{
 });
 
 
-const passw = document.getElementById('pass');
-const conf = document.getElementById('confirm');
-function validatePassword() {
-    if(conf.value==""){
-        conf.setCustomValidity("fill this field"); 
-    }
-    else if (passw.value !== conf.value) {
-        conf.setCustomValidity("Passwords do not match");
-    } else {
-        conf.setCustomValidity('');
-    }
-  
-}
-
-passw.addEventListener('change', validatePassword);
-conf.addEventListener('keyup', validatePassword);
 
 
 
@@ -41,6 +25,8 @@ event.preventDefault();
 
 const N = document.getElementById("name");
 const E = document.getElementById("email");
+const pass = document.getElementById('pass');
+const conf = document.getElementById('confirm');
 const useradio = document.getElementsByName("usertype");
 
 
@@ -74,11 +60,47 @@ function validateForm() {
     else {
         E.setCustomValidity('');
     }
+    const emailExists = accounts.some(account => account.email === E.value);
+    if (emailExists) {
+        E.setCustomValidity("Email already registered");
+        return false;
+    } else {
+        E.setCustomValidity('');
+    }
+    if (pass.value.trim() === "") {
+        pass.setCustomValidity("Please enter a password");
+        return false;
+    } else {
+        pass.setCustomValidity('');
+    }
+    if (pass.value.length < 4) {
+        pass.setCustomValidity("Password must be at least 4 characters long");
+        return false;
+    } else {
+        pass.setCustomValidity('');
+    }
+
+    // Validate confirm password
+    if (conf.value.trim() === "") {
+        conf.setCustomValidity("Please confirm your password");
+        return false;
+    } else {
+        conf.setCustomValidity('');
+    }
+    if (conf.value !== pass.value) {
+        conf.setCustomValidity("Passwords do not match");
+        return false;
+    } else {
+        conf.setCustomValidity('');
+    }
+
    
     return true;
 }
 N.addEventListener('change', validateForm);
 E.addEventListener('keyup', validateForm);
+pass.addEventListener('change', validateForm);
+conf.addEventListener('keyup', validateForm);
 
 // radio validation
 let usertype = false;
@@ -93,6 +115,7 @@ if (!usertype) {
     return;
 }
 
+
 if (!validateForm()) {
     return; 
 }
@@ -100,7 +123,7 @@ if (!validateForm()) {
 
 // saving the user in object array
 const name=document.getElementById('name').value;
-const email=document.getElementById('email').value;
+var email=document.getElementById('email').value;
 const pass_=document.getElementById('pass').value;
 
 const useraccount={
@@ -146,6 +169,8 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
         } else {
             loginpass.setCustomValidity('');
         }
+
+        
         return true;
     }
     loginemail.addEventListener('change', validateForm);
@@ -169,6 +194,10 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
         } else if (userType === 'tour-guide') {
             window.location.href = "guide_home.html";
         }
+        else if(found.email === "zeinamabrouk@gmail.com" && found.password === "123456")
+            {
+                window.location.href = "Admin.html";
+            }
     } else {
         alert("Email or password is incorrect.");
     }
