@@ -4,7 +4,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;/* aligns all content in the center of the page*/
-    background-color: rgb(126, 229, 229);
+    background-color: black;
 }
 .container{
     position: relative;
