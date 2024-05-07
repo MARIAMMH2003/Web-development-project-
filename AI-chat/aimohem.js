@@ -190,13 +190,13 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
             }
         }
         if (userType === 'client') {
-            window.location.href = "client_home.html";
+            window.location.href = "index.html";
         } else if (userType === 'tour-guide') {
-            window.location.href = "guide_home.html";
+            window.location.href = "TourGuide.html";
         }
-        else if(found.email === "zeinamabrouk@gmail.com" && found.password === "123456")
+        else if(found.email === "zeinamabrouk@gmail.com" && found.password === "1234")
             {
-                window.location.href = "Admin.html";
+                window.location.href = "Tourifyad.html";
             }
     } else {
         alert("Email or password is incorrect.");
