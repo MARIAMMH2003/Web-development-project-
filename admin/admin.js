@@ -9,7 +9,7 @@ function dropImage(event) {
     reader.onload = function(event) {
         var preview = document.getElementById('preview');
         preview.src = event.target.result;
-        // Display the image instantly in the instant-preview-card
+   
         var instantPreview = document.getElementById('instant-image-preview');
         instantPreview.innerHTML = `<img src="${event.target.result}" alt="Instant Preview">`;
     };

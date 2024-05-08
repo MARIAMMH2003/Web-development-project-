@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ html {
     }
   }
   
-/* Styling for Admin Panel */
+
 .admin-container {
     background-color: black;
     display: flex;
@@ -43,7 +43,7 @@ html {
 }
 
 .card {
-    background-color: rgba(128, 128, 128, 0.3); /* Transparent gray background */
+    background-color: rgba(128, 128, 128, 0.3); 
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     padding: 20px;
@@ -144,6 +144,7 @@ html {
    z-index: 9999;
    
 }
+
 .addModal-content h2{
   text-align: center;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -183,17 +184,17 @@ html {
   text-align: left;
   background-color:#080808ca;
   padding: 10px;
- margin-left: 166px;
+ margin-left: 165%;
   border: 1px solid #888;
-  width: 50%;
+  width: 80%;
   overflow:hidden;
 }
-.modal-content h2,.modal-content1 h2,.modal-content2 h2,.modal-content3 h2,.modal-content4 h2,.addModal-content2 h2{
+.modal-content0 h2,.modal-content h2,.modal-content1 h2,.modal-content2 h2,.modal-content3 h2,.modal-content4 h2,.addModal-content2 h2{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
-.modal-content label,.modal-content1 label,.modal-content2 label,.modal-content3 label,.modal-content4 label,.addModal-content2 label{
+.modal-content0 label,.modal-content label,.modal-content1 label,.modal-content2 label,.modal-content3 label,.modal-content4 label,.addModal-content2 label{
   font-size: 15px;
   text-align: left;
     color:#8a6252;
@@ -220,46 +221,72 @@ html {
 
 }
 .modal-container{
-left: 0;
-  position: absolute;
-}
+   left: 0;
+   position: absolute;
 
-.modal-content1 {
+}
+.modal-container0{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+ z-index: 9999;}
+ .modal-content0{
+  text-align: left;
+  background-color:#080808ca;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 100%;
+ }
+.modal-content {
   text-align: left;
     background-color:#080808ca;
-    margin-left:210px;
+    margin-left:0%;
 
  padding: 10px;
   
     border: 1px solid #888;
-    width: 45%;
+    width: 80%;
 
+}
+.modal-content1{
+  text-align: left;
+  background-color:#080808ca;
+  margin-left:80% ;
+
+padding: 10px;
+
+  border: 1px solid #888;
+  width: 80%;
 }
 .modal-content2 {
   text-align: left;
     background-color:#080808ca;
-    margin-left:440px ;
+    margin-left:165% ;
   
  padding: 10px;
 
     border: 1px solid #888;
-    width: 33%;
+    width: 80%;
 }
 .modal-content3 {
   text-align: left;
-    background-color:#080808ca;
- padding: 10px;
- margin-left: -280px;
- width:220px;
+  background-color:#080808ca;
+  margin-right:20% ;
 
-    border: 1px solid #888;
-}.modal-content4 {
+padding: 10px;
+
+  border: 1px solid #888;
   width: 80%;
+}.modal-content4 {
   text-align: left;
-    background-color:#080808ca;
- padding: 10px;
-    border: 1px solid #888;
-    margin-left: -35px;
+  background-color:#080808ca;
+  margin-left:80% ;
+
+padding: 10px;
+
+  border: 1px solid #888;
+  width: 85%;
 
 }
 
@@ -276,7 +303,7 @@ left: 0;
   padding-right: 30px;
   border: 1px solid #888;
   width: 80%;
-  width: calc(60% - 40px); /* Adjust width as needed */
+  width: calc(60% - 40px); 
   margin-right: 20px;
   position: absolute;
   text-align: center;
@@ -485,10 +512,10 @@ transform: scale(1.1);
 .swiper-button-prev {
   width: 50px;
   height: 50px;
-  background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
-  border-radius: 50%; /* Makes the arrows circular */
-  border: 2px solid black; /* Border color */
-  color: beige; /* Arrow color */
+  background-color:  rgba(0, 0, 0, 0.8);
+  border-radius: 50%; 
+  border: 2px solid black; 
+  color: beige; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,8 +532,8 @@ font-size: 10px;
   
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
-  color:black; /* Hover color */
+  background-color:rgba(41, 41, 31, 0.8); 
+  color:black; 
 }
 
 
@@ -516,7 +543,7 @@ h1{
 }
 h2{
    font-size:  20px;
-   /*background-color: #e6d8af;*/
+  
    color: beige;
 }
 h3{
@@ -561,7 +588,7 @@ a:hover{
     text-decoration: underline;
 }
 
-/* Main content styles */
+
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -569,9 +596,9 @@ a:hover{
 }
 #bar {
     position: fixed;
-    top: calc(150vh - 50px); /* Adjust the value according to the height of the navigation bar */
+    top: calc(150vh - 50px); 
     width: 100%;
-    background:linear-gradient( to right, beige,rgb(199, 187, 159) ); /* Adjust background color as needed */
+    background:linear-gradient( to right, beige,rgb(199, 187, 159) ); 
     z-index: 9999;
     height: 20px;
   
@@ -597,10 +624,9 @@ a:hover{
     font-size: 10px;
 }
 
-/* Blurry container styles */
 .blurry-container {
     position: relative;
-    height: 350px; /* Adjust height as needed */
+    height: 350px; 
     margin-bottom: 20px;
     text-align: left;
   
@@ -614,7 +640,7 @@ a:hover{
     width: 100%;
     height: 100%;
     background-size: cover;
-    filter: blur(5px); /* Adjust blur effect */
+    filter: blur(5px);
 }
 
 .text-overlay {
@@ -636,7 +662,6 @@ a:hover{
 
 
 
-/* Upcoming events styles */
 .reviews-section {
     background-color:linear-gradient( to right, beige,rgb(199, 187, 159) );
     padding: 20px;
@@ -644,7 +669,7 @@ a:hover{
     height: 550px;
 }
 
-/* Footer styles */
+
 
 hr{
     color:rgba(167, 143, 113, 0.6);
@@ -654,24 +679,18 @@ hr{
 
 }
 .before-hr {
-            display: inline-block; /* Make the element inline */
-            margin-left: 44px; /* Add some spacing between the text and the hr */
+            display: inline-block; 
             padding-top: 20px;
             color:  #867666;
             
         }
 
-#line {
-            display: inline-block; /* Make the hr inline */
-            width: 75%; /* Adjust the width as needed */
-            vertical-align: middle; /* Align the hr vertically with the text */
-        
-        }
+
         .image-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
 }
 
@@ -681,7 +700,7 @@ hr{
 }
 
 .image-container img {
-    width: 200px; /* Adjust as needed */
+    width: 200px; 
     height: auto;
 }
 
@@ -700,14 +719,12 @@ a{
     text-decoration: none;
 }
 
-/*===Product-slider=================================*/
 
-        /* Add your custom CSS styles here */
         .famous-monuments {
             position: relative;
             width: 100%;
             overflow: hidden;
-            height: 650px;
+            height: 680px;
          
             background-color: #000000;
             font-family: Arial, Helvetica, sans-serif;
@@ -715,9 +732,11 @@ a{
         
             font-style: bold;
             font-size: 25px;
-            padding: 10px;
+            font-style: italic;
            
         }
+      
+
         .swiper-container {
             width: 100%;
             overflow: hidden;
@@ -726,9 +745,9 @@ a{
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            position: relative; /* Prevent the slider from overflowing */
+            position: relative;
 
-            width: 200px; /* Adjust the width of each slide */
+            width: 200px; 
         }
         .swiper-slide img {
             width: 100%;
@@ -753,7 +772,7 @@ a{
        
         .section-content {
             padding: 20px;
-            position: relative; /* Add relative positioning to the section content */
+            position: relative; 
         }
         
         .ticket-box {
@@ -763,7 +782,7 @@ a{
             padding: 40px;
             margin-top: 0;
             display: inline-block;
-            width: calc(30% - 20px); /* Adjust width as needed */
+            width: calc(30% - 20px); 
             margin-right: 20px;
             position: absolute;
             top: -220px;            right: 0;
@@ -896,8 +915,8 @@ a{
          }
          
          #map {
-             width: 90%; /* Set the width of the map to fill the container */
-             height: 200px; /* Set the height of the map to fill the container */
+             width: 90%; 
+             height: 200px; 
              justify-content: center;
          }
         
@@ -914,24 +933,6 @@ a{
         }
         }
         
-        
-        
-        
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-
-
-
-
-
-
-header {
-  background-image: url("assets/bg.png");
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-}
 
 .container-comment {
   max-width: 1200px;
@@ -1034,20 +1035,20 @@ header {
 
 .card form {
   display: flex;
-  flex-direction: column; /* Ensure child elements stack vertically */
+  flex-direction: column; 
 }
 .buttons{
   text-align: left;
   align-self: left;
 }
 textarea {
-  width: 100%; /* Take up the whole width of the container */
-  margin-bottom: 10px; /* Add some spacing between textarea and buttons */
+  width: 100%; 
+  margin-bottom: 10px;
 }
 
 .btn-group {
   display: flex;
-  justify-content: left; /* Align  */
+  justify-content: left; 
 }
 #searchInput {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));
@@ -1072,7 +1073,7 @@ textarea {
   align-items: center;
 }
 .toggle-buttons {
-  background-color: rgba(0, 0, 0, 0.2); /* Black background with low opacity */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .toggle {

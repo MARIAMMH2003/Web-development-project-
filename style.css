@@ -158,10 +158,10 @@ transform: scale(1.1);
 .swiper-button-prev {
   width: 50px;
   height: 50px;
-  background-color:  rgba(0, 0, 0, 0.8);; /* Background color of the arrows */
-  border-radius: 50%; /* Makes the arrows circular */
-  border: 2px solid black; /* Border color */
-  color: beige; /* Arrow color */
+  background-color:  rgba(0, 0, 0, 0.8);; 
+  border-radius: 50%;
+  border: 2px solid black;
+  color: beige;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,8 +178,8 @@ font-size: 10px;
   
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color:rgba(41, 41, 31, 0.8); /* Hover background color */
-  color:black; /* Hover color */
+  background-color:rgba(41, 41, 31, 0.8); 
+  color:black; 
 }
 
 
@@ -240,7 +240,6 @@ a:hover{
     text-decoration: underline;
 }
 
-/* Main content styles */
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -248,9 +247,9 @@ a:hover{
 }
 #bar {
     position: fixed;
-    top: calc(150vh - 50px); /* Adjust the value according to the height of the navigation bar */
+    top: calc(150vh - 50px); 
     width: 100%;
-    background:linear-gradient( to right, beige,rgb(199, 187, 159) ); /* Adjust background color as needed */
+    background:linear-gradient( to right, beige,rgb(199, 187, 159) ); 
     z-index: 9999;
     height: 20px;
   
@@ -276,10 +275,10 @@ a:hover{
     font-size: 10px;
 }
 
-/* Blurry container styles */
+
 .blurry-container {
     position: relative;
-    height: 350px; /* Adjust height as needed */
+    height: 350px;
     margin-bottom: 20px;
     text-align: left;
   
@@ -293,7 +292,7 @@ a:hover{
     width: 100%;
     height: 100%;
     background-size: cover;
-    filter: blur(5px); /* Adjust blur effect */
+    filter: blur(5px); 
 }
 
 .text-overlay {
@@ -315,7 +314,7 @@ a:hover{
 
 
 
-/* Upcoming events styles */
+
 .reviews-section {
     background-color:linear-gradient( to right, beige,rgb(199, 187, 159) );
     padding: 20px;
@@ -323,7 +322,7 @@ a:hover{
     height: 550px;
 }
 
-/* Footer styles */
+
 
 hr{
     color:rgba(167, 143, 113, 0.6);
@@ -333,17 +332,18 @@ hr{
 
 }
 .before-hr {
-            display: inline-block; /* Make the element inline */
-            margin-left: 44px; /* Add some spacing between the text and the hr */
+            display: inline-block; 
+            margin-left: 44px;
             padding-top: 20px;
             color:  #867666;
+            font-style: italic;
             
         }
 
 #line {
-            display: inline-block; /* Make the hr inline */
-            width: 75%; /* Adjust the width as needed */
-            vertical-align: middle; /* Align the hr vertically with the text */
+            display: inline-block; 
+            width: 75%; 
+            vertical-align: middle;
         
         }
         .image-gallery {
@@ -360,7 +360,7 @@ hr{
 }
 
 .image-container img {
-    width: 200px; /* Adjust as needed */
+    width: 200px; 
     height: auto;
 }
 
@@ -379,9 +379,7 @@ a{
     text-decoration: none;
 }
 
-/*===Product-slider=================================*/
 
-        /* Add your custom CSS styles here */
         .famous-monuments {
             position: relative;
             width: 100%;
@@ -399,14 +397,14 @@ a{
         }
         .swiper-container {
             width: 100%;
-            overflow: hidden; /* Prevent the slider from overflowing */
+            overflow: hidden; 
         }
         
         .swiper-slide {
             text-align: center;
             font-size: 18px;
             
-            width: 200px; /* Adjust the width of each slide */
+            width: 200px; 
         }
         .swiper-slide img {
             width: 100%;
@@ -431,7 +429,7 @@ a{
        
         .section-content {
             padding: 20px;
-            position: relative; /* Add relative positioning to the section content */
+            position: relative;
         }
         
         .ticket-box {
@@ -441,7 +439,7 @@ a{
             padding: 40px;
             margin-top: 0;
             display: inline-block;
-            width: calc(30% - 20px); /* Adjust width as needed */
+            width: calc(30% - 20px); 
             margin-right: 20px;
             position: absolute;
             top: -220px;            right: 0;
@@ -571,8 +569,8 @@ a{
          }
          
          #map {
-             width: 90%; /* Set the width of the map to fill the container */
-             height: 200px; /* Set the height of the map to fill the container */
+             width: 90%; 
+             height: 200px;
              justify-content: center;
          }
         
@@ -709,17 +707,17 @@ header {
 
 .card form {
   display: flex;
-  flex-direction: column; /* Ensure child elements stack vertically */
+  flex-direction: column; 
 }
 
 textarea {
-  width: 100%; /* Take up the whole width of the container */
-  margin-bottom: 10px; /* Add some spacing between textarea and buttons */
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .btn-group {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-end; 
 }
 #searchInput {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));
