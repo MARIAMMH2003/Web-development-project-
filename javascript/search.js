@@ -437,7 +437,22 @@ function search() {
         searchResults.appendChild(listItem);
     });
 }
+document.getElementById("search-input").addEventListener("input", function() {
+    const query = this.value.trim();
+    const searchResults = document.getElementById("search-results-container");
+    
+    if (query === "") {
+        searchResults.innerHTML = ""; 
+    } else {
+        search(); 
+    }
+});
+
+document.getElementById("search-link").addEventListener("click", function() {
+    const searchContainer = document.getElementById("search-container");
+    searchContainer.style.display = searchContainer.style.display === "none" ? "block" : "none";
+});
 
 document.getElementById("search-button").addEventListener("click", function() {
     search();
-});
+});                                         
