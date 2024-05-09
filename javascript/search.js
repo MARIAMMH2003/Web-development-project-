@@ -438,7 +438,9 @@ function search() {
     });
 }
 document.getElementById("search-input").addEventListener("input", function() {
-    const query = this.value.trim();
+    const searchContainer = document.getElementById("search-container");
+    searchContainer.style.display = "block"; 
+    const query = document.getElementById("search-input").value.trim();
     const searchResults = document.getElementById("search-results-container");
     
     if (query === "") {
@@ -455,4 +457,4 @@ document.getElementById("search-link").addEventListener("click", function() {
 
 document.getElementById("search-button").addEventListener("click", function() {
     search();
-});                                         
+});
