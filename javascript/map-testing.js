@@ -70,43 +70,8 @@ marker.setMap(null);
 
     markers.push(marker);
 
-//     if(property.imageIcon){
-//         marker.setIcon(property.imageicon);
-//     }
-
-//     if(property.content){
-//     const detailwindow=new google.maps.InfoWindow({
-//     content:property.content
-//     });
-
-//     marker.addListener("click",()=>{
-//         detailwindow.open(map,marker);
-//         slider();
-//     })
-    
-//     marker.addListener("mouseout",()=>{
-//         detailwindow.close(map,marker);
-//     })
-// }
-
 }
 
-
-// var myIndex = 0;
-// 		function slider() {
-// 			var images = document.getElementsByClassName("mySlidespic","mySlidespic");
-// 			for (var i = 0; i < images.length; i++) {
-// 				images[i].style.display = "none";
-// 			}
-
-// 			if (myIndex > images.length - 1) {
-// 				myIndex = 0;
-// 			}
-// 			images[myIndex].style.display = "block";
-// 			myIndex++;
-// 			setTimeout(slider, 2000); // Change image every 2 seconds
-// 		}
-	
 
         function addMarkerAndCenter(location) {
             addMarker({ location: location });
@@ -140,7 +105,7 @@ links.forEach(function(link) {
 document.addEventListener('DOMContentLoaded', function() {
     const search = document.getElementById('searchInput');
     const museums = document.querySelectorAll('.location');
-
+    if(search){
     search.addEventListener('input', function() {
         const searchTerm = search.value.toLowerCase().trim();
         museums.forEach(museum => {
@@ -152,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}
 });
 
 
