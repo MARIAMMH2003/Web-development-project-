@@ -9,7 +9,7 @@ scroll-behavior: smooth;
 
 
 
-section{
+.section-categories{
 
     padding: 100px 40px;
 
@@ -340,135 +340,114 @@ margin-left: 60px;
 }
 
 
-.nav1{
-
-  height: 100%;
-  width: 220px;
-  position: absolute;
-  background-color: #000000;
-  transition: 0.4s ease;
- transform: translateX(-220px) ;
-
+.nav1
+{
+    height: 100%;
+    width: 220px;
+    position: absolute;
+    background-color: #000000;
+    transition: 0.4s ease;
+    transform: translateX(-220px);
+    left: 0; 
+    top: 0;
+    display: none;
+} 
+.n
+{
+    color:rgb(185, 118, 16);
+    background: #000000;
+    font-weight: 2000;
+    font-size: 3em;
+    text-align: right;
+    padding: 10px 10px;
+    padding-right: 20px;
+    pointer-events: none;
+}  
+ul li .a-toggle
+{
+    color: #ffffff;
+    background: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.05s ease-out;
 }
-
-.n{
-
-  color:rgb(185, 118, 16);
-  font-weight: 2000;
-  font-size: 3em;
-  text-align: right;
-  padding: 10px 0px;
-  padding-right: 30px;
-  pointer-events: none;
+ul li:hover .a-toggle
+{
+    color: #ffffff;
+    background-color:rgb(185, 118, 16) ;
 }
-
-ul li a{
-
-  color: #ffffff;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.4em;
-  padding: 5px 0;
-  display: block;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: 0.05s ease-out ;
-
+input
+{
+    display: none;
+    visibility: hidden;
 }
-
-
-ul li:hover a{
-
-  color: #ffffff;
-  background-color:rgb(185, 118, 16) ;
-  
+.toggle
+{
+    position:absolute;
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    top: 10px;
+    left:15px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
-
-input{
-
-display: none;
-visibility: hidden;
+.toggle .common
+{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(185, 118, 16);
+    border-radius: 50px;
+    transition: 0.3s ease;
 }
-
-.toggle{
-
-  position:absolute;
-  height: 30px;
-  width: 30px;
-  z-index: 1;
-  top: 29px;
-  left:15px;
-  
-  cursor: pointer;
-  border-radius: 3px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-
+.toggle .top_line
+{
+   top: 30%;
+   left:50%;
+   transform: translate(-50%,-50%);
 }
-
-.toggle .common{
-
-  position: absolute;
-  height: 2px;
-  width: 20px;
-  background-color: rgb(185, 118, 16);
-  border-radius: 50px;
-  transition: 0.3s ease;
+.toggle .mid_line
+{
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
-
-.toggle .top_line{
-
- top: 30%;
- left:50%;
- transform: translate(-50%,-50%);
-
+.toggle .bottom_line
+{
+    top: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
-
-.toggle .mid_line{
-
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  
+input:checked ~ .toggle .top_line
+{
+    left:2px;
+    top:14px;
+    width:25px;
+    transform: rotate(45deg);
 }
-
-.toggle .bottom_line{
-
-  top: 70%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  
+input:checked ~ .toggle .mid_line
+{
+   left:2px;
+   top:14px;
+   width:25px;
+   transform: rotate(45deg);
 }
-input:checked ~ .toggle .top_line{
-
-  left:2px;
-  top:14px;
-  width:25px;
-  transform: rotate(45deg);
-
+input:checked ~ .toggle .bottom_line
+{
+   left:2px;
+   top:14px;
+   width:25px;
+   transform: rotate(45deg);
 }
-
-input:checked ~ .toggle .mid_line{
-
- left:2px;
- top:14px;
- width:25px;
- transform: rotate(45deg);
-
-}
-
-
-input:checked ~ .toggle .bottom_line{
-
- left:2px;
- top:14px;
- width:25px;
- transform: rotate(45deg);
-
-}
-
-input:checked ~ .nav1{
-
-  transform: translateX(0);
-
+input:checked ~ .nav1
+{
+    transform: translateX(0);
 }
