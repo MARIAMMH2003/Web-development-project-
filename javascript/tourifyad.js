@@ -48,9 +48,9 @@ cards.forEach((card) => {
     card.addEventListener('mouseleave', removeFunctionDescription);
 });
 function openAdminPage() {
-    window.location.href = 'admin.html';
+    window.location.href = '../html/admin.html';
 }
 function openHighPage() {
-    window.location.href = 'admin1.html';
+    window.location.href = '../html/admin1.html';
 }
 updateSliderPosition();
