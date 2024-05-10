@@ -594,18 +594,3 @@ footer a
 .image-container img {
     width: 100px; 
 }
-@media screen and (max-width: 768px) {
-    nav {
-        text-align: center;
-    }
-
-    .nav-a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    .lll {
-        float: none;
-        margin: auto;
-    }
-}
