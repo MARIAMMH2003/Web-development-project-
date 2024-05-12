@@ -1,36 +1,36 @@
 var modals = document.querySelectorAll(".exm");
 var spans = document.querySelectorAll(".close");
-var editBtns = document.querySelectorAll(".edit-button");
+var editButtons = document.querySelectorAll(".edit-button");
 
-var closeBtn = document.querySelector(".close-btn");
-
+var closeBtn = document.querySelector(".close-button");
+var delets =  document.querySelector(".delete-button");
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close-button")) {
-        var addModal = document.getElementById("exmp");
-        addModal.style.display = "none"; 
+        var addMod = document.getElementById("exmp");
+        addMod.style.display = "none"; 
     }
 });
 
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close-picture")) {
-        pictureModal = document.getElementById("picture-edit");
-        pictureModal.style.display = "none"; 
+        pictureMod = document.getElementById("picture-edit");
+        pictureMod.style.display = "none"; 
     }
 });
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close-paragraph")) {
-        var paragraphModal = document.getElementById("paragraph-edit");
-        paragraphModal.style.display = "none"; 
+        var paragraphMod = document.getElementById("paragraph-edit");
+        paragraphMod.style.display = "none"; 
     }
 
 });
 
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains("close-title")) {
-        var titleModal = document.getElementById("title-edit");
-        titleModal.style.display = "none"; 
+        var titleMod = document.getElementById("title-edit");
+        titleMod.style.display = "none"; 
     }
 });
 
@@ -46,15 +46,16 @@ function ediTitlePopup() {
 
 
 function openAddPopup() {
-    var addModal = document.getElementById("exmp");
-    addModal.style.display = "block";
+    var addMod = document.getElementById("exmp");
+    addMod.style.display = "block";
 }
 
 
-editBtns.forEach(function(btn, index) {
+editButtons.forEach(function(btn, index) {
     btn.addEventListener("click", function() {
         modals[index].style.display = "block";
     });
+    
 });
 
 
@@ -66,9 +67,9 @@ spans.forEach(function(span, index) {
 });
 
 window.onclick = function(event) {
-    modals.forEach(function(modal) {
-        if (event.target == modal ) {
-            modal.style.display = "none";
+    modals.forEach(function(mod) {
+        if (event.target == mod ) {
+            mod.style.display = "none";
         }
     
     });
@@ -89,7 +90,7 @@ fileInputs.forEach(function(input, index) {
         reader.readAsDataURL(file);
     });
 });
-function handleImagePreview() {
+function handleImageview() {
     var preview = document.querySelectorAll(".view");
     var inputs = document.querySelectorAll(".image");
 
@@ -106,18 +107,45 @@ function handleImagePreview() {
         });
     });
 }
-function deleteElement() { 
-    const choice = prompt('delete-button');
-    if (choice.toLowerCase() === 'i') { 
-        const img = targetDiv.querySelector('image');
-        if (img) { img.remove(); } 
-    } else if (choice.toLowerCase() === 't') { 
-        targetDiv.textContent = ''; 
-    } 
-}
+function handleDeleteButtonClick(event) {
+   
+    var civiElement = event.target.closest('.civi');
+  
+  
+    var imElement = civiElement.querySelector('.im');
+    var info2Element = civiElement.querySelector('.info2');
+    var buttonsElement = civiElement.querySelector('.buttons');
+  
+   
+    if (imElement && info2Element && buttonsElement) {
+    
+      imElement.remove();
+      info2Element.remove();
+      buttonsElement.remove();
+    }
+  }
+  
+
+  var deleteButtons = document.querySelectorAll('.delete-button');
+  
+ 
+  deleteButtons.forEach(function(deleteButton) {
+    deleteButton.addEventListener('click', handleDeleteButtonClick);
+  });
+  
+ 
+  
+
+  var deleteButtons = document.querySelectorAll('.delete-button');
+  
+  
+  deleteButtons.forEach(function(deleteButton) {
+    deleteButton.addEventListener('click', handleDeleteButtonClick);
+  });
+  
 
 document.addEventListener("DOMContentLoaded", function() {
-    handleImagePreview();
+    handleImageview();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
