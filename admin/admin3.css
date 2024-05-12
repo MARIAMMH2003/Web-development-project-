@@ -31,7 +31,7 @@ scroll-behavior: smooth;
     max-height: 80%;
 }
 .image6{
-    max-width: 100px;
+    max-width: 130px;
     max-height: 100px; 
     overflow: hidden; 
   }
@@ -49,6 +49,7 @@ scroll-behavior: smooth;
     background-color: rgb(11, 58, 58);
    width:400px;
     opacity: 85%;
+    height:17.6em ;
 }
 .exmp-con h2{
   text-align: center;
@@ -58,7 +59,7 @@ scroll-behavior: smooth;
 }
 .exmp-con label{
   text-align: left;
-  color:#8a6252;
+  color:#9b3a14;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -67,39 +68,57 @@ scroll-behavior: smooth;
   background-color:#080808ca;
   margin: 10% auto;
   padding: 15px;
-  padding-left: 30px;
+  padding-left: 15px;
   padding-right: 30px;
   border: 1px solid #888;
   width: 80%;
   overflow:hidden;
+  height: 17.5em;
 }
 
 
-.exm-con h2,.addModal-content2 h2{
+.exm-con h2{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
-.exm-con label,.addModal-content2 label{
+.exm-con label{
   font-size: 15px;
-  text-align: left;
-    color:#8a6252;
+ margin-left: 10px;
+
+    color:#e65656be;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#inp,#input3,#input10{
+#inp{
+  
     background-color:  rgba(245, 245, 220, 0.814);
     color: black;
     border: solid 2px rgba(0, 0, 0, 0.881);
-    margin: 5px;
-}
-.emp-con {
-  text-align: left;
-    background-color:#914e4eca;
-    padding: 10px;
-    border: 1px solid #888;
-    width: 70%;
+    margin-left: 53px;
 
 }
+#inp1{
+  background-color:  rgba(245, 245, 220, 0.814);
+  color: black;
+  border: solid 2px rgba(0, 0, 0, 0.881);
+  margin-left: 45px;
+}
+
+#input3,#input10{
+    background-color:  rgba(245, 245, 220, 0.814);
+    color: black;
+    border: solid 2px rgba(0, 0, 0, 0.881);
+    margin-left: 5px;
+}
+#input4{
+  background-color:  rgba(245, 245, 220, 0.814);
+  color: black;
+  border: solid 2px rgba(0, 0, 0, 0.881);
+ 
+}
+
+
+
 
 .modal-container2{
   right: 0;
@@ -115,8 +134,8 @@ left: 0;
 
 
 
-.close,.close-btn,.close-picture,.close-paragraph,.close-title {
-    color: #979797;
+.close,.close-button,.close-picture,.close-paragraph,.close-title {
+    color: #dddddd;
     float: right;
     margin-top: -10px;
     margin-left: -40px;
@@ -137,7 +156,7 @@ left: 0;
   
   
   
-  .edit-button ,.delete-button,.innerButton ,.add-btn{
+  .edit-button ,.delete-button,.innerButton {
     background-color:#e6733e;
     font-size: 10px;
     color: beige;
@@ -145,11 +164,27 @@ left: 0;
     padding: 9px 16px;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
     margin: 2px;
 }
+
+.add-button{
+
+  background-color:#e6733e;
+  font-size: 10px;
+  color: beige;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 2px 2px 2px 10px;
+
+}
+
 .innerButton {
-    margin-top: 1.2em; 
+   
+    margin-left: 7px;
   }
 
  .edit-button:hover,.add-button:hover,.innerButton:hover,.delete-button:hover  {
@@ -157,20 +192,33 @@ left: 0;
     transform: scale(1.1);
     
 }
-
-
-
-
-h1{
-    font-size: 15px;
+.lopa{
+  margin-top: 50px;
+  margin-left:62px ;
+  display: flex;
+   
 }
+
+
+.lopa1{
+
+font-size: 1.5em;
+color:rgba(167, 68, 22, 0.815);
+
+}
+
+
+
+h1,h3{
+    font-size: 15px;
+
+}
+
 h2{
+
    font-size:  20px;
    
    color: beige;
-}
-h3{
-    font-size: 15px;
 }
 
 
@@ -181,15 +229,11 @@ h3{
     margin-top:250px;
 
 }
+
 a{
     text-decoration: none;
 }
-section{
 
-    padding: 100px 40px;
-
-    
-}
 
 
 .title{
@@ -203,6 +247,7 @@ section{
     margin-left: 120px;
 
 }
+
 .most{
 
     display: flex;
@@ -219,6 +264,7 @@ section{
 .peoject{
 
    background-color: rgb(172, 139, 101);
+   padding: 100px 40px;
 
 }
 
@@ -245,13 +291,39 @@ section{
   
 }
 
+.civi1{
+   
+
+  width: 83.5%;
+  
+   display:flex;
+    margin-top: 50px ;
+   transition: 0.5s ease;
+ 
+
+  
+ 
+}
+.civi2{
+   
+
+  width: 83.5%;
+  
+   display:flex;
+    margin-top: 50px ;
+   transition: 0.5s ease;
+ 
+
+  
+ 
+}
  
 .civi:hover{
     transform: scale(1.1);
 
     background-color: rgb(62, 121, 209);
 
-    width: 98%;
+    width: 98.4%;
 
    height: 282px;
    
@@ -291,7 +363,7 @@ margin-left: 60px;
 .info2{
   font-size: 1.4em;
 
-    padding: 1.7em;
+    padding: 1.4em;
     width: 60%;
     color: rgba(129, 44, 4, 0.815);
     margin-left: 30px;
@@ -307,12 +379,4 @@ margin-left: 60px;
   
 }
 
-      
-        
-        
-        
-
-
-
-
-
+    
