@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourifyAd</title>
+    <link rel="stylesheet" href="../css/tourifyad.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-logo">
+                <div class="logo">
+                    <span class="logo-icon">☥</span> 
+                    <span class="logo-text">Tourify</span>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="title-wrapper">
+        <h1 class="title">Welcome, Admin!</h1>
+    </div>
+        <div class="container">
+        <div class="card-slider-container">
+            <div class="card-slider">
+                <div class="cards-wrapper">
+                    <div class="card active" data-function="Manage Museums" onclick="openAdminPage()">
+                        <img src="../images/museumsad.png" alt="Museum">
+                    </div>
+                
+                    <div class="card active" data-function="Manage Museums" onclick="openHighPage()">
+                        <img src="../images/highlightsad.png" alt="Highlights">
+                    </div>
+                    <div class="card active" data-function="Manage Tour Guides"><img src="../images/tourguidead.png"></div>
+                    <div class="card active" data-function="Manage Map"><img src="../images/Location.png"></div>
+                    <div class="card active" data-function="Manage categories"><img src="../images/categories.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+    <script src="../javascript/tourifyad.js"></script>
+</body>
+</html>
