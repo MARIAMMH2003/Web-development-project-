@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Greco-Roman Museum Of Alexandria</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/map-testing.css">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+  <link rel="stylesheet" href="../css/admin.css">
+  </head>
+    
+
+  <body>
+    <section >  <div class="blurry-container">
+        <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg')"></div>
+        <div class="text-overlay">
+          <h1 style="color: beige; font-size: 20px;">Greco-Roman Museum Of Alexandria</h1><br>
+          <h2 style="color: beige; font-size: 15px;">Echoes of Ancient Alexandria</h2><br>
+          <p style="color: beige; font-size: 10px;" >  26th April 1892 </p>
+        </div>
+    </div>
+    <div id="bar">
+    <nav id="ahh" >
+        
+        <a href="#overview">Overview</a>
+        <a href="#details">Famous Monuments</a>
+        <a href="#comments-section">Comments</a>
+    </nav></div>
+    <hr></section>
+   
+    <section id="overview" class="section-content">
+        <div class="blurry-container">
+            <div class="text-overlay">
+                <h1 style="color: #8a6252; font-size: 20px;">Greco-Roman Museum Of Alexandria</h1><br>
+                   <h2 style="color: #8a6252; font-size: 15px;">Echoes of Ancient Alexandria</h2><br>
+                   <p style="color: #8a6252; font-size: 10px;" >  26th April 1892 </p>
+                <br>
+                <ps id="paragraph"style="color: black;">
+                    The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament <br>
+                     to the city's rich cultural heritage. Housed in a neoclassical building, the museum <br>
+                     showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. <br>
+                      Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and <br>
+                      everyday objects, offering insight into the fusion of Greek and Egyptian cultures <br>
+                      during this era. <br><br>
+
+                    Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and <br>
+                     intricately decorated pottery, reflecting the artistic prowess and cultural exchange that <br>
+                      flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations <br>
+                       of the city's harbor, shedding light on its maritime past. <br><br>
+                    
+                    As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, <br>
+                     where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of <br>
+                     royal portraits to the simplicity of household items, each artifact tells a story of the people who once <br>
+                      inhabited this cosmopolitan city. <br><br>
+                    
+                    The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy <br>
+                     of one of the ancient world's most influential cultural hubs. <br><br></ps>
+        
+              </div>
+              <div class="ticket-box">
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">    The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament 
+                        to the city's rich cultural heritage. Housed in a neoclassical building, the museum 
+                        showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. 
+                         Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and 
+                         everyday objects, offering insight into the fusion of Greek and Egyptian cultures 
+                         during this era. 
+   
+                       Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and 
+                        intricately decorated pottery, reflecting the artistic prowess and cultural exchange that 
+                         flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations 
+                          of the city's harbor, shedding light on its maritime past. 
+                       
+                       As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, 
+                        where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of 
+                        royal portraits to the simplicity of household items, each artifact tells a story of the people who once 
+                         inhabited this cosmopolitan city. 
+                       
+                       The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy 
+                        of one of the ancient world's most influential cultural hubs. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="famous-monuments"id="details">
+      <br>
+      <span class="before-hr">Famous Monuments</span>
+        <hr id="line">
+        <br>  <br> <br> 
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://egymonuments.gov.eg/media/8232/8_a_dsc2594.jpg" alt="Slide 1">
+             <div class="swiper-text">
+                     <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
+                        <p>The Statue of the god Hermanubis, a fusion deity combining the attributes of Hermes and Anubis, represents the cultural syncretism of Greco-Egyptian religion during the Ptolemaic period. This marble sculpture, dating back to the 2nd century AD, reflects the blending of Greek and Egyptian religious beliefs in ancient Alexandria, symbolizing the diverse cultural landscape of the city.</p>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Hermanubis, a fusion deity combining the attributes of Hermes and Anubis, represents the cultural syncretism of Greco-Egyptian religion during the Ptolemaic period. This marble sculpture, dating back to the 2nd century AD, reflects the blending of Greek and Egyptian religious beliefs in ancient Alexandria, symbolizing the diverse cultural landscape of the city.  </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
+          </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://egymonuments.gov.eg/media/8234/17_a_dsc2520.jpg"alt="Slide 2">
+              <div class="swiper-text">
+              <!--  <h2>The Narmer Palette</h2>-->
+                <p>The Statue of the god Serapis, crafted during the Ptolemaic period in Egypt, embodies the fusion of Greek and Egyptian religious traditions. Serapis, a deity created by Ptolemy I, symbolizes the synthesis of Egyptian Osiris and Greek Zeus. This monumental statue reflects the cultural exchange and religious syncretism characteristic of Hellenistic Alexandria.</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Serapis, crafted during the Ptolemaic period in Egypt, embodies the fusion of Greek and Egyptian religious traditions. Serapis, a deity created by Ptolemy I, symbolizes the synthesis of Egyptian Osiris and Greek Zeus. This monumental statue reflects the cultural exchange and religious syncretism characteristic of Hellenistic Alexandria. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://live.staticflickr.com/65535/51935948687_430c28f122_c.jpg" alt="Slide 3">
+              <div class="swiper-text">
+               <!-- <h2>The Statue of Ramses II</h2>-->
+                <p>The Statue of the god Mars, an embodiment of strength and warfare in Roman mythology, stands as a testament to the military prowess and imperial aspirations of the Roman Empire. Crafted with exquisite detail, this statue symbolizes Roman military might and the valor of its soldiers.</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Statue of the god Mars, an embodiment of strength and warfare in Roman mythology, stands as a testament to the military prowess and imperial aspirations of the Roman Empire. Crafted with exquisite detail, this statue symbolizes Roman military might and the valor of its soldiers. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="https://pbs.twimg.com/media/F8LYQhIXIAAlOv4.jpg" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Khafre</h2>-->
+              <p>The Statue of Emperor Diocletian, a formidable ruler of the Roman Empire known for his administrative reforms and efforts to stabilize the empire, depicts him in regal attire, embodying power and authority. Erected during his reign, it serves as a lasting tribute to his legacy and influence.</p>
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">The Statue of Emperor Diocletian, a formidable ruler of the Roman Empire known for his administrative reforms and efforts to stabilize the empire, depicts him in regal attire, embodying power and authority. Erected during his reign, it serves as a lasting tribute to his legacy and influence.  </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div> <div class="swiper-slide">
+          <img  src="https://preview.redd.it/i21grdx6bhm71.jpg?width=640&crop=smart&auto=webp&s=01f50cb18e0c2f8405036465f22f7f52c3781ef7" alt="Slide 3">
+          <div class="swiper-text">
+           <!-- <h2>The Bust of Nefertiti</h2>-->
+            <p>The Statue of Apis Bull, revered in ancient Egyptian culture as a symbol of fertility and strength, represents the deity worshipped in Memphis. Adorned with sacred insignia, this monumental statue honors the divine creature and its role in religious ceremonies, reflecting the spiritual beliefs of the ancient Egyptians.</p>
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8"> The Statue of Apis Bull, revered in ancient Egyptian culture as a symbol of fertility and strength, represents the deity worshipped in Memphis. Adorned with sacred insignia, this monumental statue honors the divine creature and its role in religious ceremonies, reflecting the spiritual beliefs of the ancient Egyptians.  </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
+</div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+    </section>
+
+    
+
+
+    
+    <section id="comments-section" class="reviews-section">
+
+
+      <div class="container-comment">
+        <div class="container__left">
+          <h1>"Discover why countless visitors choose to explore this museum.
+
+            
+          </h1>
+          <p>
+            With a diverse array of exhibits and interactive displays, it caters to various interests, ensuring each guest finds something to admire
+          </p>
+          <p>
+            The commitment to providing enriching experiences has garnered praise from thousands of guests annually. Families bond, friends debate, and individuals reflect within its walls, creating cherished memories that last a lifetime.
+          </p>
+          <p>
+            Join the satisfied reviewers. Leave a comment now .
+          </p>
+          
+        </div>
+        <div class="container__right">
+          <div class="card">
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Captivating artifacts, interactive displays, and engaging tours.
+                </p>
+                <h4>- Mariam Most</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Immersive exhibits, knowledgeable guides, and rich historical insights.
+                </p>
+                <h4>- Zeina Mohamed</h4>
+              </div>
+            </div>
+          </div>
+        
+<div class="card">
+
+
+<div class="rating">
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+</div>
+<div class="card__content">
+<span><i class="ri-double-quotes-l"></i></span>
+<div class="card__details">
+  <p>
+    Well-curated collections, stunning architecture, and memorable experiences.
+  </p>
+  <h4>- Mariam Shaddad </h4>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+    
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-col" id="footer-col1">
+        <div class="map-container">
+          <a href="#" class="link"><h4>Greco-Roman Museum Of Alexandria</h4></a>
+          <div id="map"></div></div>
+      </div>
+    
+      <div class="footer-col" id="footer-col2">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/GraecoRomanMuseumAlex?mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/explore/locations/287169268352978/graeco-roman-museum?igsh=enNjbHgzN2FjMms3"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtu.be/_KK0IIKcoko"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="../javascript/admin.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" >
+    </script>
+    <script src="../javascript/map-testing.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Smithsonian Museums</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/map-testing.css">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+  <link rel="stylesheet" href="../css/admin.css">
+  </head>
+    
+
+  <body>
+    <section>  <div class="blurry-container">
+        <div class="blurry-background" style="background-image: url('https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg')"></div>
+        <div class="text-overlay">
+          <h1 style="color: beige; font-size: 20px;">Smithsonian Museums</h1><br>
+          <h2 style="color: beige; font-size: 15px;"> Explore, Discover, Imagine, Inspire</h2><br>
+          <p style="color: beige; font-size: 10px;" >  10th August 1846 </p>
+        </div>
+    </div>
+    <div id="bar">
+    <nav id="ahh" >
+        
+        <a href="#overview">Overview</a>
+        <a href="#details">Famous Monuments</a>
+        <a href="#comments-section">Comments</a>
+    </nav></div>
+    <hr></section>
+    <br>
+    <br>
+    <section id="overview" class="section-content">
+        <div class="blurry-container">
+            <div class="text-overlay">
+                <h1 style="color: #8a6252; font-size: 20px;">Smithsonian Museums</h1><br>
+                   <h2 style="color: #8a6252; font-size: 15px;">  Explore, Discover, Imagine, Inspire</h2><br>
+                   <p style="color: #8a6252; font-size: 10px;" >  10th August 1846  </p>
+                <br>
+                <ps id="paragraph"style="color: black;">
+                    The Smithsonian Institution, founded in 1846, stands as the world's <br>
+                    largest museum, education, and research complex, comprising 19 museums, galleries,<br>
+                     gardens, and a zoo. Nestled primarily in Washington D.C., its diverse collections span <br>
+                     art, history, culture, science, and technology, attracting millions of visitors annually. <br><br>
+
+                    The National Museum of American History showcases the nation's cultural heritage, featuring <br>
+                     iconic artifacts such as the Star-Spangled Banner and the First Ladies' inaugural gowns. <br>
+                      The National Air and Space Museum chronicles humanity's quest for the skies, housing the Wright <br>
+                       brothers' plane and the Apollo 11 command module. <br><br>
+                    
+                    In the heart of the National Mall, the National Museum of Natural History unveils the mysteries <br>
+                     of our planet and its inhabitants, including the Hope Diamond and dinosaur fossils. Meanwhile, <br>
+                      the National Portrait Gallery immortalizes significant figures through portraiture, offering a <br>
+                      visual narrative of American history and culture. <br><br>
+                    
+                    Beyond D.C., the Smithsonian's reach extends across the country, with facilities <br>
+                     like the National Museum of African American History and Culture in Harlem and the National <br>
+                     Museum of the American Indian in New York City. These institutions stand as beacons of knowledge and <br>
+                     inspiration, fostering curiosity, understanding, and appreciation for the world's wonders.  <br><br>
+                    </ps>
+        
+              </div>
+              <div class="ticket-box">
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">    The Smithsonian Institution, founded in 1846, stands as the world's 
+                        largest museum, education, and research complex, comprising 19 museums, galleries,
+                         gardens, and a zoo. Nestled primarily in Washington D.C., its diverse collections span 
+                         art, history, culture, science, and technology, attracting millions of visitors annually. 
+    
+                        The National Museum of American History showcases the nation's cultural heritage, featuring
+                         iconic artifacts such as the Star-Spangled Banner and the First Ladies' inaugural gowns. 
+                          The National Air and Space Museum chronicles humanity's quest for the skies, housing the Wright
+                           brothers' plane and the Apollo 11 command module. 
+                        
+                        In the heart of the National Mall, the National Museum of Natural History unveils the mysteries 
+                         of our planet and its inhabitants, including the Hope Diamond and dinosaur fossils. Meanwhile, 
+                          the National Portrait Gallery immortalizes significant figures through portraiture, offering a
+                          visual narrative of American history and culture. 
+                        
+                        Beyond D.C., the Smithsonian's reach extends across the country, with facilities
+                         like the National Museum of African American History and Culture in Harlem and the National 
+                         Museum of the American Indian in New York City. These institutions stand as beacons of knowledge and 
+                         inspiration, fostering curiosity, understanding, and appreciation for the world's wonders. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="famous-monuments"id="details">
+      <br>
+      <span class="before-hr">Famous Monuments</span>
+        <hr id="line">
+        <br>  <br> <br> 
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://i.pinimg.com/564x/82/63/0b/82630be28616070f815a18e7169fe4d2.jpg" alt="Slide 1">
+             <div class="swiper-text">
+                     <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
+                        <p>Ruby Slippers from "The Wizard of Oz" - National Museum of American History</p>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8">Ruby Slippers from "The Wizard of Oz" - National Museum of American History< </textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
+          </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://i.redd.it/eqsblervbkt41.jpg"alt="Slide 2">
+              <div class="swiper-text">
+              <!--  <h2>The Narmer Palette</h2>-->
+                <p>Dinosaur fossils - National Museum of Natural History</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> Dinosaur fossils - National Museum of Natural History </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://i.pinimg.com/564x/5a/e2/86/5ae286808be687a5f0b2e2f9d088884f.jpg" alt="Slide 3">
+              <div class="swiper-text">
+               <!-- <h2>The Statue of Ramses II</h2>-->
+                <p>Neil Armstrong's spacesuit - National Air and Space Museum</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> Neil Armstrong's spacesuit - National Air and Space Museum  </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="https://www.virginexperiencegifts.com/media/image/a/m/american-history11.jpg" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Khafre</h2>-->
+              <p>First Ladies' inaugural gowns - National Museum of American History</p>
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8"> First Ladies' inaugural gowns - National Museum of American History </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div><div class="swiper-slide">
+          <img  src="https://d7hftxdivxxvm.cloudfront.net/?height=800&quality=85&resize_to=fit&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FOnoosXPnmz-RPbAj7b66yQ%2Fnormalized.jpg&width=543" alt="Slide 3">
+          <div class="swiper-text">
+           <!-- <h2>The Bust of Nefertiti</h2>-->
+            <p>Portrait of George Washington - National Portrait Gallery</p>
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8">Portrait of George Washington - National Portrait Gallery< </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
+</div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+    </section>
+
+    
+
+
+    
+    <section id="comments-section" class="reviews-section">
+
+
+      <div class="container-comment">
+        <div class="container__left">
+          <h1>"Discover why countless visitors choose to explore this museum.
+
+            
+          </h1>
+          <p>
+            With a diverse array of exhibits and interactive displays, it caters to various interests, ensuring each guest finds something to admire
+          </p>
+          <p>
+            The commitment to providing enriching experiences has garnered praise from thousands of guests annually. Families bond, friends debate, and individuals reflect within its walls, creating cherished memories that last a lifetime.
+          </p>
+          <p>
+            Join the satisfied reviewers. Leave a comment now .
+          </p>
+          
+        </div>
+        <div class="container__right">
+          <div class="card">
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Captivating artifacts, interactive displays, and engaging tours.
+                </p>
+                <h4>- Mariam Most</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Immersive exhibits, knowledgeable guides, and rich historical insights.
+                </p>
+                <h4>- Zeina Mohamed</h4>
+              </div>
+            </div>
+          </div>
+        
+<div class="card">
+
+
+<div class="rating">
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+</div>
+<div class="card__content">
+<span><i class="ri-double-quotes-l"></i></span>
+<div class="card__details">
+  <p>
+    Well-curated collections, stunning architecture, and memorable experiences.
+  </p>
+  <h4>- Mariam Shaddad </h4>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-col" id="footer-col1">
+        <div class="map-container">
+          <a href="#" class="link"><h4>Smithsonian Museums </h4></a>
+          <div id="map"></div></div>
+      </div>
+    
+      <div class="footer-col" id="footer-col2">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Smithsonian?mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+          <a href="#https://x.com/smithsonian?s=11&t=ahQ36uT6oM6_I3pMHnewvQ"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/smithsonian?igsh=MXFlaXk5dmdzcmc2Mg=="><i class="fab fa-instagram"></i></a>
+          <a href="https://youtu.be/QHx8wnhzkhM?si=86OjRJ2MoJHzbQa1"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="../javascript/admin.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" >
+    </script>
+    <script src="../javascript/map-testing.js"></script>
+  </body>
+
+</html>

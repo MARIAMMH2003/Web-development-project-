@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Luxor Museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/map-testing.css">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+  <link rel="stylesheet" href="../css/admin.css">
+  </head>
+    
+
+  <body>
+    <section>  <div class="blurry-container">
+        <div class="blurry-background" style="background-image: url('https://www.sis.gov.eg/Content/Upload/Editor/Image1_1120233172710.png')"></div>
+        <div class="text-overlay">
+          <h1 style="color: beige; font-size: 20px;">Luxor Museum</h1><br>
+          <h2 style="color: beige; font-size: 15px;"> Unveiling Ancient Treasures Anew</h2><br>
+          <p style="color: beige; font-size: 10px;" >  28th May 1975 </p>
+        </div>
+    </div>
+    <div id="bar">
+    <nav id="ahh" >
+        
+        <a href="#overview">Overview</a>
+        <a href="#details">Famous Monuments</a>
+        <a href="#comments-section">Comments</a>
+    </nav></div>
+    <hr></section>
+    <br>
+    <br>
+    <section id="overview" class="section-content">
+        <div class="blurry-container">
+            <div class="text-overlay">
+                <h1 style="color: #8a6252; font-size: 20px;">Luxor Museum</h1><br>
+                   <h2 style="color: #8a6252; font-size: 15px;"> Unveiling Ancient Treasures Anew</h2><br>
+                   <p style="color: #8a6252; font-size: 10px;" >   28th May 1975  </p>
+                <br>
+                <ps id="paragraph"style="color: black;">
+                    The Luxor Museum, founded in 1975, stands as a beacon of Egypt's rich cultural <br>
+                     heritage. Nestled on the East Bank of the Nile, it boasts a stunning collection <br>
+                      of artifacts primarily from the Theban Necropolis and Luxor Temple. Showcasing a <br>
+                       fusion of ancient Egyptian and Greco-Roman influences, the museum offers a captivating <br>
+                        journey through millennia of history. <br><br>
+
+                    Visitors are greeted by a meticulously curated display featuring statues of <br>
+                    pharaohs, intricately carved reliefs, and exquisite artifacts unearthed from nearby <br>
+                     archaeological sites. Noteworthy highlights include the renowned granite colossus of <br>
+                     Amenhotep III and the beautifully preserved mummy of Ramses I. <br><br>
+
+                    
+                    The museum's design, with its airy galleries and expansive windows, provides <br>
+                    a serene backdrop for contemplation and exploration. Each artifact tells a story of <br>
+                    ancient rituals, royal power, and artistic mastery, offering glimpses into the lives <br>
+                     of the pharaohs and their subjects. <br><br>
+                    
+                    Beyond its permanent collection, the Luxor Museum hosts temporary exhibitions and <br>
+                    educational programs, engaging visitors of all ages with the wonders of ancient Egypt. <br>
+                     Whether admiring the delicate craftsmanship of a golden amulet or pondering the mysteries <br>
+                     of an inscribed stele, every visit to the Luxor Museum promises a deeper understanding of <br>
+                      this timeless civilization. <br><br>
+                    </ps>
+        
+              </div>
+              <div class="ticket-box">
+                <h3>Welcome!</h3>
+                <p>Which part would you like to edit?</p>
+                <button onclick="editPicturePopup()">Edit Piture</button>
+                <button onclick=" ediTitlePopup() ">Edit Title</button>
+                <button onclick="editParagraphPopup()">Edit Paragraph</button>
+
+            </div>
+            <div id="picture-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-picture">&times;</span>
+                  <h2>Edit Picture</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="image">Image:</label>
+                      <input type="file" id="image" name="image">
+                      <div class="image-preview3" id="image-preview">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>  
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+            <div id="title-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-title">&times;</span>
+                  <h2>Edit Title</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Title:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Slogan:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                      <label for="title">Date:</label>
+                      <input id="input9"type="text" id="title" name="title"><br>
+                   
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div> <div id="paragraph-edit"  class="Modal2">
+              <div class="new-class">
+                  <span class="close-paragraph">&times;</span>
+                  <h2>Edit Museum</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <textarea id="paragraph" rows="20" cols="80">       The Luxor Museum, founded in 1975, stands as a beacon of Egypt's rich cultural 
+                        heritage. Nestled on the East Bank of the Nile, it boasts a stunning collection 
+                         of artifacts primarily from the Theban Necropolis and Luxor Temple. Showcasing a 
+                          fusion of ancient Egyptian and Greco-Roman influences, the museum offers a captivating 
+                           journey through millennia of history. 
+   
+                       Visitors are greeted by a meticulously curated display featuring statues of 
+                       pharaohs, intricately carved reliefs, and exquisite artifacts unearthed from nearby 
+                        archaeological sites. Noteworthy highlights include the renowned granite colossus of 
+                        Amenhotep III and the beautifully preserved mummy of Ramses I. 
+   
+                       
+                       The museum's design, with its airy galleries and expansive windows, provides 
+                       a serene backdrop for contemplation and exploration. Each artifact tells a story of 
+                       ancient rituals, royal power, and artistic mastery, offering glimpses into the lives 
+                        of the pharaohs and their subjects. 
+                      
+                       Beyond its permanent collection, the Luxor Museum hosts temporary exhibitions and 
+                       educational programs, engaging visitors of all ages with the wonders of ancient Egypt. 
+                        Whether admiring the delicate craftsmanship of a golden amulet or pondering the mysteries 
+                        of an inscribed stele, every visit to the Luxor Museum promises a deeper understanding of 
+                         this timeless civilization. </textarea>
+                      <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+         
+              </div>
+            </div>
+        </div>
+    </section>
+    <section class="famous-monuments"id="details">
+      <br>
+      <span class="before-hr">Famous Monuments</span>
+        <hr id="line">
+        <br>  <br> <br> 
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Ahmose_Mummy_at_Luxor_Museum_in_Luxor_Egypt.jpg" alt="Slide 1">
+             <div class="swiper-text">
+                     <!--   <h2>The Golden Mask of Tutankhamun</h2>-->
+                        <p>The Luxor Museum proudly houses the mummy of Ahmose I, the revered pharaoh of the early New Kingdom. Displayed with regal dignity, Ahmose's mummy offers a tangible connection to Egypt's illustrious past, embodying the splendor of ancient royalty for visitors to behold.</p>
+                        <div class="buttons">
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="modal-container">
+                  <div id="editModal1" class="modal">
+                      <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <h2>Edit Monument</h2>
+                          <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                              <label for="title">Discription:</label>
+                              <textarea id="paragraph" rows="4" cols="8"> The Luxor Museum proudly houses the mummy of Ahmose I, the revered pharaoh of the early New Kingdom. Displayed with regal dignity, Ahmose's mummy offers a tangible connection to Egypt's illustrious past, embodying the splendor of ancient royalty for visitors to behold.</textarea>                             <label for="image">Image:</label>
+                              <input type="file" class="image" name="image">
+                              <div class="image-preview2" id="image-preview">
+                                <img class="preview" src="" alt="Image Preview">
+                            </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                          </form>
+                      </div>
+                  </div>
+          </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/main-image/2018/05/05/1178196-1318541902.jpg?itok=DuxRtIIC "alt="Slide 2">
+              <div class="swiper-text">
+              <!--  <h2>The Narmer Palette</h2>-->
+                <p>Tutankhamun's hunting chariot, an emblem of royal prestige, is showcased in the Luxor Museum. Crafted with exquisite detail, this artifact offers a glimpse into the opulent lifestyle of ancient Egyptian pharaohs, reflecting their passion for the hunt and their mastery of craftsmanship.</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content1">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> Tutankhamun's hunting chariot, an emblem of royal prestige, is showcased in the Luxor Museum. Crafted with exquisite detail, this artifact offers a glimpse into the opulent lifestyle of ancient Egyptian pharaohs, reflecting their passion for the hunt and their mastery of craftsmanship.  </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+              <img class="image-margin" src="https://i.pinimg.com/474x/8a/02/79/8a02792689937a86e1a5b9f843df6659.jpg" alt="Slide 3">
+              <div class="swiper-text">
+               <!-- <h2>The Statue of Ramses II</h2>-->
+                <p>The Luxor Museum displays a remarkable black-and-gold wooden head of the cow goddess Mehit-Weret, found in Tutankhamun's tomb. This artifact exemplifies the ancient reverence for Hathor, showcasing exquisite craftsmanship and religious symbolism.</p>
+                <div class="buttons">
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-container">
+          <div id="editModal1" class="modal">
+              <div class="modal-content2">
+                  <span class="close">&times;</span>
+                  <h2>Edit Monument</h2>
+                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                      <label for="title">Discription:</label>
+                      <textarea id="paragraph" rows="4" cols="8"> The Luxor Museum displays a remarkable black-and-gold wooden head of the cow goddess Mehit-Weret, found in Tutankhamun's tomb. This artifact exemplifies the ancient reverence for Hathor, showcasing exquisite craftsmanship and religious symbolism. </textarea>                             <label for="image">Image:</label>
+                      <input type="file" class="image" name="image">
+                      <div class="image-preview2" id="image-preview">
+                        <img class="preview" src="" alt="Image Preview">
+                    </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                  </form>
+              </div>
+          </div>
+  </div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="https://i0.wp.com/egypt-museum.com/wp-content/uploads/2023/09/Ramses_I_Mummy.jpg?ssl=1" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Khafre</h2>-->
+              <p>Ramesses I's mummy is among Luxor Museum's treasures, offering a poignant glimpse into ancient Egyptian royalty. Displayed with reverence, it reflects the intricate funerary practices and cultural significance of the time.</p>
+              <div class="buttons">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container2">
+        <div id="editModal1" class="modal">
+            <div class="modal-content3">
+                <span class="close">&times;</span>
+                <h2>Edit Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8"> Ramesses I's mummy is among Luxor Museum's treasures, offering a poignant glimpse into ancient Egyptian royalty. Displayed with reverence, it reflects the intricate funerary practices and cultural significance of the time.  </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+</div> <div class="swiper-slide">
+          <img  src="https://i.pinimg.com/564x/b2/61/98/b261981b682f5af409b7727d6121241e.jpg" alt="Slide 3">
+          <div class="swiper-text">
+           <!-- <h2>The Bust of Nefertiti</h2>-->
+            <p>This greywacke statue of Thutmose III was found in the Karnak Cachette in 1904. With the legs below the knees missing, the statue measures at 90cm tall.Thutmose III created the largest empire Egypt had ever seen; no fewer than 17 campaigns were conducted and he conquered lands from the Niya Kingdom in northern Syria to the Fourth Cataract of the Nile in Nubia.</p>
+            <div class="buttons">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+          </div>
+      </div>
+  </div>
+  <div class="modal-container2">
+      <div id="editModal1" class="modal">
+          <div class="modal-content4">
+              <span class="close">&times;</span>
+              <h2>Edit Monument</h2>
+              <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                  <label for="title">Discription:</label>
+                  <textarea id="paragraph" rows="4" cols="8"> This greywacke statue of Thutmose III was found in the Karnak Cachette in 1904. With the legs below the knees missing, the statue measures at 90cm tall.Thutmose III created the largest empire Egypt had ever seen; no fewer than 17 campaigns were conducted and he conquered lands from the Niya Kingdom in northern Syria to the Fourth Cataract of the Nile in Nubia.  </textarea>                             <label for="image">Image:</label>
+                  <input type="file" class="image" name="image">
+                  <div class="image-preview2" id="image-preview">
+                    <img class="preview" src="" alt="Image Preview">
+                </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+              </form>
+          </div>
+      </div>
+</div>
+          <div class="swiper-slide">
+            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
+            <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+              <div class="buttons">
+                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
+              
+            </div>
+          </div>
+          </div>
+          
+          <div class="modal-container2">
+          
+          
+              <div id="addModal2" >
+                <div class="addModal-content2">
+                <span class="close-btn">&times;</span>
+                <h2>Add Monument</h2>
+                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
+                    <label for="title">Discription:</label>
+                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
+                    <input type="file" class="image" name="image">
+                    <div class="image-preview2" id="image-preview">
+                      <img class="preview" src="" alt="Image Preview">
+                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
+                </form>
+            </div></div>
+          </div></div></div>
+          </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+    </section>
+
+    
+
+
+    
+    <section id="comments-section" class="reviews-section">
+      <div class="container-comment">
+        <div class="container__left">
+          <h1>"Discover why countless visitors choose to explore this museum.
+
+            
+          </h1>
+          <p>
+            With a diverse array of exhibits and interactive displays, it caters to various interests, ensuring each guest finds something to admire
+          </p>
+          <p>
+            The commitment to providing enriching experiences has garnered praise from thousands of guests annually. Families bond, friends debate, and individuals reflect within its walls, creating cherished memories that last a lifetime.
+          </p>
+          <p>
+            Join the satisfied reviewers. Leave a comment now .
+          </p>
+          
+        </div>
+        <div class="container__right">
+          <div class="card">
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Captivating artifacts, interactive displays, and engaging tours.
+                </p>
+                <h4>- Mariam Most</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Immersive exhibits, knowledgeable guides, and rich historical insights.
+                </p>
+                <h4>- Zeina Mohamed</h4>
+              </div>
+            </div>
+          </div>
+        
+<div class="card">
+
+
+<div class="rating">
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+</div>
+<div class="card__content">
+<span><i class="ri-double-quotes-l"></i></span>
+<div class="card__details">
+  <p>
+    Well-curated collections, stunning architecture, and memorable experiences.
+  </p>
+  <h4>- Mariam Shaddad </h4>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-col" id="footer-col1">
+        <div class="map-container">
+          <a href="#" class="link"><h4>Luxor Museum </h4></a>
+          <div id="map"></div></div>
+      </div>
+    
+      <div class="footer-col" id="footer-col2">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="https://www.facebook.com/LuxorMuseumofAncientEgyptianArt?mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/explore/locations/234896361/luxor-museum?igsh=Y2pmZXU5NG42OG5k"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtu.be/m7OyLCK21Jc?si=lkjdKpPA2BIucsnN"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="../javascript/admin.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" >
+    </script>
+    <script src="../javascript/map-testing.js"></script>
+  </body>
+
+</html>
