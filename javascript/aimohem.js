@@ -19,9 +19,10 @@ login.addEventListener('click',()=>{
 
 
 
-let accounts=[];
-document.getElementById('signuppage').addEventListener('submit',function(event){
-event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const signupForm = document.getElementById('signuppage');
+
+    signupForm.addEventListener('submit', async function(event) {
 
 const N = document.getElementById("name");
 const E = document.getElementById("email");
@@ -122,23 +123,53 @@ if (!validateForm()) {
 
 
 // saving the user in object array
-const name=document.getElementById('name').value;
-var email=document.getElementById('email').value;
-const pass_=document.getElementById('pass').value;
+// const name=document.getElementById('name').value;
+// var email=document.getElementById('email').value;
+// const pass_=document.getElementById('pass').value;
 
-const useraccount={
-name:name,
-email:email,
-password:pass_
+// const useraccount={
+// name:name,
+// email:email,
+// password:pass_
+// };
+
+
+// accounts.push(useraccount);
+// alert("success");
+
+// });
+
+////heeereeee
+const userData = {
+    name: N.value.trim(),
+    email: E.value.trim(),
+    password: pass.value.trim(),
+    userType: document.querySelector('input[name="usertype"]:checked').value
 };
 
+try {
+    const response = await fetch('/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+    });
 
-accounts.push(useraccount);
-alert("success");
+    if (!response.ok) {
+        throw new Error('Failed to register user');
+    }
 
+    const result = await response.json();
+    alert(result.message); // Success message
+    window.location.href = '/login.html'; // Redirect to login page after successful registration
+} catch (error) {
+    console.error('Error:', error);
+    alert('Failed to register user');
+}
 });
-
-
+});
+///heeeereeeee
 
 // loging in
 document.getElementById('loginpage').addEventListener('submit', function(event) {
