@@ -217,3 +217,11 @@ document.addEventListener("DOMContentLoaded", function() {
 //         }
 //     });
 // });
+document.addEventListener('DOMContentLoaded',()=>{
+    const logintxt=document.getElementById('logintext');
+    const loginpic=document.getElementById('loginpic');
+    if(sessionStorage.getItem('loggedIn')=='true'){
+        logintxt.style.display='none';
+        loginpic.style.display='inline';
+    }
+});

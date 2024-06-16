@@ -181,6 +181,7 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
 
     const found = accounts.find(account => account.email === loginemail.value);
     if (found && found.password === loginpass.value) {
+        sessionStorage.setItem('loggedIn', 'true');
         const user = document.getElementsByName("usertype");
         let userType;
         for (let i = 0; i < user.length; i++) {
@@ -189,6 +190,7 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
                 break;
             }
         }
+    
         if (userType === 'client') {
             window.location.href = "../html/index.html";
         } else if (userType === 'tour-guide') {
@@ -198,9 +200,11 @@ document.getElementById('loginpage').addEventListener('submit', function(event) 
             {
                 window.location.href = "../html/Tourifyad.html";
             }
+          
     } else {
         alert("Email or password is incorrect.");
     }
+
 });
 
 
