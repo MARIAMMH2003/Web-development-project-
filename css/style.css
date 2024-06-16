@@ -205,8 +205,7 @@ h3{
 
 #comments-section{
 background: linear-gradient( to right, beige,rgb(199, 187, 159) );
-padding-bottom: 10px;
-margin-bottom: 10px;
+height: 620px;
 }
 
 
@@ -272,16 +271,18 @@ a:hover{
 
 
 #paragraph{
-    font-size: 10px;
+    font-size: 600%;
+    color: #000;
+    width: 60%;
+    
 }
 
 
 .blurry-container {
     position: relative;
     height: 350px;
-    margin-bottom: 20px;
     text-align: left;
-  
+
 
 }
 
@@ -368,13 +369,22 @@ hr{
     margin-top: 5px;
     font-style: italic;
 }
-#overview{
-   
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    margin-top:250px;
-
+#overview {
+  font-family: Arial, sans-serif;
+  font-size: 10%; /* 1rem is 100% of the default font size */
+  min-height: 30vh; /* Adjust as necessary */
+  display: flex; /* Use flexbox to place elements side by side */
+  align-items: flex-start; /* Align items to the top */
+  padding: 5%; /* Add some padding */
+  gap: 2%; /* Space between text-over and ticket-box */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
+
+#text-over {
+  flex: 1 1 68%; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 68%; /* Ensure it doesn't exceed 68% */
+}
+
 a{
     text-decoration: none;
 }
@@ -425,50 +435,71 @@ a{
      
     
 
-     
+    
        
         .section-content {
-            padding: 20px;
-            position: relative;
+            padding-left: 5%;   
         }
-        
-        .ticket-box {
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 40px;
-            margin-top: 0;
-            display: inline-block;
-            width: calc(30% - 20px); 
-            margin-right: 20px;
-            position: absolute;
-            top: -220px;            right: 0;
-            text-align: center;
+        .section-content h1{
+          color: #8a6252; font-size: 20px;
+          padding-bottom: 0.5%;
         }
-        
-        .ticket-box h3 {
-            margin-top: 0;
-            color: #333;
-            font-size: 15px;
-            padding-bottom: 2px;
+        .section-content h2{
+        color: #8a6252; font-size: 15px;
+        padding-bottom: 0.5%;
         }
+        .section-content p{
+        color: #8a6252; font-size: 10px;
+      padding-bottom: 5%; }
         
-        .ticket-box p {
-            color: #666;
-            font-size: 10px;
-            padding-bottom: 4px;
-        }
-        
-        .ticket-box button {
-            background-color:#8a6252;
-            color: beige;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
+.ticket-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5%;
+  padding: 2%;
+  flex: 1 1 28%; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 28%; /* Ensure it doesn't exceed 28% */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ticket-box h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1rem; /* Adjusted font size */
+  padding-bottom: 0.5rem;
+}
+
+.ticket-box p {
+  color: #666;
+  font-size: 0.9rem; /* Adjusted font size */
+  padding-bottom: 1rem;
+}
+
+.ticket-box button {
+  background-color: #8a6252;
+  color: beige;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ticket-box button:hover {
+  background-color: #725144;
+}
+
+@media (max-width: 768px) {
+  #text-over, .ticket-box {
+      flex: 1 1 100%; /* Full width on smaller screens */
+      max-width: 100%;
+  }
+
+  .ticket-box {
+      margin-top: 2rem; /* Add space above the ticket box */
+  }
+}
         .ticket-box button:hover {
             background-color: #06752d;
         }
@@ -648,10 +679,7 @@ header {
   flex-direction: column; 
 }
 
-.card img {
-  max-width: 75px;
-  border-radius: 100%;
-}
+
 
 .card__content {
   display: flex;
@@ -715,9 +743,44 @@ textarea {
   margin-bottom: 10px;
 }
 
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
 .btn-group {
   display: flex;
-  justify-content: flex-end; 
+  gap: 5%;
+}
+
+.btn {
+  padding: 2% 7%;
+  border: none;
+  border-radius: 2%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 65%;
+}
+
+.btn.submit {
+  background-color: #8a6252;
+  color: beige;
+}
+
+.btn.submit:hover {
+  background-color: #725144;
+}
+
+.btn.cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn.cancel:hover {
+  background-color: #aaa;
 }
 #searchInput {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));
