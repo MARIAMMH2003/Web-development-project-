@@ -16,468 +16,211 @@
     
 
     <section id="museums">
-      <div class="serching-container">
-        <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search Museums">
-        <i class="fa-solid fa-magnifying-glass" id="searchLogo"></i>
-      </div>
+      <section id="museums">
+    
         <h1 class="text-header">Museums</h1>
-      </div>
-        <div class="container">
-          <div class="swiper museums-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide museums-slide">
-                  <a href="EgyptianMuseumInCairoAdmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://i.pinimg.com/564x/52/26/fb/5226fb81560b1145afc4bea0e8919bff.jpg" alt="The Egyptian Museum in Cairo">
-                </div>
-              </a>
-                <div class="museums-slide-content">
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      The Egyptian Museum in Cairo                </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                
-                
-                <div class="buttons">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </div>
-            </div>
-        </div>
-            <div id="editModal1" class="modal">
-                <div class="modal-content0">
-                    <span class="close">&times;</span>
-                    <h2>Edit Museum</h2>
-                    <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                        <label for="title">Title:</label>
-                        <input id="input1" type="text" id="title" name="title">
-                        <label for="image">Image:</label>
-                        <input type="file" class="image" name="image">
-                        <div class="image-preview2" id="image-preview">
-                          <img class="preview" src="https://i.pinimg.com/564x/55/76/60/557660e4518a38c3a0a058a3b58b03a2.jpg" alt="Image Preview">
-                      </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-          </div>
-              <div class="swiper-slide museums-slide">
-                  <a href="TheCopticMuseumadmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://i.pinimg.com/564x/b7/f7/0f/b7f70fe84c747c2a8d451e8e07db6caf.jpg" alt="The Coptic Museum">
-                </div></a>
-                <div class="museums-slide-content">
-               
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      The Coptic Museum
-                    </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                    <div class="buttons">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
-            </div>
-                <div id="editModal2"  class="modal">
-                    <div class="modal-content0">
-                        <span class="close">&times;</span>
-                        <h2>Edit Museum</h2>
-                        <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                            <label for="title">Title:</label>
-                            <input id="input2" type="text" id="title" name="title">
-                            <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
-                            <div class="image-preview2" id="image-preview">
-                            <img class="preview" src="#" alt="Image Preview"></div>
-                            <button class="inner-buttons" type="submit">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-               
-              </div>
-          
-              <div class="swiper-slide museums-slide">
-                  <a href="MuseumofIslamicArtinCairoadmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://images.museumwnf.org/full/museums/eg/1/2.jpg" alt="Museum of Islamic Art in Cairo">
-                </div> </a>
-                <div class="museums-slide-content">
-                  
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      Museum of Islamic Art in Cairo
-                    </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                    <div class="buttons">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
-            </div>
-                <div id="editModal3"  class="modal">
-                    <div class="modal-content0">
-                        <span class="close">&times;</span>
-                        <h2>Edit Museum</h2>
-                        <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                            <label for="title">Title:</label>
-                            <input id="input3" type="text" id="title" name="title">
-                            <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
-                            <div class="image-preview2" id="image-preview">
-                            <img class="preview" src="#" alt="Image Preview"></div>
-                            <button class="inner-buttons" type="submit">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-                  </div>
-               
-            
-              <div class="swiper-slide museums-slide">
-                  <a href="BritishMuseumAdmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://cdn.londonandpartners.com/asset/british-museum_museum-frontage-image-courtesy-of-the-british-museum_f0b0a5a3c53f8fc1564868c561bd167c.jpg" alt="british Museum">
-                </div></a>
-                <div class="museums-slide-content">
-                
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      British Museum
-                    </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                    <div class="buttons">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
-            </div>
-                <div id="editModal4"  class="modal">
-                    <div class="modal-content0">
-                        <span class="close">&times;</span>
-                        <h2>Edit Museum</h2>
-                        <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                            <label for="title">Title:</label>
-                            <input id="input4" type="text" id="title" name="title">
-                            <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
-                            <div class="image-preview2" id="image-preview">
-                            <img class="preview" src="#" alt="Image Preview"></div>
-                            <button class="inner-buttons"  type="submit">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-                  </div>
-             
-         
-           
-       
-          
-              <div class="swiper-slide museums-slide">
-                  <a href="LuxorMuseumAdmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://www.sis.gov.eg/Content/Upload/Editor/Image1_1120233172710.png" alt="Luxor Museum">
-                </div></a>
-                <div class="museums-slide-content">
-                 
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      Luxor Museum
-                    </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                    <div class="buttons">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
-            </div>
-                <div id="editModal5"  class="modal">
-                    <div class="modal-content0">
-                        <span class="close">&times;</span>
-                        <h2>Edit Museum</h2>
-                        <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                            <label for="title">Title:</label>
-                            <input id="input5" type="text" id="title" name="title">
-                            <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
-                            <div class="image-preview2" id="image-preview">
-                            <img class="preview" src="#" alt="Image Preview"></div>
-                            <button class="inner-buttons" type="submit">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-                  </div>
-             
-           
-              <div class="swiper-slide museums-slide">
-                  <a href="AlexandriaNationalMuseumAdmin.html">
-                <div class="museums-slide-img">
-                  <img src="https://i.pinimg.com/564x/42/89/fa/4289fa5c99f2bf1c0e99c67ae742ed5e.jpg" alt="Alexandria National Museum">
-                </div></a>
-                <div class="museums-slide-content">
-                  
-                  <div class="museums-slide-content-bottom">
-                    <h2 class="museum-name">
-                      Alexandria National Museum
-                    </h2>
-                    <h3 class="museum-rating">
-                      <span>4.5</span>
-                      <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </div>
-                    </h3>
-                    <div class="buttons">
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
-                    </div>
-                </div>
-            </div>
-                <div id="editModal6"  class="modal">
-                    <div class="modal-content0">
-                        <span class="close">&times;</span>
-                        <h2>Edit Museum</h2>
-                        <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                            <label for="title">Title:</label>
-                            <input id="input6" type="text" id="title" name="title">
-                            <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
-                            <div class="image-preview2" id="image-preview">
-                            <img class="preview" src="#" alt="Image Preview"></div>
-                            <button class="inner-buttons" type="submit">Save Changes</button>
-                        </form>
-                    </div>
-                </div>
-                  </div>
-              
-  
-              <div class="swiper-slide museums-slide">
-                <a href="SmithsonianMuseumadmin.html">
-              <div class="museums-slide-img">
-                <img src="https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg" alt="Smithsonian Museum">
-              </div></a>
-              <div class="museums-slide-content">
-                
-                <div class="museums-slide-content-bottom">
-                  <h2 class="museum-name">
-                    Smithsonian Museum
-                  </h2>
-                  <h3 class="museum-rating">
-                    <span>4.5</span>
-                    <div class="rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-                  </h3>
-                  <div class="buttons">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </div>
-            </div>
-        </div>
-            <div id="editModal7"  class="modal">
-                <div class="modal-content0">
-                    <span class="close">&times;</span>
-                    <h2>Edit Museum</h2>
-                    <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                        <label for="title">Title:</label>
-                        <input id="input7" type="text" id="title" name="title">
-                        <label for="image">Image:</label>
-                        <input type="file" class="image" name="image">
-                        <div class="image-preview2" id="image-preview">
-                        <img class="preview" src="#" alt="Image Preview"></div>
-                        <button class="inner-buttons" type="submit">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-                </div>
-             
-            <div class="swiper-slide museums-slide">
-              <a href="KarnakTempleAdmin.html">
-            <div class="museums-slide-img">
-              <img src=" https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg" alt=" Karnak Temple">
-            </div></a>
-            <div class="museums-slide-content">
-              
-              <div class="museums-slide-content-bottom">
-                <h2 class="museum-name">
-                  Karnak Temple
-                </h2>
-                <h3 class="museum-rating">
-                  <span>4.5</span>
-                  <div class="rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-                </h3>
-                <div class="buttons">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </div>
-            </div>
-        </div>
-            <div id="editModal8"  class="modal">
-                <div class="modal-content0">
-                    <span class="close">&times;</span>
-                    <h2>Edit Museum</h2>
-                    <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                        <label for="title">Title:</label>
-                        <input id="input8"type="text" id="title" name="title">
-                        <label for="image">Image:</label>
-                        <input type="file" class="image" name="image">
-                        <div class="image-preview2" id="image-preview">
-                        <img class="preview" src="#" alt="Image Preview"></div>
-                        <button class="inner-buttons" type="submit">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-          </div>
-  
-          <div class="swiper-slide museums-slide">
-            <a href="Greco-RomanMuseumOfAlexandria-admin.html">
-          <div class="museums-slide-img">
-            <img src="https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg" alt=" Greco-Roman Museum Of Alexandria">
-          </div></a>
-          <div class="museums-slide-content">
-            
-            <div class="museums-slide-content-bottom">
-              <h2 class="museum-name">
-                Greco-Roman Museum Of Alexandria
-              </h2>
-              <h3 class="museum-rating">
-                <span>4.5</span>
-                <div class="rating">
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                </div>
-              </h3>
-              <div class="buttons">
-                <button class="edit-btn">Edit</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-    </div>
-        <div id="editModal9"  class="modal">
-            <div class="modal-content0">
-                <span class="close">&times;</span>
-                <h2>Edit Museum</h2>
-                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Title:</label>
-                    <input id="input9"type="text" id="title" name="title">
-                    <label for="image">Image:</label>
-                    <input type="file" class="image" name="image">
-                    <div class="image-preview2" id="image-preview">
-                      <img class="preview" src="" alt="Image Preview">
-                  </div>   
-                    <button class="inner-buttons" type="submit">Save Changes</button>
-                </form>
-            </div>
-       
-            </div>
-          </div>
-        
-          <div class="swiper-slide museums-slide">
-          <div class="museums-slide-img">
-            <img src="https://www.svgrepo.com/show/114383/white-plus-inside-a-black-square-symbol.svg" alt=" add museum">
-          </div>
-          <div class="museums-slide-content">
-            
-            <div class="museums-slide-content-bottom">
-              <h2 class="museum-name">
-             Add Museum             </h2>
-             
-              <div class="buttons">
-                <button class="add-btn" onclick="openAddPopup()">Add</button>
-              
-            </div>
-        </div>
-    </div>
-        <div id="addModal" >
-            <div class="addModal-content">
-              <span class="close-btn">&times;</span>
-              <h2>Add Museum</h2>
-                <form id="addForm" action="add.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Title:</label>
-                    <input id="input10"type="text" id="title" name="title">
-                    <label for="image">Image:</label>
-                    <input type="file" class="image" name="image">
-                    <div class="image-preview2" id="image-preview">
-                      <img class="preview" src="" alt="Image Preview">
-                  </div>  
-                    <button class="inner-buttons" type="submit">Save </button>
-                </form>
-            </div>
-       
-            </div>
-          </div>
-        </div>
-          
 
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev" ></div>
-      </div>
+      <div class="container-museum">
+
+          <div class="slide">
   
+              
+              <div class="item" style="background-image: url(https://i.pinimg.com/564x/52/26/fb/5226fb81560b1145afc4bea0e8919bff.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                  <div class="content">
+                      <div class="name">The Egyptian Museum in Cairo </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="EgyptianMuseumInCairoAdmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+              <div class="item" style="background-image: url(https://www.svgrepo.com/show/114383/white-plus-inside-a-black-square-symbol.svg);">
+                <div class="content">
+                    <div class="name">  Add museum </div>
+               
+                      <a href="BritishMuseum.html" class="button-link">Add</a>
+                </div>
+            </div>
+              <div class="item" style="background-image: url(https://images.squarespace-cdn.com/content/v1/56c13cc00442627a08632989/1589748843269-75TRXGEE5UBOBUH1BRTE/luxormuseum.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">   Luxor Museum </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="LuxorMuseumAdmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+              <div class="item" style="background-image: url(https://i.pinimg.com/564x/42/89/fa/4289fa5c99f2bf1c0e99c67ae742ed5e.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">Alexandria National Museum </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="AlexandriaNationalMuseumAdmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+              <div class="item" style="background-image: url(https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">Smithsonian Museum </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="SmithsonianMuseumadmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+              <div class="item" style="background-image: url(https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">   Karnak Temple </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="KarnakTempleAdmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+              <div class="item" style="background-image: url(https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">Greco-Roman Museum Of Alexandria </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="Greco-RomanMuseumOfAlexandria-admin.html" class="button-link">Edit</a>
+
+                  </div>
+              </div>                <div class="item" style="background-image: url(https://i.pinimg.com/564x/b7/f7/0f/b7f70fe84c747c2a8d451e8e07db6caf.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">    The Coptic Museum</div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="TheCopticMuseumadmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>                <div class="item" style="background-image: url(https://images.museumwnf.org/full/museums/eg/1/2.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">   Museum of Islamic Art in Cairo </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        <a href="MuseumofIslamicArtinCairoadmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>                <div class="item" style="background-image: url(https://cdn.londonandpartners.com/asset/british-museum_museum-frontage-image-courtesy-of-the-british-museum_f0b0a5a3c53f8fc1564868c561bd167c.jpg);">
+                <div class="delete-icon">
+                  <ion-icon name="trash"></ion-icon>
+                  <span class="delete-text">Delete</span>
+              </div>
+                <div class="content">
+                      <div class="name">  British Museum </div>
+                      <h3 class="museum-rating">
+                          <span>4.5</span>
+                          <div class="rating">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                          </div>
+                        </h3>
+                        
+                        <a href="BritishMuseumAdmin.html" class="button-link">Edit</a>
+                  </div>
+              </div>
+       
           </div>
-        </div>
-      </section>
+  
+          <div class="button">
+              <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+  
+      </div>
+    </section>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

@@ -389,3 +389,34 @@ document.addEventListener('DOMContentLoaded', function() {
   
  
 
+  let next = document.querySelector('.next')
+  let prev = document.querySelector('.prev')
+  
+  next.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').appendChild(items[0])
+  })
+  
+  prev.addEventListener('click', function(){
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+  })
+  document.querySelectorAll('.delete-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        this.closest('.item').remove();
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const removeIcons = document.querySelectorAll('.remove-icon');
+
+    removeIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const slide = this.closest('.swiper-slide');
+            slide.remove();
+            // Update the Swiper instance if necessary
+            swiper.update();
+        });
+    });
+});
