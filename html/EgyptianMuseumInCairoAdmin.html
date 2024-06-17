@@ -29,141 +29,66 @@
 
   <body>
     <section>  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/52/26/fb/5226fb81560b1145afc4bea0e8919bff.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">The Egyptian Museum in Cairo</h1><br>
-          <h2 style="color: beige; font-size: 15px;"> Bridging past and present</h2><br>
-          <p style="color: beige; font-size: 10px;" >  15th of November 1902. </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-    <br>
-    <br>
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">The Egyptian Museum in Cairo</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;"> Bridging past and present</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" >  15th of November 1902. </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                    Celebrating its rich heritage, the Egyptian Museum in Cairo stands as a beacon of ancient legacy  <br>
-                     and modern innovation. Established in 1902, the museum serves as a testament to Egypt's<br>
-                     enduring cultural significance. Within its hallowed halls, visitors embark on a journey through<br>
-                     millennia of history, marveling at treasures from the time of the pharaohs.<br>
-                    <br>
+      <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/52/26/fb/5226fb81560b1145afc4bea0e8919bff.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">The Egyptian Museum in Cairo</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> Bridging past and present</h2><br>
+        <p style="color: beige; font-size: 10px;" >  15th of November 1902. </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >The Egyptian Museum in Cairo</h1><br>
+                 <h2 > Bridging past and present</h2><br>
+                 <p >  15th of November 1902. </p>
+              <br>
+              <p id="paragraph1"style="color: black;">
+                  Celebrating its rich heritage, the Egyptian Museum in Cairo stands as a beacon of ancient legacy 
+                   and modern innovation. Established in 1902, the museum serves as a testament to Egypt's
+                   enduring cultural significance. Within its hallowed halls, visitors embark on a journey through
+                   millennia of history, marveling at treasures from the time of the pharaohs.
+                  <br>
 
 
-                    At the heart of the museum's collection lies a wealth of artifacts meticulously curated to preserve <br>
-                    Egypt's illustrious past. From intricately carved statues to ornate sarcophagi, each exhibit offers a<br>
-                    glimpse into the splendor of ancient Egyptian civilization. Among its most prized possessions is<br>
-                    the iconic golden mask of Tutankhamun, a symbol of the opulence and mystique of the pharaonic era.<br>
-                    <br>
+                  At the heart of the museum's collection lies a wealth of artifacts meticulously curated to preserve 
+                  Egypt's illustrious past. From intricately carved statues to ornate sarcophagi, each exhibit offers a
+                  glimpse into the splendor of ancient Egyptian civilization. Among its most prized possessions is
+                  the iconic golden mask of Tutankhamun, a symbol of the opulence and mystique of the pharaonic era.
+                  <br>
 
-                    
-                    Yet, the Egyptian Museum is more than just a repository of antiquities—it is a living testament to<br>
-                    the enduring allure of Egyptology. Through groundbreaking research and innovative exhibitions,<br>
-                    the museum continues to shed new light on the mysteries of the past. Visitors are invited to<br>
-                    explore the latest discoveries and interpretations, enriching their understanding of Egypt's storied<br>
-                    history.
-                    <br>
+                  
+                  Yet, the Egyptian Museum is more than just a repository of antiquities—it is a living testament to
+                  the enduring allure of Egyptology. Through groundbreaking research and innovative exhibitions,
+                  the museum continues to shed new light on the mysteries of the past. Visitors are invited to
+                  explore the latest discoveries and interpretations, enriching their understanding of Egypt's storied
+                  history.
+                  <br>
 
 
-                    As a cultural cornerstone of Cairo, the museum plays a vital role in preserving Egypt's cultural<br>
-                    heritage for future generations. Through its ongoing efforts in conservation and education, it<br>
-                    ensures that the legacy of ancient Egypt remains vibrant and accessible to all. Just as the ancient<br>
-                    Egyptians sought immortality through their monuments, so too does the Egyptian Museum strive<br>
-                    to immortalize their legacy in the annals of history. <br> <br></ps>
-        
-              </div>
-              <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                  As a cultural cornerstone of Cairo, the museum plays a vital role in preserving Egypt's cultural
+                  heritage for future generations. Through its ongoing efforts in conservation and education, it
+                  ensures that the legacy of ancient Egypt remains vibrant and accessible to all. Just as the ancient
+                  Egyptians sought immortality through their monuments, so too does the Egyptian Museum strive
+                  to immortalize their legacy in the annals of history. <br></p>
+      
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">     Celebrating its rich heritage, the Egyptian Museum in Cairo stands as a beacon of ancient legacy  
-                        and modern innovation. Established in 1902, the museum serves as a testament to Egypt's
-                        enduring cultural significance. Within its hallowed halls, visitors embark on a journey through
-                        millennia of history, marveling at treasures from the time of the pharaohs.
-                       
-   
-   
-                       At the heart of the museum's collection lies a wealth of artifacts meticulously curated to preserve 
-                       Egypt's illustrious past. From intricately carved statues to ornate sarcophagi, each exhibit offers a
-                       glimpse into the splendor of ancient Egyptian civilization. Among its most prized possessions is
-                       the iconic golden mask of Tutankhamun, a symbol of the opulence and mystique of the pharaonic era.
-                
-   
-                       
-                       Yet, the Egyptian Museum is more than just a repository of antiquities—it is a living testament to
-                       the enduring allure of Egyptology. Through groundbreaking research and innovative exhibitions,
-                       the museum continues to shed new light on the mysteries of the past. Visitors are invited to
-                       explore the latest discoveries and interpretations, enriching their understanding of Egypt's storied
-                       history.
-                       
-   
-   
-                       As a cultural cornerstone of Cairo, the museum plays a vital role in preserving Egypt's cultural
-                       heritage for future generations. Through its ongoing efforts in conservation and education, it
-                       ensures that the legacy of ancient Egypt remains vibrant and accessible to all. Just as the ancient
-                       Egyptians sought immortality through their monuments, so too does the Egyptian Museum strive
-                       to immortalize their legacy in the annals of history. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+            <div class="ticket-box">
+              <h3>Book a Ticket</h3>
+              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+              <button>Book Now</button>
+          </div>
+      
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>

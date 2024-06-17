@@ -29,126 +29,58 @@
 
   <body>
     <section>  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">Smithsonian Museums</h1><br>
-          <h2 style="color: beige; font-size: 15px;"> Explore, Discover, Imagine, Inspire</h2><br>
-          <p style="color: beige; font-size: 10px;" >  10th August 1846 </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-    <br>
-    <br>
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">Smithsonian Museums</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;">  Explore, Discover, Imagine, Inspire</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" >  10th August 1846  </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                    The Smithsonian Institution, founded in 1846, stands as the world's <br>
-                    largest museum, education, and research complex, comprising 19 museums, galleries,<br>
-                     gardens, and a zoo. Nestled primarily in Washington D.C., its diverse collections span <br>
-                     art, history, culture, science, and technology, attracting millions of visitors annually. <br><br>
+      <div class="blurry-background" style="background-image: url('https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">Smithsonian Museums</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> Explore, Discover, Imagine, Inspire</h2><br>
+        <p style="color: beige; font-size: 10px;" >  10th August 1846 </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >Smithsonian Museums</h1><br>
+                 <h2 >  Explore, Discover, Imagine, Inspire</h2><br>
+                 <p  >  10th August 1846  </p>
+              <br>
+              <p id="paragraph1">
+                  The Smithsonian Institution, founded in 1846, stands as the world's 
+                  largest museum, education, and research complex, comprising 19 museums, galleries,
+                   gardens, and a zoo. Nestled primarily in Washington D.C., its diverse collections span 
+                   art, history, culture, science, and technology, attracting millions of visitors annually. <br>
 
-                    The National Museum of American History showcases the nation's cultural heritage, featuring <br>
-                     iconic artifacts such as the Star-Spangled Banner and the First Ladies' inaugural gowns. <br>
-                      The National Air and Space Museum chronicles humanity's quest for the skies, housing the Wright <br>
-                       brothers' plane and the Apollo 11 command module. <br><br>
-                    
-                    In the heart of the National Mall, the National Museum of Natural History unveils the mysteries <br>
-                     of our planet and its inhabitants, including the Hope Diamond and dinosaur fossils. Meanwhile, <br>
-                      the National Portrait Gallery immortalizes significant figures through portraiture, offering a <br>
-                      visual narrative of American history and culture. <br><br>
-                    
-                    Beyond D.C., the Smithsonian's reach extends across the country, with facilities <br>
-                     like the National Museum of African American History and Culture in Harlem and the National <br>
-                     Museum of the American Indian in New York City. These institutions stand as beacons of knowledge and <br>
-                     inspiration, fostering curiosity, understanding, and appreciation for the world's wonders.  <br><br>
-                    </ps>
-        
-              </div>
-              <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                  The National Museum of American History showcases the nation's cultural heritage, featuring 
+                   iconic artifacts such as the Star-Spangled Banner and the First Ladies' inaugural gowns. 
+                    The National Air and Space Museum chronicles humanity's quest for the skies, housing the Wright 
+                     brothers' plane and the Apollo 11 command module. <br>
+                  
+                  In the heart of the National Mall, the National Museum of Natural History unveils the mysteries 
+                   of our planet and its inhabitants, including the Hope Diamond and dinosaur fossils. Meanwhile, 
+                    the National Portrait Gallery immortalizes significant figures through portraiture, offering a 
+                    visual narrative of American history and culture. <br>
+                  
+                  Beyond D.C., the Smithsonian's reach extends across the country, with facilities 
+                   like the National Museum of African American History and Culture in Harlem and the National 
+                   Museum of the American Indian in New York City. These institutions stand as beacons of knowledge and 
+                   inspiration, fostering curiosity, understanding, and appreciation for the world's wonders.  <br>
+                  </p>
+      
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">    The Smithsonian Institution, founded in 1846, stands as the world's 
-                        largest museum, education, and research complex, comprising 19 museums, galleries,
-                         gardens, and a zoo. Nestled primarily in Washington D.C., its diverse collections span 
-                         art, history, culture, science, and technology, attracting millions of visitors annually. 
-    
-                        The National Museum of American History showcases the nation's cultural heritage, featuring
-                         iconic artifacts such as the Star-Spangled Banner and the First Ladies' inaugural gowns. 
-                          The National Air and Space Museum chronicles humanity's quest for the skies, housing the Wright
-                           brothers' plane and the Apollo 11 command module. 
-                        
-                        In the heart of the National Mall, the National Museum of Natural History unveils the mysteries 
-                         of our planet and its inhabitants, including the Hope Diamond and dinosaur fossils. Meanwhile, 
-                          the National Portrait Gallery immortalizes significant figures through portraiture, offering a
-                          visual narrative of American history and culture. 
-                        
-                        Beyond D.C., the Smithsonian's reach extends across the country, with facilities
-                         like the National Museum of African American History and Culture in Harlem and the National 
-                         Museum of the American Indian in New York City. These institutions stand as beacons of knowledge and 
-                         inspiration, fostering curiosity, understanding, and appreciation for the world's wonders. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+            <div class="ticket-box">
+              <h3>Book a Ticket</h3>
+              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+              <button>Book Now</button>
+          </div>
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>

@@ -29,129 +29,61 @@
 
   <body>
     <section>  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://images.museumwnf.org/full/museums/eg/1/2.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">Museum of Islamic Arts</h1><br>
-          <h2 style="color: beige; font-size: 15px;"> lluminating Heritage, Inspiring Unity.</h2><br>
-          <p style="color: beige; font-size: 10px;" >  2nd December 1903 </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-    <br>
-    <br>
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">Museum of Islamic Arts</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;"> lluminating Heritage, Inspiring Unity.</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" > 2nd December 1903 </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                    "Nestled amidst the bustling streets of Cairo, the Museum of Islamic Arts <br>stands as a timeless 
-                    testament to Egypt's rich and vibrant Islamic heritage. <br>Established in 1903, this architectural 
-                    gem serves as a sanctuary of cultural preservation<br> and enlightenment, inviting visitors on a captivating 
-                     journey through <br>the annals of Islamic civilization. <br> <br>
+      <div class="blurry-background" style="background-image: url('https://images.museumwnf.org/full/museums/eg/1/2.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">Museum of Islamic Arts</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> lluminating Heritage, Inspiring Unity.</h2><br>
+        <p style="color: beige; font-size: 10px;" >  2nd December 1903 </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >Museum of Islamic Arts</h1><br>
+                 <h2 > lluminating Heritage, Inspiring Unity.</h2><br>
+                 <p > 2nd December 1903 </p>
+              <br>
+              <p id="paragraph1">
+                  "Nestled amidst the bustling streets of Cairo, the Museum of Islamic Arts stands as a timeless 
+                  testament to Egypt's rich and vibrant Islamic heritage. Established in 1903, this architectural 
+                  gem serves as a sanctuary of cultural preservation and enlightenment, inviting visitors on a captivating 
+                   journey through the annals of Islamic civilization.  <br>
 
-                    Stepping through its majestic gates, visitors are greeted by a treasure trove of artifacts that <br>
-                     span centuries of Islamic history, art, and culture. From intricate textiles and dazzling<br> ceramics to 
-                     exquisite metalwork and breathtaking manuscripts, each exhibit offers a  <br>glimpse into the diverse and
-                     multifaceted world of Islamic creativity. <br> <br>
-                    
-                    At the heart of the museum's collection lies a profound reverence for Islamic art and architecture. <br>
-                    Intricately carved woodwork, mesmerizing geometric patterns, and majestic domes evoke the grandeur and splendor <br>
-                     of Islamic civilization, while delicate calligraphy adorning ancient manuscripts speaks to the profound spiritual <br>
-                     and intellectual legacy of the Islamic world. <br><br>
-                    
-                    Through immersive exhibitions and educational programs, the museum strives to foster a deeper understanding <br>
-                    and appreciation for the rich tapestry of Islamic culture. From lectures and workshops to guided tours and <br>
-                    interactive displays, visitors are offered a multitude of opportunities to explore and engage with the fascinating <br>
-                     history and artistry of the Islamic world. <br><br>
-                    
-                   
-                
-                </ps>
-        
-              </div>
-              <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                  Stepping through its majestic gates, visitors are greeted by a treasure trove of artifacts that 
+                   span centuries of Islamic history, art, and culture. From intricate textiles and dazzling ceramics to 
+                   exquisite metalwork and breathtaking manuscripts, each exhibit offers a  glimpse into the diverse and
+                   multifaceted world of Islamic creativity.  <br>
+                  
+                  At the heart of the museum's collection lies a profound reverence for Islamic art and architecture. 
+                  Intricately carved woodwork, mesmerizing geometric patterns, and majestic domes evoke the grandeur and splendor 
+                   of Islamic civilization, while delicate calligraphy adorning ancient manuscripts speaks to the profound spiritual 
+                   and intellectual legacy of the Islamic world. <br>
+                  
+                  Through immersive exhibitions and educational programs, the museum strives to foster a deeper understanding 
+                  and appreciation for the rich tapestry of Islamic culture. From lectures and workshops to guided tours and 
+                  interactive displays, visitors are offered a multitude of opportunities to explore and engage with the fascinating 
+                   history and artistry of the Islamic world. <br>
+                  
+                 
+              
+              </p>
+      
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">  "Nestled amidst the bustling streets of Cairo, the Museum of Islamic Arts stands as a timeless 
-                        testament to Egypt's rich and vibrant Islamic heritage. Established in 1903, this architectural 
-                        gem serves as a sanctuary of cultural preservation and enlightenment, inviting visitors on a captivating 
-                         journey through the annals of Islamic civilization. 
-    
-                        Stepping through its majestic gates, visitors are greeted by a treasure trove of artifacts that 
-                         span centuries of Islamic history, art, and culture. From intricate textiles and dazzling ceramics to 
-                         exquisite metalwork and breathtaking manuscripts, each exhibit offers a  glimpse into the diverse and
-                         multifaceted world of Islamic creativity. 
-                        
-                        At the heart of the museum's collection lies a profound reverence for Islamic art and architecture.
-                        Intricately carved woodwork, mesmerizing geometric patterns, and majestic domes evoke the grandeur and splendor 
-                         of Islamic civilization, while delicate calligraphy adorning ancient manuscripts speaks to the profound spiritual 
-                         and intellectual legacy of the Islamic world. 
-                        
-                        Through immersive exhibitions and educational programs, the museum strives to foster a deeper understanding 
-                        and appreciation for the rich tapestry of Islamic culture. From lectures and workshops to guided tours and 
-                        interactive displays, visitors are offered a multitude of opportunities to explore and engage with the fascinating 
-                         history and artistry of the Islamic world. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+            <div class="ticket-box">
+              <h3>Book a Ticket</h3>
+              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+              <button>Book Now</button>
+          </div>
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>

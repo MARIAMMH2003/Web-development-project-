@@ -29,129 +29,58 @@
 
   <body>
     <section>  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://cdn.londonandpartners.com/asset/british-museum_museum-frontage-image-courtesy-of-the-british-museum_f0b0a5a3c53f8fc1564868c561bd167c.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">The British Museum</h1><br>
-          <h2 style="color: beige; font-size: 15px;"> Unveiling Humanity's Tapestry.</h2><br>
-          <p style="color: beige; font-size: 10px;" >   7th June 1753 </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-    <br>
-    <br>
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">The British Museum</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;">Unveiling Humanity's Tapestry.</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" >   7th June 1753 </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                  The British Museum, established on June 7, 1753, is a cultural treasure trove housing over eight <br>
-                  million artifacts from every corner of the globe. Its expansive collections span diverse civilizations <br>
-                  and epochs, offering visitors a captivating journey through human history and creativity. <br><br>
+      <div class="blurry-background" style="background-image: url('https://cdn.londonandpartners.com/asset/british-museum_museum-frontage-image-courtesy-of-the-british-museum_f0b0a5a3c53f8fc1564868c561bd167c.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">The British Museum</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> Unveiling Humanity's Tapestry.</h2><br>
+        <p style="color: beige; font-size: 10px;" >   7th June 1753 </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+             <div id="text-over" > <h1 >The British Museum</h1><br>
+                 <h2 >Unveiling Humanity's Tapestry.</h2><br>
+                 <p >   7th June 1753 </p>
+              <br>
+              <p id="paragraph1">
+                The British Museum, established on June 7, 1753, is a cultural treasure trove housing over eight 
+                million artifacts from every corner of the globe. Its expansive collections span diverse civilizations 
+                and epochs, offering visitors a captivating journey through human history and creativity. <br>
 
-                 From the Rosetta Stone to the Elgin Marbles, the museum's iconic exhibits represent pivotal <br> moments in
-                 world history and highlight the achievements of ancient civilizations. Visitors can<br> explore the Egyptian 
-                 mummies, marvel at Greek sculptures, and study the intricate artifacts<br> of Mesopotamia, each offering insights into 
-                 the beliefs, customs, and technologies of bygone eras. <br><br>
-                 
-                 Beyond its renowned collections, the British Museum serves as a hub for research, education, and <br>cultural exchange. 
-                 Scholars and experts from around the world converge here to study and interpret its vast<br> holdings, contributing to our 
-                 collective understanding of human civilization. <br>
-                 <br>
-                 
-                 Through innovative exhibitions, lectures, and educational programs, the museum engages visitors <br> of all ages and
-                 backgrounds, fostering a deeper appreciation for global heritage and promoting <br>cross-cultural dialogue. Its commitment 
-                 to accessibility ensures that the museum remains a welcoming space <br>for all, enriching lives and inspiring curiosity. <br><br>
-                 
-                 As a custodian of cultural heritage, the British Museum plays a vital role in preserving the legacy <br>of human 
-                  achievement and promoting cultural understanding and appreciation. With its enduring legacy and <br>global significance,
-                  it continues to inspire and educate millions, shaping our understanding of the past and <br>informing our vision for the future. <br><br></ps>
-        
+               From the Rosetta Stone to the Elgin Marbles, the museum's iconic exhibits represent pivotal  moments in
+               world history and highlight the achievements of ancient civilizations. Visitors can explore the Egyptian 
+               mummies, marvel at Greek sculptures, and study the intricate artifacts of Mesopotamia, each offering insights into 
+               the beliefs, customs, and technologies of bygone eras. <br>
+               
+               Beyond its renowned collections, the British Museum serves as a hub for research, education, and cultural exchange. 
+               Scholars and experts from around the world converge here to study and interpret its vast holdings, contributing to our 
+               collective understanding of human civilization. <br>
+               <br>
+               
+               Through innovative exhibitions, lectures, and educational programs, the museum engages visitors  of all ages and
+               backgrounds, fostering a deeper appreciation for global heritage and promoting cross-cultural dialogue. Its commitment 
+               to accessibility ensures that the museum remains a welcoming space for all, enriching lives and inspiring curiosity. <br>
+               
+               As a custodian of cultural heritage, the British Museum plays a vital role in preserving the legacy of human 
+                achievement and promoting cultural understanding and appreciation. With its enduring legacy and global significance,
+                it continues to inspire and educate millions, shaping our understanding of the past and informing our vision for the future. <br></p>
               </div>
               <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                <h3>Book a Ticket</h3>
+                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+                <button>Book Now</button>
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">  The British Museum, established on June 7, 1753, is a cultural treasure trove housing over eight 
-                        million artifacts from every corner of the globe. Its expansive collections span diverse civilizations 
-                        and epochs, offering visitors a captivating journey through human history and creativity. 
-      
-                       From the Rosetta Stone to the Elgin Marbles, the museum's iconic exhibits represent pivotal  moments in
-                       world history and highlight the achievements of ancient civilizations. Visitors can explore the Egyptian 
-                       mummies, marvel at Greek sculptures, and study the intricate artifacts of Mesopotamia, each offering insights into 
-                       the beliefs, customs, and technologies of bygone eras. 
-                       
-                       Beyond its renowned collections, the British Museum serves as a hub for research, education, and cultural exchange. 
-                       Scholars and experts from around the world converge here to study and interpret its vast holdings, contributing to our 
-                       collective understanding of human civilization. 
-                       
-                       
-                       Through innovative exhibitions, lectures, and educational programs, the museum engages visitors of all ages and
-                       backgrounds, fostering a deeper appreciation for global heritage and promoting cross-cultural dialogue. Its commitment 
-                       to accessibility ensures that the museum remains a welcoming space for all, enriching lives and inspiring curiosity. 
-                       
-                       As a custodian of cultural heritage, the British Museum plays a vital role in preserving the legacy of human 
-                        achievement and promoting cultural understanding and appreciation. With its enduring legacy and global significance,
-                        it continues to inspire and educate millions, shaping our understanding of the past and informing our vision for the future. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+        
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>

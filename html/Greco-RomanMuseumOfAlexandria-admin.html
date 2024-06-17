@@ -29,124 +29,56 @@
 
   <body>
     <section >  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">Greco-Roman Museum Of Alexandria</h1><br>
-          <h2 style="color: beige; font-size: 15px;">Echoes of Ancient Alexandria</h2><br>
-          <p style="color: beige; font-size: 10px;" >  26th April 1892 </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-   
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">Greco-Roman Museum Of Alexandria</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;">Echoes of Ancient Alexandria</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" >  26th April 1892 </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                    The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament <br>
-                     to the city's rich cultural heritage. Housed in a neoclassical building, the museum <br>
-                     showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. <br>
-                      Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and <br>
-                      everyday objects, offering insight into the fusion of Greek and Egyptian cultures <br>
-                      during this era. <br><br>
+      <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">Greco-Roman Museum Of Alexandria</h1><br>
+        <h2 style="color: beige; font-size: 15px;">Echoes of Ancient Alexandria</h2><br>
+        <p style="color: beige; font-size: 10px;" >  26th April 1892 </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+ 
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >Greco-Roman Museum Of Alexandria</h1><br>
+                 <h2 >Echoes of Ancient Alexandria</h2><br>
+                 <p >  26th April 1892 </p>
+              <br>
+              <p id="paragraph1">
+                  The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament 
+                   to the city's rich cultural heritage. Housed in a neoclassical building, the museum 
+                   showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. 
+                    Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and 
+                    everyday objects, offering insight into the fusion of Greek and Egyptian cultures 
+                    during this era. <br>
 
-                    Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and <br>
-                     intricately decorated pottery, reflecting the artistic prowess and cultural exchange that <br>
-                      flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations <br>
-                       of the city's harbor, shedding light on its maritime past. <br><br>
-                    
-                    As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, <br>
-                     where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of <br>
-                     royal portraits to the simplicity of household items, each artifact tells a story of the people who once <br>
-                      inhabited this cosmopolitan city. <br><br>
-                    
-                    The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy <br>
-                     of one of the ancient world's most influential cultural hubs. <br><br></ps>
-        
-              </div>
-              <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                  Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and 
+                   intricately decorated pottery, reflecting the artistic prowess and cultural exchange that 
+                    flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations 
+                     of the city's harbor, shedding light on its maritime past. <br>
+                  
+                  As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, 
+                   where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of 
+                   royal portraits to the simplicity of household items, each artifact tells a story of the people who once 
+                    inhabited this cosmopolitan city. <br>
+                  
+                  The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy 
+                   of one of the ancient world's most influential cultural hubs. <br></p>
+      
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">    The Greco-Roman Museum of Alexandria, established in 1892, stands as a testament 
-                        to the city's rich cultural heritage. Housed in a neoclassical building, the museum 
-                        showcases artifacts spanning the Hellenistic and Roman periods of Egypt's history. 
-                         Visitors are greeted by a diverse collection of statues, sarcophagi, pottery, and 
-                         everyday objects, offering insight into the fusion of Greek and Egyptian cultures 
-                         during this era. 
-   
-                       Among the museum's highlights are exquisite marble sculptures, intricate mosaics, and 
-                        intricately decorated pottery, reflecting the artistic prowess and cultural exchange that 
-                         flourished in ancient Alexandria. The museum also features artifacts from the underwater excavations 
-                          of the city's harbor, shedding light on its maritime past. 
-                       
-                       As visitors explore the galleries, they are transported back in time to an era of intellectual flourishing, 
-                        where Alexandria served as a vibrant center of learning, philosophy, and trade. From the grandeur of 
-                        royal portraits to the simplicity of household items, each artifact tells a story of the people who once 
-                         inhabited this cosmopolitan city. 
-                       
-                       The Greco-Roman Museum of Alexandria remains a vital link to the past, preserving and celebrating the legacy 
-                        of one of the ancient world's most influential cultural hubs. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+            <div class="ticket-box">
+              <h3>Book a Ticket</h3>
+              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+              <button>Book Now</button>
+          </div>
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>

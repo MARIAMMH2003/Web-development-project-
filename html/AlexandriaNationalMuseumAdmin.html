@@ -29,121 +29,56 @@
 
   <body>
     <section>  <div class="blurry-container">
-        <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/42/89/fa/4289fa5c99f2bf1c0e99c67ae742ed5e.jpg')"></div>
-        <div class="text-overlay">
-          <h1 style="color: beige; font-size: 20px;">Alexandria National Museum</h1><br>
-          <h2 style="color: beige; font-size: 15px;"> Echoes of Alexandria's Glory</h2><br>
-          <p style="color: beige; font-size: 10px;" >  31st December 2003 </p>
-        </div>
-    </div>
-    <div id="bar">
-    <nav id="ahh" >
-        
-        <a href="#overview">Overview</a>
-        <a href="#details">Famous Monuments</a>
-        <a href="#comments-section">Comments</a>
-    </nav></div>
-    <hr></section>
-    <br>
-    <br>
-    <section id="overview" class="section-content">
-        <div class="blurry-container">
-            <div class="text-overlay">
-                <h1 style="color: #8a6252; font-size: 20px;">Alexandria National Museum</h1><br>
-                   <h2 style="color: #8a6252; font-size: 15px;"> Echoes of Alexandria's Glory</h2><br>
-                   <p style="color: #8a6252; font-size: 10px;" >  31st December 2003 </p>
-                <br>
-                <ps id="paragraph"style="color: black;">
-                    The Alexandria National Museum, founded in 2003, stands as a testament to the city's <br>
-                     rich and diverse history. Situated in a stunning Italianate-style building, it serves as a <br>
-                     treasure trove of artifacts, spanning various epochs and civilizations. From ancient <br>
-                     Egyptian relics to artifacts from the Greco-Roman period, Islamic art, <br>
-                      and Coptic treasures, the museum offers a comprehensive <br>
-                      journey through Alexandria's past. <br><br>
+      <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/42/89/fa/4289fa5c99f2bf1c0e99c67ae742ed5e.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">Alexandria National Museum</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> Echoes of Alexandria's Glory</h2><br>
+        <p style="color: beige; font-size: 10px;" >  31st December 2003 </p>
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >Alexandria National Museum</h1><br>
+                 <h2 > Echoes of Alexandria's Glory</h2><br>
+                 <p >  31st December 2003 </p>
+              <br>
+              <p id="paragraph1">
+                  The Alexandria National Museum, founded in 2003, stands as a testament to the city's 
+                   rich and diverse history. Situated in a stunning Italianate-style building, it serves as a 
+                   treasure trove of artifacts, spanning various epochs and civilizations. From ancient 
+                   Egyptian relics to artifacts from the Greco-Roman period, Islamic art, 
+                    and Coptic treasures, the museum offers a comprehensive 
+                    journey through Alexandria's past. <br>
 
-                    Visitors can immerse themselves in the maritime history of the city, exploring <br>
-                     exhibits on Alexandria's significance as a hub of trade and culture. The museum also <br>
-                      showcases the architectural wonders of Alexandria, highlighting its role as a melting pot <br>
-                       of different cultures and influences. <br> <br>
-                    
-                    Through its carefully curated exhibits, the Alexandria National Museum provides insights <br>
-                     into the city's vibrant past, celebrating its cultural heritage and its contributions to human  <br>
-                     civilization. Whether you're interested in ancient history, art, or archaeology, the museum offers <br>
-                     something for everyone, making it a must-visit destination for anyone seeking to explore the rich tapestry of <br>
-                     Alexandria's history. <br><br></ps>
-        
-              </div>
-              <div class="ticket-box">
-                <h3>Welcome!</h3>
-                <p>Which part would you like to edit?</p>
-                <button onclick="editPicturePopup()">Edit Piture</button>
-                <button onclick=" ediTitlePopup() ">Edit Title</button>
-                <button onclick="editParagraphPopup()">Edit Paragraph</button>
-
+                  Visitors can immerse themselves in the maritime history of the city, exploring 
+                   exhibits on Alexandria's significance as a hub of trade and culture. The museum also 
+                    showcases the architectural wonders of Alexandria, highlighting its role as a melting pot 
+                     of different cultures and influences. <br>
+                  
+                  Through its carefully curated exhibits, the Alexandria National Museum provides insights 
+                   into the city's vibrant past, celebrating its cultural heritage and its contributions to human  
+                   civilization. Whether you're interested in ancient history, art, or archaeology, the museum offers 
+                   something for everyone, making it a must-visit destination for anyone seeking to explore the rich tapestry of 
+                   Alexandria's history. <br></p>
+      
             </div>
-            <div id="picture-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-picture">&times;</span>
-                  <h2>Edit Picture</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="image">Image:</label>
-                      <input type="file" id="image" name="image">
-                      <div class="image-preview3" id="image-preview">
-                        <img id="preview" src="" alt="Image Preview">
-                    </div>  
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-            <div id="title-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-title">&times;</span>
-                  <h2>Edit Title</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <label for="title">Title:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Slogan:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                      <label for="title">Date:</label>
-                      <input id="input9"type="text" id="title" name="title"><br>
-                   
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div> <div id="paragraph-edit"  class="Modal2">
-              <div class="new-class">
-                  <span class="close-paragraph">&times;</span>
-                  <h2>Edit Museum</h2>
-                  <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                      <textarea id="paragraph" rows="20" cols="80">  The Alexandria National Museum, founded in 2003, stands as a testament to the city's 
-                        rich and diverse history. Situated in a stunning Italianate-style building, it serves as a 
-                        treasure trove of artifacts, spanning various epochs and civilizations. From ancient 
-                        Egyptian relics to artifacts from the Greco-Roman period, Islamic art, 
-                         and Coptic treasures, the museum offers a comprehensive 
-                         journey through Alexandria's past. 
-  
-                       Visitors can immerse themselves in the maritime history of the city, exploring 
-                        exhibits on Alexandria's significance as a hub of trade and culture. The museum also 
-                         showcases the architectural wonders of Alexandria, highlighting its role as a melting pot 
-                          of different cultures and influences. 
-                       
-                       Through its carefully curated exhibits, the Alexandria National Museum provides insights 
-                        into the city's vibrant past, celebrating its cultural heritage and its contributions to human 
-                        civilization. Whether you're interested in ancient history, art, or archaeology, the museum offers 
-                        something for everyone, making it a must-visit destination for anyone seeking to explore the rich tapestry of 
-                        Alexandria's history. </textarea>
-                      <button class="inner-buttons" type="submit">Save Changes</button>
-                  </form>
-              </div>
-         
-              </div>
-            </div>
-        </div>
-    </section>
+            <div class="ticket-box">
+              <h3>Book a Ticket</h3>
+              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
+              <button>Book Now</button>
+          </div>
+      
+  </section>
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>
