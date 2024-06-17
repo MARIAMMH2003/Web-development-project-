@@ -782,7 +782,7 @@ textarea {
 .btn.cancel:hover {
   background-color: #aaa;
 }
-#searchInput {
+#searchInput  {
   background: linear-gradient(to right, beige, rgb(199, 187, 159));
   border: none;
   border-radius: 5px;

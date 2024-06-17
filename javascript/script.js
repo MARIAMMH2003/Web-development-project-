@@ -225,30 +225,44 @@ document.addEventListener('DOMContentLoaded',()=>{
         loginpic.style.display='inline';
     }
 });
-//museums
+//museum
 
 
-var museumsSlider = new Swiper('.museums-slider', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 'auto',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 2.5,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const search = document.getElementById('searchInput');
+    const museum = document.querySelectorAll('.museums-slide');
+    const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+
+    search.addEventListener('input', function () {
+      const searchTerm = search.value.toLowerCase().trim();
+      museum.forEach((slide, index) => {
+        const museumName = slide.querySelector('.museum-name').innerText.toLowerCase();
+        if (museumName.includes(searchTerm)) {
+          slide.classList.add('highlighted');
+          bullets[index].click();
+        } else {
+          slide.classList.remove('highlighted');
+        }
+      });
+    });
   });
+
+  
+
   
   
   document.addEventListener('DOMContentLoaded', function() {
@@ -289,18 +303,7 @@ var museumsSlider = new Swiper('.museums-slider', {
       })
   })
   
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-  });
+
   window.onscroll = function() {scrollFunction()};
   
   function scrollFunction() {
