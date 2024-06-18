@@ -1,3 +1,4 @@
+
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -330,167 +331,17 @@ allStar.forEach((item, idx)=> {
 })
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    pagination: {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-    navigation: {
+  },
+  navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const removeIcons = document.querySelectorAll('.remove-icon');
-    const editIcons = document.querySelectorAll('.edit-icon');
-    const modal = document.getElementById('editModal');
-    const closeModal = document.querySelector('.close');
-    const editImageInput = document.getElementById('editImage');
-    const imagePreview = document.getElementById('imagePreview').querySelector('img');
-    const editText = document.getElementById('editText');
-    const saveChangesBtn = document.getElementById('saveChanges');
-    let currentSlide = null;
-
-    removeIcons.forEach(icon => {
-      icon.addEventListener('click', function() {
-        const slide = this.closest('.swiper-slide');
-        slide.remove();
-        swiper.update();
-      });
-    });
-
-    editIcons.forEach(icon => {
-      icon.addEventListener('click', function() {
-        currentSlide = this.closest('.swiper-slide');
-        const currentImage = currentSlide.querySelector('.image-container').style.backgroundImage;
-        const currentText = currentSlide.querySelector('.swiper-text p').textContent;
-
-        // Set the current values to the modal inputs
-        imagePreview.src = currentImage.slice(5, -2); // Remove 'url(' and ')' from the style string
-        editText.value = currentText;
-
-        // Show the modal
-        modal.style.display = 'block';
-      });
-    });
-
-    closeModal.onclick = function() {
-      modal.style.display = 'none';
-    };
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
-    };
-
-    editImageInput.addEventListener('change', function() {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          imagePreview.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
-    saveChangesBtn.addEventListener('click', function() {
-      if (currentSlide) {
-        const newImage = imagePreview.src;
-        const newText = editText.value;
-
-        // Update the slide with new values
-        currentSlide.querySelector('.image-container').style.backgroundImage = `url(${newImage})`;
-        currentSlide.querySelector('.swiper-text p').textContent = newText;
-
-        // Hide the modal
-        modal.style.display = 'none';
-      }
-    });
-  });
-  const addIcon = document.querySelector('.add-icon');
-  const addModal = document.getElementById('addModal2');
-  const closeModalBtn = document.querySelector('.close-btn');
-  const addSlideForm = document.getElementById('addSlideForm');
-  const imagePreview = document.getElementById('image-preview img');
-
-  addIcon.addEventListener('click', function() {
-      addModal.style.display = 'block';
-  });
-
-  closeModalBtn.addEventListener('click', function() {
-      addModal.style.display = 'none';
-  });
-
-  window.addEventListener('click', function(event) {
-      if (event.target == addModal) {
-          addModal.style.display = 'none';
-      }
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const addSlideForm = document.getElementById('addSlideForm');
-  
-    addSlideForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-  
-      const addImageInput = document.getElementById('addImage');
-      const addDescriptionInput = document.getElementById('addDescription');
-  
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const newSlideHTML = `
-          <div class="swiper-slide">
-            <div class="image-margin">
-              <div class="image-container" style="background-image: url('${e.target.result}');">
-                <div class="remove-icon">
-                  <ion-icon name="trash"></ion-icon>
-                  <span class="remove-text">Delete</span>
-                </div>
-                <div class="edit-icon">
-                  <ion-icon name="create-outline"></ion-icon>
-                  <span class="edit-text">Edit</span>
-                </div>
-              </div>
-              <div class="swiper-text">
-                <p>${addDescriptionInput.value}</p>
-              </div>
-            </div>
-          </div>
-        `;
-  
-        const newSlide = document.createElement('div');
-        newSlide.innerHTML = newSlideHTML;
-  
-        // Insert the new slide before the last "add" slide
-        const addSlideIndex = swiper.slides.length - 1;
-        swiper.addSlide(addSlideIndex, newSlide.children);
-  
-        document.getElementById('addModal2').style.display = 'none';
-        addSlideForm.reset();
-        document.getElementById('imagePreview').querySelector('img').src = '';
-      };
-  
-      reader.readAsDataURL(addImageInput.files[0]);
-    });
-  
-    document.getElementById('addImage').addEventListener('change', function() {
-      const file = this.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const imagePreview = document.getElementById('imagePreview').querySelector('img');
-          imagePreview.src = e.target.result;
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  });
-  
-
+  },
+});
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -506,8 +357,37 @@ function scrollFunction() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const search = document.getElementById('searchInput');
+  const museum = document.querySelectorAll('.museums-slide');
+  const bullets = document.querySelectorAll('.swiper-pagination-bullet');
 
-
+  search.addEventListener('input', function() {
+    const searchTerm = search.value.toLowerCase().trim();
+    museum.forEach((slide, index) => {
+      const museumName = slide.querySelector('.museum-name').innerText.toLowerCase();
+      if (museumName.includes(searchTerm)) {
+        slide.classList.add('highlighted');
+        bullets[index].click(); 
+      } else {
+        slide.classList.remove('highlighted');
+      }
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      var images = document.querySelectorAll(".container .box img");
+      var topOfWindow = window.scrollY + window.innerHeight;
+      images.forEach(function(image) {
+        var imagePos = image.offsetTop;
+        if (imagePos < topOfWindow) {
+          image.classList.add("fade-in");
+        }
+      });
+    });
+  });
+  
  
 
   let next = document.querySelector('.next')
@@ -520,13 +400,284 @@ function scrollFunction() {
   
   prev.addEventListener('click', function(){
       let items = document.querySelectorAll('.item')
-      document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 10
+      document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
   })
   document.querySelectorAll('.delete-icon').forEach(icon => {
     icon.addEventListener('click', function() {
         this.closest('.item').remove();
-    })
+    });
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const removeIcons = document.querySelectorAll('.remove-icon');
 
+    removeIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            const slide = this.closest('.swiper-slide');
+            slide.remove();
+            // Update the Swiper instance if necessary
+            swiper.update();
+        });
+    });
+});
+function createNewPage() {
+    const newWindow = window.open('', '_blank');
+    const newDocument = newWindow.document.open();
+    const content = `
+      <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>New museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/map-testing.css">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+  <link rel="stylesheet" href="../css/admin.css">
+  </head>
+    
+
+  <body>
+    <section>  <div class="blurry-container">
+      <div class="blurry-background" style="background-image: url('https://i.pinimg.com/564x/66/5e/7f/665e7f6ca98e4e14551bf9d02e7c2ca0.jpg')"></div>
+      <div class="text-overlay">
+        <h1 style="color: beige; font-size: 20px;">Title</h1><br>
+        <h2 style="color: beige; font-size: 15px;"> Slogan</h2><br>
+        <p style="color: beige; font-size: 10px;" >  Date. </p>
+        <button id="edit-title-slogan-date" class="inner-buttons" >Add Museum Title</button>
+
+      </div>
+  </div>
+  <div id="bar">
+  <nav id="ahh" >
+      
+      <a href="#overview">Overview</a>
+      <a href="#details">Famous Monuments</a>
+      <a href="#comments-section">Comments</a>
+  </nav></div>
+  <hr></section>
+  <br>
+  <br>
+  <section id="overview" class="section-content">
+    <div id="text-over" >
+              <h1 >Title</h1><br>
+                 <h2 >Slogan</h2><br>
+                 <p  >  Date. </p>
+              <br>
+              <p id="paragraph1">
+                museum overview....</p>
+            </div>
+            <div class="button-box">
+              <button id="edit-overview-paragraph" class="inner-buttons">Add Paragraph</button>
+            </div>
+  </section>
+    <section class="famous-monuments"id="details">
+      <br>
+      <span class="before-hr">Famous Monuments</span>
+        <hr id="line">
+        <br>  <br> <br> 
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+     
+          <div class="swiper-slide">
+            <div class="image-margin">
+              <div class="image-container" style="background-image: url('https://i.pinimg.com/564x/66/5e/7f/665e7f6ca98e4e14551bf9d02e7c2ca0.jpg');">
+              <div class="add-icon">
+                  <ion-icon name="add-outline"></ion-icon>
+                  <span class="add-text">Add</span>
+             </div>    </div>        <div class="swiper-text">
+             <!-- <h2>The Statue of Ramses II</h2>-->
+              <p> The monument discription goes here.</p>
+          
+         
+          </div>
+          </div>
+          
+         
+          </div></div></div>
+          </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+    </section>
+
+  <div id="addModal2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Add Monument</h2>
+      <form id="addSlideForm">
+          <label for="addImage">Image:</label>
+          <input type="file" id="addImage" name="image" accept="image/*" required>
+          <div class="image-preview2" id="image-preview">
+              <img class="preview" src="" alt="Image Preview">
+          </div>
+          <label for="addDescription">Description:</label>
+          <textarea id="addDescription" rows="4" cols="8" required></textarea>
+          <button class="inner-buttons" type="submit">Add Slide</button>
+      </form>
+    </div>
+  </div>
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Monument</h2>
+        <form id="editForm">
+          <label for="editImage">Image:</label>
+          <input type="file" id="editImage" accept="image/*">
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview">
+          </div>
+          <label for="editText">Description:</label>
+          <textarea id="editText" rows="4"></textarea>
+          <button type="button"class="inner-buttons" id="saveChanges">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    
+    <section id="comments-section" class="reviews-section">
+
+      <div class="container-comment">
+        <div class="container__left">
+          <h1>"Discover why countless visitors choose to explore this museum.
+
+            
+          </h1>
+          <p>
+            With a diverse array of exhibits and interactive displays, it caters to various interests, ensuring each guest finds something to admire
+          </p>
+          <p>
+            The commitment to providing enriching experiences has garnered praise from thousands of guests annually. Families bond, friends debate, and individuals reflect within its walls, creating cherished memories that last a lifetime.
+          </p>
+          <p>
+            Join the satisfied reviewers. Leave a comment now .
+          </p>
+          
+        </div>
+        <div class="container__right">
+          <div class="card">
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Captivating artifacts, interactive displays, and engaging tours.
+                </p>
+                <h4>- Mariam Most</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="rating">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div class="card__content">
+              <span><i class="ri-double-quotes-l"></i></span>
+              <div class="card__details">
+                <p>
+                  Immersive exhibits, knowledgeable guides, and rich historical insights.
+                </p>
+                <h4>- Zeina Mohamed</h4>
+              </div>
+            </div>
+          </div>
+        
+<div class="card">
+
+
+<div class="rating">
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+<ion-icon name="star"></ion-icon>
+</div>
+<div class="card__content">
+<span><i class="ri-double-quotes-l"></i></span>
+<div class="card__details">
+  <p>
+    Well-curated collections, stunning architecture, and memorable experiences.
+  </p>
+  <h4>- Mariam Shaddad </h4>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+    
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="row">
+      <div class="footer-col" id="footer-col1">
+        <div class="map-container">
+          <a href="#" class="link"><h4>Museum Name </h4></a>
+          <div id="map"></div></div>
+      </div>
+    
+      <div class="footer-col" id="footer-col2">
+        <h4>follow us</h4>
+        <div class="social-links">
+         
+          <a href="https://www.instagram.com/explore/locations/298970781/coptic-museum?igsh=eW5td211OTg3NzQ3"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtu.be/cd2WmTqIprc?si=b-FnZCeYnwCSiWIv"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="../javascript/admin.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" >
+    </script>
+    <script src="../javascript/map-testing.js"></script>
+  </body>
+
+</html>
+    `;
+    newDocument.write(content);
+    newDocument.close();
+  }
+
+  if (createNewPageBtn) {
+    createNewPageBtn.addEventListener('click', createNewPage);
+  } else {
+    console.error('Create New Page button not found');
+  }

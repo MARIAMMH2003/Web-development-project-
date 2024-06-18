@@ -28,63 +28,49 @@
     
 
   <body>
-    <section>  <div class="blurry-container">
-      <div class="blurry-background" style="background-image: url('https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg')"></div>
-      <div class="text-overlay">
-        <h1 style="color: beige; font-size: 20px;">Karnak Temple</h1><br>
-        <h2 style="color: beige; font-size: 15px;"> Echoes of Ancient Majesty</h2><br>
-        <p style="color: beige; font-size: 10px;" > Around 2055 BCE  </p>
+    <section>
+      <div class="blurry-container">
+        <div class="blurry-background" style="background-image: url('https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg')"></div>
+        <div class="text-overlay">
+          <h1 id="blurry-title" style="color: beige; font-size: 20px;">Karnak Temple</h1><br>
+          <h2 id="blurry-slogan" style="color: beige; font-size: 15px;">Echoes of Ancient Majesty</h2><br>
+          <p id="blurry-date" style="color: beige; font-size: 10px;">Around 2055 BCE</p>
+          <button id="edit-title-slogan-date" class="inner-buttons" >Edit Museum Title</button>
+         
+        </div>
+    
       </div>
-  </div>
-  <div id="bar">
-  <nav id="ahh" >
-      
-      <a href="#overview">Overview</a>
-      <a href="#details">Famous Monuments</a>
-      <a href="#comments-section">Comments</a>
-  </nav></div>
-  <hr></section>
-  <br>
-  <br>
-  <section id="overview" class="section-content">
-    <div id="text-over" >
-      
-              <h1 >Karnak Temple</h1><br>
-                 <h2 > Echoes of Ancient Majesty.</h2><br>
-                 <p  >  Around 2055 BCE  </p>
-              <br>
-              <p id="paragraph1">
-                  The Karnak Temple Complex stands as one of ancient Egypt's 
-                   most monumental and enduring architectural achievements. Situated near 
-                    Luxor on the east bank of the Nile, Karnak is a vast complex of temples,
-                     chapels, pylons, and other structures that once formed the religious 
-                      center of the ancient Egyptian capital of Thebes. <br>
-                  
+     
+      <div id="bar">
+        <nav id="ahh">
+          <a href="#overview">Overview</a>
+          <a href="#details">Famous Monuments</a>
+          <a href="#comments-section">Comments</a>
+        </nav>
+      </div>
+      <hr>
+    </section>
+    <br><br>
+    <section id="overview" class="section-content">
+      <div id="text-over">
+        <h1 id="overview-title">Karnak Temple</h1><br>
+        <h2 id="overview-slogan">Echoes of Ancient Majesty</h2><br>
+        <p id="overview-date">Around 2055 BCE</p>
+        <br>
+        <p id="paragraph1">
+          The Karnak Temple Complex stands as one of ancient Egypt's most monumental and enduring architectural achievements. Situated near Luxor on the east bank of the Nile, Karnak is a vast complex of temples, chapels, pylons, and other structures that once formed the religious center of the ancient Egyptian capital of Thebes. <br>
+          Construction on Karnak began over 4,000 years ago during the Middle Kingdom period and continued for over a millennium, with successive pharaohs adding to its grandeur. Dedicated primarily to the worship of the god Amun, Karnak was believed to be the earthly dwelling place of this important deity. <br>
+          The complex is renowned for its colossal Hypostyle Hall, adorned with towering columns intricately carved with hieroglyphs and depictions of ancient gods and pharaohs. Other notable features include the Avenue of Sphinxes, which once connected Karnak with the nearby Luxor Temple, and the Sacred Lake, used for ritual purification ceremonies. <br>
+          Today, Karnak Temple remains a testament to the ingenuity, spirituality, and architectural prowess of ancient Egypt. Its towering pylons, majestic obelisks, and vast courtyards continue to awe visitors from around the world, offering a window into the rich cultural heritage of this ancient civilization. <br> 
+        </p>
+      </div>
+      <div class="button-box">
+        <button id="edit-overview-paragraph" class="inner-buttons">Edit Paragraph</button>
+      </div>
+    </section>
+    
 
-                  Construction on Karnak began over 4,000 years ago during the Middle 
-                   Kingdom period and continued for over a millennium, with successive pharaohs 
-                    adding to its grandeur. Dedicated primarily to the worship of the god Amun, Karnak 
-                     was believed to be the earthly dwelling place of this important deity. <br>
-                  
-                  The complex is renowned for its colossal Hypostyle Hall, adorned with 
-                   towering columns intricately carved with hieroglyphs and depictions of 
-                   ancient gods and pharaohs. Other notable features include the Avenue of Sphinxes, 
-                    which once connected Karnak with the nearby Luxor Temple, and the Sacred Lake, used
-                     for ritual purification ceremonies. <br>
-                  
-                  Today, Karnak Temple remains a testament to the ingenuity, spirituality, 
-                   and architectural prowess of ancient Egypt. Its towering pylons, majestic obelisks,
-                    and vast courtyards continue to awe visitors from around the world, offering 
-                     a window into the rich cultural heritage of this ancient civilization.  <br> 
-                  </p>
-      
-            </div>
-            <div class="ticket-box">
-              <h3>Book a Ticket</h3>
-              <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-              <button>Book Now</button>
-          </div>
-  </section>
+
     <section class="famous-monuments"id="details">
       <br>
       <span class="before-hr">Famous Monuments</span>
@@ -185,37 +171,22 @@
             <p>The Avenue of Sphinxes at Karnak Temple is a majestic path lined with sphinx statues, symbolizing the link between the Luxor Temple and Karnak. It served as a ceremonial route for processions during ancient Egyptian festivals and rituals.</p>
         
       </div>
+</div>
+</div>
+<div class="swiper-slide">
+  <div class="image-margin">
+    <div class="image-container" style="background-image: url('https://i.pinimg.com/564x/66/5e/7f/665e7f6ca98e4e14551bf9d02e7c2ca0.jpg');">
+    <div class="add-icon">
+        <ion-icon name="add-outline"></ion-icon>
+        <span class="add-text">Add</span>
+   </div>    </div>        <div class="swiper-text">
+   <!-- <h2>The Statue of Ramses II</h2>-->
+    <p> The monument discription goes here.</p>
+
 
 </div>
-          <div class="swiper-slide">
-            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
-            <div class="swiper-text">
-             <!-- <h2>The Statue of Ramses II</h2>-->
-              <p> The monument discription goes here.</p>
-          
-              <div class="buttons">
-                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
-              
-            </div>
-          </div>
-          </div>
-          
-          <div class="modal-container2">
-          
-          
-              <div id="addModal2" >
-                <div class="addModal-content2">
-                <span class="close-btn">&times;</span>
-                <h2>Add Monument</h2>
-                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Discription:</label>
-                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
-                    <input type="file" class="image" name="image">
-                    <div class="image-preview2" id="image-preview">
-                      <img class="preview" src="" alt="Image Preview">
-                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
-                </form>
-            </div></div>
+</div>
+
           </div></div></div>
           </div>
                 </div>
@@ -226,9 +197,65 @@
     </section>
 
     
-
-
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Monument</h2>
+        <form id="editForm">
+          <label for="editImage">Image:</label>
+          <input type="file" id="editImage" accept="image/*">
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview">
+          </div>
+          <label for="editText">Description:</label>
+          <textarea id="editText" rows="4"></textarea>
+          <button type="button" id="saveChanges">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <div id="addModal2" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add Monument</h2>
+        <form id="addSlideForm">
+            <label for="addImage">Image:</label>
+            <input type="file" id="addImage" name="image" accept="image/*" required>
+            <div class="image-preview2" id="image-preview">
+                <img class="preview" src="" alt="Image Preview">
+            </div>
+            <label for="addDescription">Description:</label>
+            <textarea id="addDescription" rows="4" cols="8" required></textarea>
+            <button class="inner-buttons" type="submit">Add Slide</button>
+        </form>
+      </div>
+    </div>
+    <div id="editTitleSloganDateModal" >
+      <div class="modal-content">
+        <span class="close-btn1">&times;</span>
+        <h2>Edit Title, Slogan, and Date</h2>
+        <form id="editTitleSloganDateForm">
+          <label for="editTitle">Title:</label>
+          <input type="text" id="editTitle" name="editTitle" required>
+          <label for="editSlogan">Slogan:</label>
+          <input type="text" id="editSlogan" name="editSlogan" required>
+          <label for="editDate">Date:</label>
+          <input type="text" id="editDate" name="editDate" required>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
     
+    <div id="editOverviewParagraphModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn2">&times;</span>
+        <h2>Edit Overview Paragraph</h2>
+        <form id="editOverviewParagraphForm">
+          <label for="editParagraph">Overview Paragraph:</label>
+          <textarea id="editParagraph" name="editParagraph" rows="4" cols="50" required></textarea>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
     <section id="comments-section" class="reviews-section">
 
 

@@ -268,167 +268,164 @@ height: 650px;
 
 
 
-#picture-edit,#title-edit{
-  width: 65%;
-  margin-top: -350px;
-}
-#paragraph-edit{
-  width: 65%;
-  margin-top: -350px;
-}
-.modal,#addModal,#picture-edit,#title-edit,#paragraph-edit ,#addModal2{
-  display: none;
-  position: absolute;
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
- z-index: 9999;
- 
+ width: 100%;
+ height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
 }
-
-.addModal-content h2{
-text-align: center;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-padding: 10px;
-
+.modal h2{
+  justify-self: center;
+  color:#725144;
 }
-.addModal-content label{
-text-align: left;
-color:#8a6252;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
-.addModal-content{
-text-align: left;
-background-color:#080808ca;
-margin: 10% auto;
-padding: 15px;
-padding-left: 30px;
-padding-right: 30px;
-border: 1px solid #888;
-width: 80%;
-overflow:hidden;
-}
-.addModal-content2 h2{
-text-align: center;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-padding: 10px;
+.modal-content {
+  background-color: rgba(245, 245, 220, 0.89);  margin:5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%; 
 
 }
-.addModal-content2 label{
-text-align: left;
-color:#8a6252;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
-.addModal-content2{
-text-align: left;
-background-color:#080808ca;
-padding: 10px;
-margin-left: 165%;
-border: 1px solid #888;
-width: 80%;
-overflow:hidden;
-}
-.modal-content0 h2,.modal-content h2,.modal-content1 h2,.modal-content2 h2,.modal-content3 h2,.modal-content4 h2,.addModal-content2 h2{
-  text-align: center;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 10px;
-}
-.modal-content0 label,.modal-content label,.modal-content1 label,.modal-content2 label,.modal-content3 label,.modal-content4 label,.addModal-content2 label{
-font-size: 15px;
-text-align: left;
-  color:#8a6252;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#input1,#input2,#input3,#input4,#input5,#input6,#input7,#input8,#input9,#input10{
-  background-color:  rgba(245, 245, 220, 0.814);
+
+.close:hover,
+.close:focus {
   color: black;
-  border: solid 2px rgba(0, 0, 0, 0.881);
-  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }
-.modal-content {
-text-align: left;
-  background-color:#080808ca;
+.close-btn1 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn1:hover,
+.close-btn1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}.close-btn2 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn2:hover,
+.close-btn2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Image preview in modal */
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-preview2 img {
+  width: 100%;
+  height: 230px;
+}
+.image-preview2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.image-preview img {
+  width: 40%;
+  height: 230px;
+}
+
+.button-box {
+  border-radius: 5%;
+  padding: 2%;
+  flex: 1 1 28%; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 28%; /* Ensure it doesn't exceed 28% */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.button-box button {
+  background-color: #8a6252;
+  color: beige;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.button-box button:hover {
+  background-color: #725144;
+}
+
+
+
+.inner-buttons2 {
   padding: 10px;
-  border: 1px solid #888;
-  width: 70%;
-
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.modal-container2{
-right: 0;
-position: absolute;
-
+@media (min-width: 600px) {
+  .button-box {
+    flex-direction: row;
+  }
 }
-.modal-container{
- left: 0;
- position: absolute;
 
-}
-.modal-container0{
-display: none;
-position: absolute;
-left: 0;
-top: 0;
-z-index: 9999;}
-.modal-content0{
-text-align: left;
-background-color:#080808ca;
-padding: 10px;
-border: 1px solid #888;
-width: 100%;
-}
-.modal-content {
-text-align: left;
-  background-color:#080808ca;
-  margin-left:0%;
 
-padding: 10px;
+.inner-buttons {
+  
+    background-color: #8a6252;
+    color: beige;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}  
+  
+.inner-buttons:hover {
+    background-color: #725144;
+  }
 
-  border: 1px solid #888;
-  width: 80%;
 
-}
-.modal-content1{
-text-align: left;
-background-color:#080808ca;
-margin-left:80% ;
 
-padding: 10px;
-
-border: 1px solid #888;
-width: 80%;
-}
-.modal-content2 {
-text-align: left;
-  background-color:#080808ca;
-  margin-left:165% ;
-
-padding: 10px;
-
-  border: 1px solid #888;
-  width: 80%;
-}
-.modal-content3 {
-text-align: left;
-background-color:#080808ca;
-margin-right:20% ;
-
-padding: 10px;
-
-border: 1px solid #888;
-width: 80%;
-}.modal-content4 {
-text-align: left;
-background-color:#080808ca;
-margin-left:80% ;
-
-padding: 10px;
-
-border: 1px solid #888;
-width: 85%;
-
-}
 
 
 
@@ -525,6 +522,7 @@ a:hover{
     color: #fff;
 }
 
+
 .text-overlay h1 {
     font-size: 32px;
     font-weight: bold;
@@ -533,6 +531,7 @@ a:hover{
 
 .text-overlay p {
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 
@@ -661,57 +660,7 @@ a{
         color: #8a6252; font-size: 10px;
       padding-bottom: 5%; }
         
-.ticket-box {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5%;
-  padding: 2%;
-  flex: 1 1 28%; /* Flex-grow, flex-shrink, flex-basis */
-  max-width: 28%; /* Ensure it doesn't exceed 28% */
-  text-align: center;
-  box-sizing: border-box;
-}
 
-.ticket-box h3 {
-  margin-top: 0;
-  color: #333;
-  font-size: 1rem; /* Adjusted font size */
-  padding-bottom: 0.5rem;
-}
-
-.ticket-box p {
-  color: #666;
-  font-size: 0.9rem; /* Adjusted font size */
-  padding-bottom: 1rem;
-}
-
-.ticket-box button {
-  background-color: #8a6252;
-  color: beige;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.ticket-box button:hover {
-  background-color: #725144;
-}
-
-@media (max-width: 768px) {
-  #text-over, .ticket-box {
-      flex: 1 1 100%; /* Full width on smaller screens */
-      max-width: 100%;
-  }
-
-  .ticket-box {
-      margin-top: 2rem; /* Add space above the ticket box */
-  }
-}
-        .ticket-box button:hover {
-            background-color: #06752d;
-        }
         .swiper-container p{
         font-size: 10px;
         color: beige;
@@ -1252,11 +1201,23 @@ font-weight: bolder;
   transition: opacity 0.3s ease;
   color: beige;
 }
-.image-container:hover .remove-icon .edit-icon{
+.add-icon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  color: beige;
+}
+.image-container:hover .remove-icon .edit-icon .add-icon{
     opacity: 1;
 }
 
-.remove-icon ion-icon .edit-icon ion-icon {
+.remove-icon ion-icon .edit-icon ion-icon .add-icon ion-icon{
     font-size: 24px;
 }
 
@@ -1271,6 +1232,16 @@ font-weight: bolder;
   margin-right: 5px;
   font-size: 14px;
   color:beige;
+}
+.add-text {
+  display: none;
+  margin-right: 5px;
+  font-size: 14px;
+  color:beige;
+
+}
+.add-icon:hover .add-text  {
+  display: inline;
 }
 .remove-icon:hover .remove-text  {
     display: inline;
