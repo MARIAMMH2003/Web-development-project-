@@ -1,16 +1,26 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", function (req, res) {
-  res.render('index', { user: (req.session.user === undefined ? "" : req.session.user) });
+router.get("/", (req, res)=> {
+  res.render('index', { title:"home page" });
+});
+router.get('/', (req, res) => {
+  res.render('index', { title: 'Home Page' });
 });
 
-router.get('/slide', function (req, res) {
-  res.render('slide', { user: (req.session.user === undefined ? "" : req.session.user) });
+// Route for login page
+router.get('/login', (req, res) => {
+    res.render('login', { user: (req.session.user === undefined ? "" : req.session.user) });
 });
 
-router.get('/about', function (req, res) {
-  res.render('about', { user: (req.session.user === undefined ? "" : req.session.user) });
+// Route for signup page
+router.get('/signup', (req, res) => {
+    res.render('signup', { user: (req.session.user === undefined ? "" : req.session.user) });
 });
+
+// Other routes go here
+
+module.exports = router;
+
 
 module.exports = router;

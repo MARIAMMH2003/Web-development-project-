@@ -1,0 +1,9 @@
+<h2>My Profile</h2>
+<% if (user && user.Image) { %>
+    <img src="/images/<%= user.Image %>" width="100">
+    <div>
+        Name: <%= user.name %>
+    </div>
+<% } else { %>
+    <p>User profile data not available.</p>
+<% } %>

@@ -1,4 +1,4 @@
-// data is stored in this model which acts like a collection 
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
@@ -10,16 +10,16 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  email: {
-    type: String,
-    required: true,
+  email:{
+    type:String,
+    required:true,
     unique:true
   },
-  userType: {
-    type: String,
-    enum:['client','tour-guide'],
-    required: true
-  },
+  usertype:{
+    type:String,
+    required:true,
+    enum:['client','tour-guide'] 
+  }
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);

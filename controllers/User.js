@@ -1,73 +1,73 @@
 const Employees = require('../models/employees');
-const path = require('path');
+  const AddUser = async (req, res) => {
+ const { name, password, email, usertype } = req.body;
 
-const AddUser = (req, res) => {
-    let imgFile;
-    let uploadPath;
-    if (!req.files || Object.keys(req.files).length === 0) {
-        return res.status(400).send('No files were uploaded.');
+  try {
+        const existingUser = await Employees.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ error: 'Email already exists' });
+        }
+   const newUser = new Employees({
+            name,
+            password,
+            email,
+            usertype
+        });
+          await newUser.save();
+           res.status(201).json({ message: 'User registered successfully' });
+  } catch (error) {
+           console.error('Error registering user:', error);
+            res.status(500).json({ error: 'Failed to register user' });
     }
-    imgFile = req.files.img;
-    uploadPath = path.join(__dirname, '../public/images/' + req.body.un + '.png');
-
-    // Use the mv() method to place the file somewhere on your server
-    imgFile.mv(uploadPath, function (err) {
-        if (err)
-            res.status(500).send(err);
-
-        const emp = new Employees({
-            UserName: req.body.un,
-            Password: req.body.pw,
-            Image: req.body.un + '.png',
-            Type: req.body.type
-        })
-        emp.save()
-            .then(result => {
-                res.redirect('/');
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    });
 };
 
-const GetUser = (req, res) => {
-    var query = { UserName: req.body.un, Password: req.body.pw };
-    Employees.findOne(query)
-        .then(result => {
-            req.session.user = result;
-            res.redirect('/user/profile');
-        })
-        .catch(err => {
-            console.log(err);
-        });
+const GetUser = async (req, res) => {
+    const {name,password,email,usertype } = req.body;
+
+    try {
+        const user = await Employees.findOne({ name: name,password:password, email:email, usertype:usertype });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        req.session.user = user;
+        res.redirect('/user/profile');
+    } catch (error) {
+        console.error('Error finding user:', error);
+        res.status(500).json({ error: 'Failed to get user' });
+    }
 };
 
-const checkUN = (req, res) => {
-    var query = { UserName: req.body.UserName };
-    Employees.find(query)
-        .then(result => {
-            if (result.length > 0) {
-                res.send('taken');
-            }
-            else {
-                res.send('available');
-            }
-        })
-        .catch(err => {
-            console.log(err);
-        });
+const checkUN = async (req, res) => {
+    const {email } = req.body;
+
+       try {
+     const existingUser = await Employees.findOne({ email });
+         if (existingUser) {
+           res.send('taken');
+        } else {
+            res.send('available');
+        }
+    } catch (error) {
+        console.error('Error checking username:', error);
+        res.status(500).json({ error: 'Failed to check username' });
+    }
 };
 
-const editUser = (req, res) => {
-    Employees.findByIdAndUpdate(req.session.user._id, { Password: req.body.pw })
-        .then(result => {
-            req.session.user.Password = req.body.pw;
-            res.redirect('/user/profile')
-        })
-        .catch(err => {
-            console.log(err);
-        });
+const editUser = async (req, res) => {
+    const { password } = req.body;
+    const userId = req.session.user._id;
+
+    try {
+        const updatedUser = await Employees.findByIdAndUpdate(userId, { password: password }, { new: true });
+        if (!updatedUser) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        req.session.user.password = password;
+        res.redirect('/user/profile');
+    } catch (error) {
+        console.error('Error updating user:', error);
+        res.status(500).json({ error: 'Failed to update user' });
+    }
 };
 
 module.exports = {
