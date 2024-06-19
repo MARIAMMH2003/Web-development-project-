@@ -1,0 +1,149 @@
+*{
+   box-sizing: border-box;
+   font-family: 'lato',san-serif;  
+   margin: 0;
+   padding: 0;
+}
+body{
+display: flex;
+flex-direction: column;
+align-items: center;
+background: black;
+color:aliceblue;
+padding: 20px; 
+}
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: auto;
+}
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+   
+}
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    
+}
+.grid-item:hover{
+    transform:translateY(-20px) ;
+}
+.grid-item:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(111, 54, 3, 0.5),rgb(231, 219, 156));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.grid-item:hover:before{
+opacity: 1;
+
+}
+.grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid-item .content{
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s all;  
+  text-align: center;
+}
+
+.grid-item:hover .content{
+opacity: 1;
+transform: translateY(0px);
+}
+
+.grid-item .content .link{
+   margin: 0;
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.location {
+   padding: 10px;
+}
+
+.location-info {
+    display: none;
+    color: black;
+    text-align: center;
+    padding: 60px;
+}
+
+
+.show-btn, .confirm-btn, .edit-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  
+}
+
+.show-btn {
+    background-color: #f19e62;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+#searchInput{
+background-color: black;
+border: none;
+color: aliceblue;
+width: 100%;
+padding: 10px;
+
+}
+#searchLogo{
+    color: aliceblue;
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+}
