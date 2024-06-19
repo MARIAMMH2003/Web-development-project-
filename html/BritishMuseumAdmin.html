@@ -34,6 +34,8 @@
         <h1 style="color: beige; font-size: 20px;">The British Museum</h1><br>
         <h2 style="color: beige; font-size: 15px;"> Unveiling Humanity's Tapestry.</h2><br>
         <p style="color: beige; font-size: 10px;" >   7th June 1753 </p>
+        <button id="edit-title-slogan-date" class="inner-buttons" >Edit Museum Title</button>
+
       </div>
   </div>
   <div id="bar">
@@ -74,11 +76,9 @@
                 achievement and promoting cultural understanding and appreciation. With its enduring legacy and global significance,
                 it continues to inspire and educate millions, shaping our understanding of the past and informing our vision for the future. <br></p>
               </div>
-              <div class="ticket-box">
-                <h3>Book a Ticket</h3>
-                <p>Explore the wonders of ancient Egypt. Book your tickets now!</p>
-                <button>Book Now</button>
-            </div>
+              <div class="button-box">
+                <button id="edit-overview-paragraph" class="inner-buttons">Edit Paragraph</button>
+              </div>
         
   </section>
     <section class="famous-monuments"id="details">
@@ -184,35 +184,20 @@
     </div>
    
   </div>
-          <div class="swiper-slide">
-            <img class="image-margin" src="C:\Users\maria\Documents\GitHub\Web-development-project-\admin\Plus-Background-PNG-Clip-Art-removebg-preview.png" alt="Slide 3">
-            <div class="swiper-text">
-             <!-- <h2>The Statue of Ramses II</h2>-->
-              <p> The monument discription goes here.</p>
-          
-              <div class="buttons">
-                <button class="add-btn" onclick="openAddPopupMonuments()">Add</button>
-              
-            </div>
-          </div>
-          </div>
-          
-          <div class="modal-container2">
-          
-          
-              <div id="addModal2" >
-                <div class="addModal-content2">
-                <span class="close-btn">&times;</span>
-                <h2>Add Monument</h2>
-                <form id="editForm" action="edit.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Discription:</label>
-                    <textarea id="paragraph" rows="4" cols="8">   </textarea>                             <label for="image">Image:</label>
-                    <input type="file" class="image" name="image">
-                    <div class="image-preview2" id="image-preview">
-                      <img class="preview" src="" alt="Image Preview">
-                  </div>                        <button class="inner-buttons" type="submit">Save Changes</button>
-                </form>
-            </div></div>
+  <div class="swiper-slide">
+    <div class="image-margin">
+      <div class="image-container" style="background-image: url('https://i.pinimg.com/564x/66/5e/7f/665e7f6ca98e4e14551bf9d02e7c2ca0.jpg');">
+      <div class="add-icon">
+          <ion-icon name="add-outline"></ion-icon>
+          <span class="add-text">Add</span>
+     </div>    </div>        <div class="swiper-text">
+     <!-- <h2>The Statue of Ramses II</h2>-->
+      <p> The monument discription goes here.</p>
+  
+ 
+  </div>
+  </div>
+  
           </div></div></div>
           </div>
                 </div>
@@ -222,8 +207,38 @@
             </div>
     </section>
 
-    
-
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit Monument</h2>
+        <form id="editForm">
+          <label for="editImage">Image:</label>
+          <input type="file" id="editImage" accept="image/*">
+          <div class="image-preview" id="imagePreview">
+            <img src="" alt="Image Preview" class="image-preview">
+          </div>
+          <label for="editText">Description:</label>
+          <textarea id="editText" rows="4"></textarea>
+          <button type="button" id="saveChanges">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <div id="addModal2" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add Monument</h2>
+        <form id="addSlideForm">
+            <label for="addImage">Image:</label>
+            <input type="file" id="addImage" name="image" accept="image/*" required>
+            <div class="image-preview2" id="image-preview">
+                <img class="preview" src="" alt="Image Preview">
+            </div>
+            <label for="addDescription">Description:</label>
+            <textarea id="addDescription" rows="4" cols="8" required></textarea>
+            <button class="inner-buttons" type="submit">Add Slide</button>
+        </form>
+      </div>
+    </div>
 
     
     <section id="comments-section" class="reviews-section">
