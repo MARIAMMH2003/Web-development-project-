@@ -5,6 +5,7 @@ const fileUpload = require('express-fileupload');
 const mongoose = require('mongoose');
 const User = require('./models/employees');
 const bcrypt = require('bcrypt');
+const bodyParser = require('body-parser');
 const app = express();
 const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj'
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -105,4 +106,16 @@ app.post('/login', async (req, res) => {
 app.use((req, res) => {
   const user = req.session.user || { Image: 'default.jpg', name: 'Unknown' };
   res.status(404).render('404', { user });
+});
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+
+// Routes
+const tourGuideRoutes = require('./routes/tourGuideRoutes');
+app.use('/tourGuides', tourGuideRoutes);
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
