@@ -1,30 +1,24 @@
-
-const contain=document.querySelector(".container"),
-signUp=document.querySelector(".signup-link"),
-login=document.querySelector(".login-link");
-
-
-signUp.addEventListener('click',()=>{
-  
-contain.classList.add("active");
-
-});
-login.addEventListener('click',()=>{
-  
-    contain.classList.remove("active");
-    
-});
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const signupForm = document.getElementById('signuppage');
+    const container = document.querySelector(".container");
+    const signUp = document.querySelector(".signup-link");
+    const login = document.querySelector(".login-link");
 
-    function validateForm() {
-   const N = document.getElementById('name');
-    const E = document.getElementById('email');
-     const pass = document.getElementById('password');
-   const conf = document.getElementById('confirm');
-   const usertype=document.getElementById('input[name="usertype"]:checked');
+    signUp.addEventListener('click', () => {
+        container.classList.add("active");
+    });
+
+    login.addEventListener('click', () => {
+        container.classList.remove("active");
+    });
+
+    const signupForm = document.getElementById('signuppage');
+    const loginForm = document.getElementById('loginpage');
+
+    function validateSignupForm() {
+        const N = document.getElementById('name');
+        const E = document.getElementById('email');
+        const pass = document.getElementById('password');
+        const conf = document.getElementById('confirm');
 
         let valid = true;
 
@@ -86,129 +80,132 @@ document.addEventListener('DOMContentLoaded', function() {
             conf.setCustomValidity('');
         }
 
-  
-
         return valid;
     }
 
     signupForm.addEventListener('submit', async function(event) {
-        event.preventDefault();  
-        if (!validateForm()) 
-            {
+        event.preventDefault();
+        if (!validateSignupForm()) {
             return;
         }
-           const data = {
-         
-            name:document.getElementById('name').value,
-            email:document.getElementById('email').value,
-            password:document.getElementById('password').value,
-            usertype:document.querySelector('input[name="usertype"]:checked').value
+
+        const data = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            usertype: document.querySelector('input[name="usertype"]:checked').value
         };
+
         try {
             const response = await fetch('/signup', {
                 method: 'POST',
-                headers:
-                 {
+                headers: {
                     'Content-Type': 'application/json'
                 },
-                    body: JSON.stringify(data)
+                body: JSON.stringify(data)
             });
-            if (response.ok) 
-                {
+
+            if (response.ok) {
                 const results = await response.json();
                 alert(results.message);
                 signupForm.reset();
-            } 
-            else 
-            {
+            } else {
                 const error = await response.json();
                 alert(error.error);
             }
-        } 
-        catch (error) {
-            console.error('Error submitting form:', error);
-            alert('Error submitting form. Please try again later.');
+        } catch (error) {
+            console.error('Error submitting signup form:', error);
+            alert('Error submitting signup form. Please try again later.');
         }
     });
 
+    function validateLoginForm() {
+        const loginemail = document.getElementById('loginemail');
+        const loginpass = document.getElementById('loginpass');
 
-const N=document.getElementById("name");
-const E=document.getElementById("email");
-const pass=document.getElementById("password");
-const conf=document.getElementById("confirm");
+        let valid = true;
 
-
-    N.addEventListener('change', validateForm);
-    E.addEventListener('keyup', validateForm);
-    pass.addEventListener('change', validateForm);
-    conf.addEventListener('keyup', validateForm);
-});
-
-// loging in
-document.getElementById('loginpage').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const loginemail = document.getElementById('loginemail');
-    const loginpass = document.getElementById('loginpass');
-
-    function validateForm() {
-         if (loginemail.value.trim() === "") {
+        if (loginemail.value.trim() === "") {
             loginemail.setCustomValidity("Please enter your email");
-            return false;
+            valid = false;
         } else {
             loginemail.setCustomValidity('');
         }
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(loginemail.value)) {
-            loginemail.setCustomValidity("enter a valid email address");
-            return false;
-        }
-        else {
+            loginemail.setCustomValidity("Enter a valid email address");
+            valid = false;
+        } else {
             loginemail.setCustomValidity('');
         }
+
         if (loginpass.value.trim() === "") {
             loginpass.setCustomValidity("Please enter your password");
-            return false;
+            valid = false;
         } else {
             loginpass.setCustomValidity('');
         }
 
-        
-        return true;
-    }
-    loginemail.addEventListener('change', validateForm);
-    loginpass.addEventListener('keyup', validateForm);
-    if (!validateForm()) {
-        return;
+        return valid;
     }
 
-    const found = accounts.find(account => account.email === loginemail.value);
-    if (found && found.password === loginpass.value) {
-        sessionStorage.setItem('loggedIn', 'true');
-        const user = document.getElementsByName("usertype");
-        let userType;
-        for (let i = 0; i < user.length; i++) {
-            if (user[i].checked) {
-                userType = user[i].value;
-                break;
-            }
+    loginForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        if (!validateLoginForm()) {
+            return;
         }
-    
-        if (userType === 'client') {
-            window.location.href = "../html/index.html";
-        } else if (userType === 'tour-guide') {
-            window.location.href = "../html/TourGuide.html";
-        }
-        else if(found.email === "zeinamabrouk@gmail.com" && found.password === "1234")
-            {
-                window.location.href = "../html/Tourifyad.html";
-            }
-          
-    } else {
-        alert("Email or password is incorrect.");
-    }
 
+        const data = {
+            email: document.getElementById('loginemail').value,
+            password: document.getElementById('loginpass').value
+        };
+
+        try {
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                sessionStorage.setItem('loggedIn', 'true');
+                sessionStorage.setItem('userType', result.usertype);
+
+                if (result.usertype === 'client') {
+                    window.location.href = "/";
+                } else if (result.usertype === 'tour-guide') {
+                    window.location.href = "../html/TourGuide.html";
+                } else if (result.usertype === 'admin') {
+                    window.location.href = "../html/Tourifyad.html";
+                } else {
+                    alert('Unknown user type');
+                }
+            } else {
+                const error = await response.json();
+                alert(error.error);
+            }
+        } catch (error) {
+            console.error('Error submitting login form:', error);
+            alert('Error submitting login form. Please try again later.');
+        }
+    });
+
+    // Add event listeners for real-time form validation
+    const nameField = document.getElementById('name');
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password');
+    const confirmPasswordField = document.getElementById('confirm');
+    const loginemailField = document.getElementById('loginemail');
+    const loginpasswordField = document.getElementById('loginpass');
+
+    nameField.addEventListener('change', validateSignupForm);
+    emailField.addEventListener('keyup', validateSignupForm);
+    passwordField.addEventListener('change', validateSignupForm);
+    confirmPasswordField.addEventListener('keyup', validateSignupForm);
+    loginemailField.addEventListener('change', validateLoginForm);
+    loginpasswordField.addEventListener('change', validateLoginForm);
 });
-
-
-
-
