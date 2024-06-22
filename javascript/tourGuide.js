@@ -71,3 +71,36 @@ document.getElementById('Requests').addEventListener('click', function() {
 document.getElementById('CardPreview').addEventListener('click', function() {
     window.location.href = 'cardpreview.html';
 });
+
+document.getElementById('tourGuideForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const tourGuide = {
+        name: document.getElementById('name').value,
+        profession: document.getElementById('profession').value,
+        about: document.getElementById('about').value,
+        image: document.getElementById('image').value,
+        socialMedia: {
+            facebook: document.getElementById('facebook').value,
+            twitter: document.getElementById('twitter').value,
+            instagram: document.getElementById('instagram').value,
+            whatsapp: document.getElementById('whatsapp').value,
+        },
+        rating: document.getElementById('rating').value
+    };
+    await fetch('/tourGuides', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(tourGuide)
+    });
+    alert('Tour guide profile updated!');
+});
+
+document.getElementById('cardPreviewBtn').addEventListener('click', () => {
+    window.location.href = 'cardpreview.html';
+});
+
+document.getElementById('requestBtn').addEventListener('click', () => {
+    window.location.href = 'request.html';
+})
