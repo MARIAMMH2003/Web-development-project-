@@ -48,5 +48,7 @@ router.get('/Greco-RomanMuseumOfAlexandria', (req, res) => {
 router.get('/LuxorMuseum', (req, res) => {
   res.render('LuxorMuseum');
 });
-
+router.get('/tourifyad', (req, res) => {
+  res.render('tourifyad');
+});
 module.exports = router;
