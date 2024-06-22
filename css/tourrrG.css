@@ -56,6 +56,14 @@ input {
     visibility: hidden;
 }
 
+.input2
+{
+    display: flex;
+    visibility: visible;
+    padding: 1em;
+    margin: 1em;
+}
+
 .nav1
 {
     height: 100%;
