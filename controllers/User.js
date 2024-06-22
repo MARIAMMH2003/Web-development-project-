@@ -22,12 +22,16 @@ const Employees = require('../models/employees');
 };
 
 const GetUser = async (req, res) => {
-    const {name,password,email,usertype } = req.body;
+    const {email,password } = req.body;
 
     try {
-        const user = await Employees.findOne({ name: name,password:password, email:email, usertype:usertype });
+        const user = await Employees.findOne({ email:email });
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
+        }
+        const passwordMatch = await bcrypt.compare(lpassword, user.password);
+        if (!passwordMatch) {
+            return res.status(401).json({ error: 'Incorrect password' });
         }
         req.session.user = user;
         res.redirect('/user/profile');

@@ -6,9 +6,9 @@ router.use(bodyParser.json());
 
 const User = require("../controllers/User");
 
-// router.get('/signup', (req, res) => {
-//     res.render('signup', { user: (req.session.user === undefined ? "" : req.session.user) });
-// });
+router.get('/login', (req, res) => {
+    res.render('login', { user: (req.session.user === undefined ? "" : req.session.user) });
+});
 
 router.get('/signup', (req, res) => {
     res.render('signup', { user: (req.session.user === undefined ? "" : req.session.user) });
