@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guides</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Tour Guides</h1>
+    <form action="/tourGuides" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="profession" placeholder="Profession" required>
+        <textarea name="about" placeholder="About"></textarea>
+        <input type="text" name="image" placeholder="Image URL">
+        <input type="text" name="socialMedia[facebook]" placeholder="Facebook URL">
+        <input type="text" name="socialMedia[twitter]" placeholder="Twitter URL">
+        <input type="text" name="socialMedia[instagram]" placeholder="Instagram URL">
+        <input type="text" name="socialMedia[whatsapp]" placeholder="WhatsApp URL">
+        <input type="number" name="rating" placeholder="Rating" min="1" max="5">
+        <button type="submit">Add Tour Guide</button>
+    </form>
+
+    <ul>
+        <% tourGuides.forEach(tourGuide => { %>
+            <li>
+                <img src="<%= tourGuide.image %>" alt="Tour Guide Picture">
+                <h2><%= tourGuide.name %></h2>
+                <p><%= tourGuide.profession %></p>
+                <p><%= tourGuide.about %></p>
+                <p>Rating: <%= tourGuide.rating %></p>
+                <form action="/tourGuides/update/<%= tourGuide._id %>" method="POST">
+                    <button type="submit">Edit</button>
+                </form>
+                <form action="/tourGuides/delete/<%= tourGuide._id %>" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
