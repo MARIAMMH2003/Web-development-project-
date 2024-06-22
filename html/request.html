@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Guide Requests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tour Guide Requests</h1>
+    <ul id="requestsList"></ul>
+    <button onclick="window.history.back();">Back</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const response = await fetch('/requests'); // Assuming you have an endpoint for requests
+            const requests = await response.json();
+            const requestsList = document.getElementById('requestsList');
+            requests.forEach(request => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `User: ${request.user}, Date: ${request.date}, Message: ${request.message}`;
+                requestsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
