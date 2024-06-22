@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*
-{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-body,html{
+
+body, html {
     height: 100%;
     margin: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-nav{
+
+nav {
     text-align: center;
     position: fixed;
-    width:100%;
+    width: 100%;
     margin: 0px;
     background-color: beige;
     z-index: 200;
@@ -23,27 +25,77 @@ nav{
     display: flex;
     justify-content: center;
 }
-.nav-a{
+
+.nav-a {
     position: relative;
     top: 10px;
     color: black;
     text-decoration: none;
-    padding:10px;
+    padding: 10px;
     padding-top: 0px;
     text-align: center;
     margin: 6px;
     border: 10px;
 }
-.nav-span{
+
+.nav-span {
     color: rgb(215, 154, 0);
     transition: all 0.5s ease-out;
 }
+
 .lll {
     height: 50px;
     width: 50px;
     margin-left: 5px;
     position: absolute;
-    right: 0; 
+    right: 0;
+}
+
+input {
+    display: none;
+    visibility: hidden;
+}
+
+.nav1
+{
+    height: 100%;
+    width: 220px;
+    position: absolute;
+    background-color: #000000;
+    transition: 0.4s ease;
+    transform: translateX(-220px);
+    left: 0; 
+    top: 0;
+    display: none;
+} 
+.n
+{
+    color:rgb(185, 118, 16);
+    background: #000000;
+    font-weight: 2000;
+    font-size: 3em;
+    text-align: right;
+    padding: 10px 10px;
+    padding-right: 20px;
+    pointer-events: none;
+}  
+ul li .a-toggle
+{
+    color: #ffffff;
+    background: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.05s ease-out;
+}
+ul li:hover .a-toggle
+{
+    color: #ffffff;
+    background-color:rgb(185, 118, 16) ;
 }
 input
 {
@@ -115,6 +167,8 @@ input:checked ~ .nav1
 {
     transform: translateX(0);
 }
+
+
 .container {
     display: flex;
     position: relative;
@@ -124,15 +178,14 @@ input:checked ~ .nav1
 
 .background {
     display: flex;
-    align-content: center;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('image1.jpeg'); 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    height: 50vh; 
+    background-image: url('image1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @keyframes slideBackground {
@@ -154,20 +207,151 @@ input:checked ~ .nav1
     }
     100% {
         background-image: url('image1.jpeg');
-        background-position: 0 0; 
+        background-position: 0 0;
     }
+}
+
+.background:hover {
+    opacity: 0.8; 
+    color: rgba(127, 129, 131,  0.546);
 }
 
 .foreground {
     display: flex;
-    position: absolute;
+    justify-content: center;
     align-items: center;
-    top: 85%;
-    left: 45%;
+    position: absolute;
+    top: 85%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    /* background-color: rgba(255, 0, 0, 0.5); */
-    z-index: 2;
     background-image: url('TourGuide2.jpeg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.foreground:hover {
+    opacity: 0.8;
+    color: rgba(127, 129, 131, 0.546); 
+}
+
+@media (max-width: 768px) {
+    .foreground {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .foreground {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.secondPart
+{
+    height: min-content;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1
+{
+    color: #000000;
+}
+
+#bio-container {
+    margin-bottom: 20px;
+}
+
+#bio-text, #bio-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#bio-input {
+    resize: vertical;
+}
+
+.bio-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.bio-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #008cba;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.bio-buttons button:hover {
+    background-color: #005f5f;
+}
+
+.bio-buttons button#save-bio {
+    background-color: #4caf50;
+}
+
+.bio-buttons button#save-bio:hover {
+    background-color: #357a38;
+}
+
+.Thirdbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 2em;
+}
+
+.Thirdbuttons button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: rgb(215, 154, 0);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-size: 2em; 
+    width: 400px; 
+    height: 100px; 
+}
+
+.Thirdbuttons button:hover {
+    background-color: rgb(169, 122, 2);
+}
+
+@media (max-width: 768px) {
+    .Thirdbuttons {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .Thirdbuttons button {
+        width: 150px; 
+        height: 80px; 
+        font-size: 1.5em; 
+        padding: 0.75em 1.5em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .Thirdbuttons button {
+        width: 120px; 
+        height: 60px; 
+        font-size: 1.2em; 
+        padding: 0.5em 1em; 
+    }
 }
