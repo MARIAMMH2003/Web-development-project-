@@ -16,6 +16,10 @@ router.use((req, res, next) => {
     }
 });
 
+router.get('/', (req, res) => {
+    res.render('tourifyad');
+});
+
 router.get("/viewAll", Admin.GetAllUsers);
 router.get("/emp/:id", Admin.GetUser);
 router.get("/toAdmin/:id", Admin.toAdmin);

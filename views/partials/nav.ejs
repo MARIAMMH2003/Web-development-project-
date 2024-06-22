@@ -4,8 +4,8 @@
   <a href='/about'>About</a>
 
   <% if (!user) { %>
-      <a href='/user/signup'>Sign Up</a>
-      <a href='/user/login'>Login</a>
+      <a href='/signup'>Sign Up</a>
+      <a href='/login'>Login</a>
   <% } else { %>
       <% if (user.Type === "admin") { %>
           <a href='/admin/viewAll'>Admin</a>

@@ -41,8 +41,7 @@ const MuseumSchema = new Schema({
     },
     updatedAt: {
         type: Date,
-        required: true,
-        default: Date.now
+        required: false
     },
     __v: {
         type: Number,
