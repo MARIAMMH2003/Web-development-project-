@@ -5,6 +5,7 @@ const fileUpload = require('express-fileupload');
 const mongoose = require('mongoose');
 const User = require('./models/employees');
 
+
 const app = express();
 const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj'
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -33,6 +34,8 @@ app.get("/", (req, res) => {
 const indexRoutes = require("./routes/index");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
+const museumRoutes = require('./routes/museums');
+app.use('/museums', museumRoutes);
 
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);

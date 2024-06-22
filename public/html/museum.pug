@@ -1,0 +1,171 @@
+doctype html
+html(lang="en")
+
+  head
+    title The Coptic Museum
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+    link(href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet')
+    link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+    link(rel="stylesheet" href="../css/map-testing.css")
+    link(rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png")
+    link(rel="stylesheet" href="../css/style.css")
+    
+  body
+    section
+      .blurry-container
+        .blurry-background(style="background-image: url('https://i.pinimg.com/564x/b7/f7/0f/b7f70fe84c747c2a8d451e8e07db6caf.jpg')")
+        .text-overlay
+          h1(style="color: beige; font-size: 20px;") The Coptic Museum
+          br
+          h2(style="color: beige; font-size: 15px;") Preserving Heritage, Inspiring Culture
+          br
+          p(style="color: beige; font-size: 10px;") 14th December 1908.
+      #bar
+        nav#ahh
+          a(href="#overview") Overview
+          a(href="#details") Famous Monuments
+          a(href="#comments-section") Comments
+      hr
+    br
+    br
+    section#overview.section-content
+      #text-over
+        h1 The Coptic Museum
+        br
+        h2 Preserving Heritage, Inspiring Culture
+        br
+        p 14th December 1908.
+        br
+        p#paragraph
+          | Embracing its rich heritage, the Coptic Museum in Cairo stands as a testament to the enduring legacy
+          | of Egypt's Coptic Christian community. Established in 1908, the museum is a sanctuary of cultural 
+          | preservation and enlightenment. Within its sacred walls, visitors are transported through centuries 
+          | of Coptic history, witnessing the evolution of art, faith, and tradition.
+          br
+          | At the heart of the museum's collection lies a treasure trove of artifacts meticulously curated 
+          | to celebrate the enduring spirit of the Coptic people. From intricately woven textiles to exquisite icons,
+          | each exhibit tells a story of resilience and devotion. Among its most revered artifacts is the famed 
+          | Fayyum portraits, exquisite portraits of ancient Coptic individuals capturing their timeless beauty and grace. 
+          br
+          | Yet, the Coptic Museum is more than a mere repository of relics—it is a vibrant hub of cultural exchange 
+          | and scholarship. Through innovative exhibitions and educational programs, the museum fosters a deeper understanding 
+          | of Coptic heritage and its significance in shaping Egypt's diverse tapestry of cultures. 
+          br
+          | As a guardian of Coptic identity and heritage, the museum plays a pivotal role in preserving the legacy 
+          | of Egypt's Coptic community. By safeguarding its rich cultural heritage, the museum ensures that the voices 
+          | and stories of the Coptic people endure for generations to come, inspiring future generations to embrace their 
+          | heritage with pride and reverence. 
+          br
+      .ticket-box
+        h3 Book a Ticket
+        p Explore the wonders of ancient Egypt. Book your tickets now!
+        button Book Now
+
+    section.famous-monuments#details
+      br
+      span.before-hr Famous Monuments
+      hr#line
+      br
+      br
+      br
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img.image-margin(src="http://www.coptic-cairo.com/museum/selection/icons/icons/files/page44-1000-full.jpg" alt="Slide 1")
+            .swiper-text
+              p St. Barbara is among the most popular Christian saints in the East and West. She was locked in a tower by her pagan father, the rich Dioscuros from Nikomedia While he was travelling, Barbara converted to Christianity and eventually was beheaded by her own father.
+          .swiper-slide
+            img.image-margin(src="../images/ankh cross.png" alt="Slide 2")
+            .swiper-text
+              p Coptic gravestones often depict the deceased with their hands raised in prayer. This example was made for a woman who is dressed in a long garment. A traditional Roman mantle covers her head and shoulders and hangs down over her elbows.
+          .swiper-slide
+            img.image-margin(src="../images/garmnet.png" alt="Slide 3")
+            .swiper-text
+              p This tunic was a garment commonly worn by males in Greco-Roman civilizations. At the top of this tunic, an arcade encloses figures of dancers and warriors. Below, two vertical panels with warriors and dancers alternate with roundels amid human busts.
+          .swiper-slide
+            img.image-margin(src="../images/silver casket.png" alt="Slide 3")
+            .swiper-text
+              p This precious Bible casket of wood is covered with embossed silver sheets attached by nails. A rombic and floral pattern runs along all four sides. In the centre Virgin Mary with Jesus sitting on her lap are placed in between two Arabic lines.
+          .swiper-slide
+            img(src="http://www.coptic-cairo.com/museum/selection/fresco/files/page27_7.jpg" alt="Slide 3")
+            .swiper-text
+              p Excavations at the Monastery of St. Jeremiah in Saqqara have yielded several niches that were pierced into the eastern walls of monks’ cells and served the monks for prayer and contemplation. These niches bear christological scenes showing the enthroned Jesus or Jesus Pantocrator. Two niches are decorated with the Virgin Mary nursing the infant Jesus
+        .swiper-pagination
+        .swiper-button-next
+        .swiper-button-prev
+
+    section#comments-section.reviews-section
+      .container-comment
+        .container__left
+          h1 "Discover why countless visitors choose to explore this museum.
+          p With a diverse array of exhibits and interactive displays, it caters to various interests, ensuring each guest finds something to admire.
+          p The commitment to providing enriching experiences has garnered praise from thousands of guests annually. Families bond, friends debate, and individuals reflect within its walls, creating cherished memories that last a lifetime.
+          p Join the satisfied reviewers. Leave a comment now.
+        .container__right
+          .card
+            .rating
+              ion-icon(name="star")
+              ion-icon(name="star")
+              ion-icon(name="star")
+              ion-icon(name="star")
+            .card__content
+              span
+                i.ri-double-quotes-l
+              .card__details
+                p Captivating artifacts, interactive displays, and engaging tours.
+                h4 - Zeina Mohamed
+          .card
+            .rating
+              ion-icon(name="star")
+              ion-icon(name="star")
+              ion-icon(name="star")
+              ion-icon(name="star")
+              ion-icon(name="star")
+            .card__content
+              span
+                i.ri-double-quotes-l
+              .card__details
+                p Well-curated collections, stunning architecture, and memorable experiences.
+                h4 - Mariam shaddad
+          .card
+            form(action="#")
+              .rating
+                input(type="number" name="rating" hidden)
+                i.bx.bx-star.star(style="--i: 0;")
+                i.bx.bx-star.star(style="--i: 1;")
+                i.bx.bx-star.star(style="--i: 2;")
+                i.bx.bx-star.star(style="--i: 3;")
+                i.bx.bx-star.star(style="--i: 4;")
+              textarea(name="opinion" cols="30" rows="5" placeholder="Your opinion...")
+              .btn-group
+                button.btn.submit(type="submit") Submit
+                button.btn.cancel Cancel
+
+    footer.footer
+      .footer-container
+        .row
+          .footer-col#footer-col1
+            .map-container
+              a.link(href="#") 
+                h4 The Coptic Museum
+              #map
+          .footer-col#footer-col2
+            h4 follow us
+            .social-links
+              a(href="https://www.instagram.com/explore/locations/298970781/coptic-museum?igsh=eW5td211OTg3NzQ3")
+                i.fab.fa-instagram
+              a(href="https://youtu.be/cd2WmTqIprc?si=b-FnZCeYnwCSiWIv")
+                i.fab.fa-youtube
+
+    script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+    script(src="js/swiper-bundle.min.js")
+    script(src="../js/js file")
+    script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap")
+    script(src="../js/map-testing.js")
