@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Preview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Card Preview</h1>
+    <div id="tourGuideCardPreview"></div>
+    <button onclick="window.history.back();">Back</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const response = await fetch('/tourGuides');
+            const tourGuides = await response.json();
+            const tourGuide = tourGuides[0]; // Assuming you want to preview the first tour guide for simplicity
+            const cardPreview = document.getElementById('tourGuideCardPreview');
+            cardPreview.innerHTML = `
+                <div class="booking-card">
+                    <div class="card-content">
+                        <div class="booking-image">
+                            <img src="${tourGuide.image}" alt="Tour Guide Pic">
+                        </div>
+                        <div class="booking-details">
+                            <h2>${tourGuide.name}<br><span>${tourGuide.profession}</span></h2>
+                            <div class="booking-rating">${'⭐'.repeat(tourGuide.rating)}</div>
+                            <p>${tourGuide.about}</p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+    </script>
+</body>
+</html>
