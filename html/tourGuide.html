@@ -7,8 +7,6 @@
     <title>Tour Guide</title>
 </head>
 <body>
-    
-</body>
     <nav>
         <h1 class="nav-a"><span class="nav-span">T</span>ourify</h1>
         <img src="Screenshot 2024-04-27 214041-fotor-20240427214821.png" alt="Museum logo" class="lll">
@@ -19,11 +17,40 @@
                 <span class="mid_line common"></span>
                 <span class="bottom_line common"></span>
             </div>
+            <div class="nav1">
+                <h1 class="n">Menu</h1>
+                <ul>
+                    <li><a href="chats.html" class="a-toggle">Chat</a></li>
+                    <li><a href="tourGuide.html" class="a-toggle">Account</a></li>
+                    <li><a href="login.html" class="a-toggle">Log Out</a></li>
+                </ul>
+            </div>
         </label>
     </nav>
     <div class="container">
-        <div class="background"></div>
-        <div class="foreground"></div>
+        <div class="background">
+            <input type="file" id="background-input" accept="image/*" style="display: none;">
+        </div>
+        <div class="foreground">
+            <input type="file" id="foreground-input" accept="image/*" style="display: none;">
+        </div>
     </div>
-    
+    <div class="secondPart">
+        <h1>Bio</h1>
+        <div id="bio-container">
+            <p id="bio-text">This is your bio. Click the Edit button to modify it.</p>
+            <textarea id="bio-input" style="display:none;"></textarea>
+        </div>
+        <div class="bio-buttons">
+            <button id="edit-bio">Edit</button>
+            <button id="save-bio" style="display:none;">Save</button>
+        </div>
+    </div>
+    <hr>
+    <div class="Thirdbuttons">
+        <button id="Requests">Requests</button>
+        <button id="CardPreview">Card Preview</button>
+    </div>
+    <script src="tourGuide.js"></script>
+</body>
 </html>
