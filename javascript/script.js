@@ -337,3 +337,25 @@ prev.addEventListener('click', function(){
       });
     });
   });
+document.addEventListener('DOMContentLoaded', async () => {
+        const response = await fetch('/tourGuides');
+        const tourGuides = await response.json();
+        const tourGuidesContainer = document.getElementById('tourGuidesContainer');
+        tourGuides.forEach(tourGuide => {
+            const card = document.createElement('div');
+            card.className = 'swiper-slide booking-card';
+            card.innerHTML = `
+                <div class="card-content">
+                    <div class="booking-image">
+                        <img src="${tourGuide.image}" alt="Tour Guide Pic">
+                    </div>
+                    <div class="booking-details">
+                        <h2>${tourGuide.name}<br><span>${tourGuide.profession}</span></h2>
+                        <div class="booking-rating">${'⭐'.repeat(tourGuide.rating)}</div>
+                        <p>${tourGuide.about}</p>
+                        <button class="request-button">Request</button>
+                    </div>
+                </div>`;
+            tourGuidesContainer.appendChild(card);
+        });
+    });
