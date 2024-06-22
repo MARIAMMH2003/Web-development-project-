@@ -36,16 +36,27 @@
         </div>
     </div>
     <div class="secondPart">
-        <h1>Bio</h1>
+        <h1>Tour Guide Profile</h1>
         <div id="bio-container">
             <p id="bio-text">This is your bio. Click the Edit button to modify it.</p>
-            <textarea id="bio-input" style="display:none;"></textarea>
+            <textarea id="bio-input" style="display:none;"></textarea> 
         </div>
         <div class="bio-buttons">
             <button id="edit-bio">Edit</button>
             <button id="save-bio" style="display:none;">Save</button>
         </div>
     </div>
+    <form id="tourGuideForm">
+        <label class="lab2">Name: <input class="input2" type="text" id="name" placeholder="Name" required></label>
+        <label class="lab2">Profession: <input class="input2" type="text" id="profession" placeholder="Profession" required></label>
+        <label class="lab2">About: <textarea class="input2" id="about" placeholder="About"></textarea></label>
+        <label class="lab2">Image: <input class="input2" type="text" id="image" placeholder="Image URL"></label>
+        <label class="lab2">Facebook URL: <input class="input2" type="text" id="facebook" placeholder="Facebook URL"></label>
+        <label class="lab2">Twitter URL: <input class="input2" type="text" id="twitter" placeholder="Twitter URL"></label>
+        <label class="lab2">Instagram URL: <input class="input2" type="text" id="instagram" placeholder="Instagram URL"></label>
+        <label class="lab2">Whatsapp URL: <input class="input2" type="text" id="whatsapp" placeholder="WhatsApp URL"></label>
+        <button class="input2" type="submit">Save</button>
+    </form>
     <hr>
     <div class="Thirdbuttons">
         <button id="Requests">Requests</button>
