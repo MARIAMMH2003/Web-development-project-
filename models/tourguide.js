@@ -11,7 +11,6 @@ const tourGuideSchema = new mongoose.Schema({
     instagram: String,
     whatsapp: String
   },
-  rating: Number
 });
 
 module.exports = mongoose.model('TourGuide', tourGuideSchema);
