@@ -1,4 +1,4 @@
-const TourGuide = require('../models/tourGuide');
+const TourGuide = require('../models/tourguide');
 
 // Get all tour guides
 exports.getTourGuides = async (req, res) => {
@@ -24,3 +24,14 @@ exports.deleteTourGuide = async (req, res) => {
   await TourGuide.findByIdAndDelete(req.params.id);
   res.redirect('/tourGuides');
 };
+
+const express = require('express');
+const router = express.Router();
+const tourGuideController = require('../controllers/tourguideController.js');
+
+router.get('/', tourGuideController.getTourGuides);
+router.post('/', tourGuideController.createTourGuide);
+router.post('/update/:id', tourGuideController.updateTourGuide);
+router.post('/delete/:id', tourGuideController.deleteTourGuide);
+
+module.exports = router;
