@@ -41,7 +41,7 @@ const tourGuideRoutes = require('./routes/tourguideRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 
 app.use('/museums', museumRoutes);
-app.use('/admin/museums', museumRoutes);
+//app.use('/admin/museums', museumRoutes);
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
