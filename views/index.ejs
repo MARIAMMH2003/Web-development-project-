@@ -20,44 +20,8 @@
 </head>
 <body>
     
-        <nav>
-            <img src="../images/Screenshot 2024-04-27 214041-fotor-20240427214821.png" alt="Museum logo" class="lll">
-            <a href="#home" class="nav-a">HOME</a>
-            <a href="#contact" class="nav-a">CONTACT US</a>
-            <a href="#about" class="nav-a">ABOUT US</a>
-            <a href="/signup" class="nav-a" id="logintext">LOGIN</a>
-            <span id="loginpic" style="display: none;">
-                <img src="../images/login-logo.jpg" alt="Login Picture" style="width: 30px; height: 40px; padding-top: 5px; border-radius:8px;">
-            </span>
-            <a href="#booking" class="nav-a">BOOK A TOUR-GUIDE</a>
-            <span id="search-link" class="nav-a">SEARCH</span>
-            <div class="search-container" id="search-container" style="display: none;">
-                <input type="text" id="search-input" placeholder="Search...">
-                <button id="search-button">Search</button>
-            </div>
-            <!-- <label>
-                <input type="checkbox">
-                <div class="toggle">
-                    <span class="top_line common"></span>
-                    <span class="mid_line common"></span>
-                    <span class="bottom_line common"></span>
-                </div>
-                <div class="nav1">
-                    <h1 class="n">Menu</h1>
-                    <ul>
-                        <li><a href="#highlights" class="a-toggle">explore</a></li>
-                        <li><a href="#museums" class="a-toggle">museums</a></li>
-                        <li><a href="m.html" class="a-toggle">categories</a></li>
-                        <li><a href="chatbot.html" class="a-toggle">chatbot</a></li>
-                        <li><a href="#map" class="a-toggle">map</a></li>
-                    </ul>
-                </div>
-            </label> -->
-        </nav>
-       
-        
-        <div id="search-results-container"></div>
-    </header>
+    <%- include('partials/nav.ejs') %>
+    <div id="search-results-container"></div>
 
     <section id="home" class="parallax">
         <div class="parallax-container">
@@ -464,9 +428,9 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- External Script -->
-    <script src="../js/script.js" defer></script>
-    <script src="../js/search.js" defer></script>
-    <script src="../js/aimohem.js" defer></script>
+    <script src="../public/js/script.js" defer></script>
+    <script src="../public/js/search.js" defer></script>
+    <script src="../public/js/aimohem.js" defer></script>
 
 </body>
 </html>

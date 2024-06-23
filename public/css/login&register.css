@@ -5,19 +5,22 @@ body{
     align-items: center;
     justify-content: center;/* aligns all content in the center of the page*/
    background: beige;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     position: relative;
-    max-width: 100%;
-    width: 50%;
+    /* max-width: 100%;
+    width: 50%; */
     background: #fff;
     border-radius: 10px;/*curves of the border of the container*/
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     align-items: center;
+    /* padding: 900px; */
 }
 .container .form-details{
-    max-width: 250px;
+    max-width: 210px;
     height: 100%;
     color: #fff;
     width: 100%;
@@ -28,6 +31,8 @@ body{
     background: url("https://i.pinimg.com/564x/14/47/e0/1447e0716c5358c67bb68e2b204fa58c.jpg");
     background-size:cover;
     background-position: center;
+    border: none; /* Reset border */
+    box-sizing: border-box; 
 }
 
 .container .forms{
@@ -82,12 +87,13 @@ transition: margin-left 0.18s ease, opacity 0.2s ease;
   position: relative;
   height: 50px;
     width: 100%;
-    margin-top: 30px;   
+    margin-top: 30px; 
+     
 }
 .fields input{
     position: absolute;
     height: 100%;
-    width: 80%;
+    /* width: 80%; */
     padding: 0 35px;
     border:none; /*removing the borders of the field boxes*/
     outline: none;
@@ -171,15 +177,26 @@ font-weight: 60;
  margin-left: 40px;
 }
 @media (max-width:800px){
-    .container{
-        width:90%;
+    .form .title{
+      flex-wrap: wrap;
     }
     .forms .form-details{
-       width: 30%;
+       width: 40%;
     }
     .forms .form{
         padding: 30px 20px;
         flex-wrap: wrap;
     }
+    .form .button input {
+        text-wrap: wrap;
+        margin: 0;
+        left: 10px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .form .fields{
+        width: 100%;
+    }
+
 }
-/*el tags btt7t mn 8er .*/
