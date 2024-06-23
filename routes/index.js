@@ -23,6 +23,11 @@ router.get('/map-tetsing', async (req, res) => {
   }
 });
 
+// new
+
+
+// new
+
 router.get('/login', (req, res) => {
     res.render('signup', { user: (req.session.user === undefined ? "" : req.session.user) });
 });

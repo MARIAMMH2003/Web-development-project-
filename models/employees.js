@@ -20,6 +20,7 @@ const userSchema = new Schema({
     required:true,
     enum:['client','tour-guide', 'admin'] 
   }
+  
 }, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);

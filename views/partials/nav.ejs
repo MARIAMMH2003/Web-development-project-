@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+     <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+
 <nav>
     <img src="../images/Screenshot 2024-04-27 214041-fotor-20240427214821.png" alt="Museum logo" class="lll">
     <a href="#home" class="nav-a">HOME</a>
@@ -12,7 +22,25 @@
     <div class="search-container" id="search-container" style="display: none;">
         <input type="text" id="search-input" placeholder="Search...">
         <button id="search-button">Search</button>
-    </div> 
-
- 
+    </div>
 </nav>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logintxt = document.getElementById('logintext');
+        const loginpic = document.getElementById('loginpic');
+        if (sessionStorage.getItem('loggedIn') === 'true')
+         {
+            logintxt.style.display = 'none';
+            loginpic.style.display = 'inline';
+        } else
+         {
+            logintxt.style.display = 'inline';
+            loginpic.style.display = 'none';
+        }
+    });
+</script>
+<script src="../public/js/search.js" defer></script>
+</body>
+</html>

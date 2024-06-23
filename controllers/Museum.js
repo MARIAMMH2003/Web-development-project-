@@ -70,10 +70,30 @@ const getAllMuseums = async (req, res) => {
     }
   };
   
-
+  const searchMuseumsByName = async (req, res) => {
+    const query = req.query.name ? req.query.name.toLowerCase() : '';
+  
+    if (!query) {
+      return res.status(400).json({ message: 'search quer empty' });
+    }
+  
+    try {
+      const museums = await Museum.find({ title: { $regex: query, $options: 'i' } });
+  
+      if (museums.length === 0) {
+        return res.status(404).json({ message: 'no museums found' });
+      }
+  
+      res.status(200).json({ museums });
+    } catch (error) {
+      console.error( error);
+      res.status(500).json({ message: 'Failed to search museums' });
+    }
+  };
 module.exports = {
     addMuseum,
     addMonument,
     getMuseumById,
-    getAllMuseums
+    getAllMuseums,
+    searchMuseumsByName
 };

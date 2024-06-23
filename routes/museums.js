@@ -1,5 +1,5 @@
 const express = require('express');
-const { addMuseum, addMonument, upload,getAllMuseums } = require('../controllers/Museum');
+const { addMuseum, addMonument, upload,getAllMuseums,searchMuseumsByName } = require('../controllers/Museum');
 const router = express.Router();
 const Museum = require('../models/museum'); 
 
@@ -13,6 +13,29 @@ router.get('/', async (req, res) => {
   }
 });
 
+// new
+// router.get('/search', async (req, res) => {
+//   const query = req.query.name ? req.query.name.toLowerCase() : '';
+
+//   if (!query) {
+//     return res.status(400).json({ message: 'Please provide a search query.' });
+//   }
+
+//   try {
+//     const museums = await Museum.find({ title: { $regex: query, $options: 'i' } });
+
+//     if (museums.length === 0) {
+//       return res.status(404).json({ message: 'No museums found.' });
+//     }
+
+//     res.status(200).json({ museums });
+//   } catch (error) {
+//     console.error('Error searching museums by name:', error);
+//     res.status(500).json({ message: 'Failed to search museums by name.' });
+//   }
+// });
+router.get('/search', searchMuseumsByName);
+// new
 router.get('/add', (req, res) => {
   res.render("newMuseum");
 });
@@ -39,6 +62,6 @@ router.get('/allMuseums', async (req, res) => {
 router.post('/add', addMuseum);
 router.post('/addmonument', addMonument);
 router.get('/allMuseums', getAllMuseums);
-
+router.get('/search', searchMuseumsByName);
 
 module.exports = router;

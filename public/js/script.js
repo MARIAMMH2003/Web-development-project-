@@ -205,26 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-// document.addEventListener('DOMContentLoaded', function() {
-//     var checkbox = document.querySelector('input[type="checkbox"]');
-//     var nav = document.querySelector('.nav1');
 
-//     checkbox.addEventListener('change', function() {
-//         if (checkbox.checked) {
-//             nav.style.display = 'block';
-//         } else if (!nav.contains(event.target) && event.target !== checkbox){
-//             nav.style.display = 'none';
-//         }
-//     });
-// });
-document.addEventListener('DOMContentLoaded',()=>{
-    const logintxt=document.getElementById('logintext');
-    const loginpic=document.getElementById('loginpic');
-    if(sessionStorage.getItem('loggedIn')=='true'){
-        logintxt.style.display='none';
-        loginpic.style.display='inline';
-    }
-});
 //museum
 
 

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const signUp = document.querySelector(".signup-link");
     const login = document.querySelector(".login-link");
 
+ 
     signUp.addEventListener('click', () => {
         container.classList.add("active");
     });
@@ -174,6 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
                 sessionStorage.setItem('loggedIn', 'true');
                 sessionStorage.setItem('userType', result.usertype);
+
+                
 
                 if (result.usertype === 'client') {
                     window.location.href = "/";
