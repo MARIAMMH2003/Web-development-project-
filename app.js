@@ -37,16 +37,16 @@ const indexRoutes = require("./routes/index");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const museumRoutes = require('./routes/museums');
-const tourGuideRoutes = require('./routes/tourguideRoutes');
-const bookingRoutes = require('./routes/bookingRoutes');
+//const tourGuideRoutes = require('./routes/tourguideRoutes');
+//const bookingRoutes = require('./routes/bookingRoutes');
 
 app.use('/museums', museumRoutes);
 app.use('/admin/museums', museumRoutes);
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
-app.use('/tourGuides', tourGuideRoutes);
-app.use('/bookings', bookingRoutes);
+//app.use('/tourGuides', tourGuideRoutes);
+//app.use('/bookings', bookingRoutes);
 app.get('/profile', (req, res) => {
   const user = req.session.user || { Image: 'default.jpg', name: 'Unknown' };
   res.render('profile', { user });
