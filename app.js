@@ -5,7 +5,6 @@ const fileUpload = require('express-fileupload');
 const path = require('path');
 const mongoose = require('mongoose');
 const User = require('./models/employees');
-const Booking = require('./models/booking');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const app = express();
@@ -38,7 +37,7 @@ const indexRoutes = require("./routes/index");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const museumRoutes = require('./routes/museums');
-const tourGuideRoutes = require('./routes/tourGuideRoutes');
+const tourGuideRoutes = require('./routes/tourguideRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 
 app.use('/museums', museumRoutes);
