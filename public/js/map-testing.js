@@ -1,3 +1,4 @@
+const museums = window.museumsData;
 function initMap(){
     var options={
      center:{ lat:29.971829446,lng:31.1360000},

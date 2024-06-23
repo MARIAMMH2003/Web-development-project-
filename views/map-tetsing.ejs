@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <link rel="stylesheet" href="../css/map-testingAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search museums...">
+    <i class="fa-solid fa-magnifying-glass" id="searchLogo"></i>
+</div>
+    <div class="grid-container">
+         <% museums.forEach(museum => { %>
+        <div class="location grid-item">
+         <img src="<%= museum.picture %>" alt="<%= museum.title %>">
+        <div class="content">
+         <a href="#" class="link"><%= museum.title %>
+         <button class="show-btn">Show</button>
+            </a>
+        <div class="location-info">
+                 <p id="longitude">Longitude:</p>
+                 <p id="latitude">Latitude:</p>
+                 <button class="confirm-btn">Save Changes</button>
+                        
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+   
+</div>
+<div id="map"></div>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYfgrabCkaQmKOH2VWYnRREOKAk7M43Ow&loading=async&callback=initMap" ></script>
+    <script src="../js/map-testing.js"></script>
+    
+</body>
+</html>

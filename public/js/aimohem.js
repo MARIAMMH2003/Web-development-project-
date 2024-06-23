@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add event listeners for real-time form validation
+    
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const passwordField = document.getElementById('password');

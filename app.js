@@ -87,22 +87,17 @@ app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   console.log(req.body)
   try {
-    // Check if the user exists
     const user = await User.findOne({ email });
-    if (!user) {
+    if (!user)
+       {
       return res.status(400).json({ error: 'user not found' });
     }
-
-    // Check if the password is correct
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) {
+    if (!isMatch) 
+      {
       return res.status(400).json({ error: 'Invalid email or password' });
     }
-
-    // Store user session
     req.session.user = user;
-
-    // Respond with success message
     res.status(200).json({ message: 'Login successful', usertype: user.usertype });
 
   } catch (error) {
