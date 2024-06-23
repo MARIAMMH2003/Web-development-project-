@@ -10,7 +10,18 @@ body {
     background: black;
     overflow-x: hidden;
 }
-
+.price {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+    color:beige;
+    z-index: 1; /* Adjust z-index if necessary */
+  }
 .container {
     max-width: 1200px;
     margin: 0 auto;

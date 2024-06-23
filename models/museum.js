@@ -12,6 +12,16 @@ const MonumentSchema = new Schema({
     }
 });
 
+const CommentSchema = new Schema({
+    content: {
+        type: String,
+        required: true
+    },
+    rating: {
+        type: String,
+        required: true
+    }
+});
 const MuseumSchema = new Schema({
     title: {
         type: String,
@@ -33,7 +43,12 @@ const MuseumSchema = new Schema({
         type: String,
         required: false
     },
+    price: {
+        type: Number,
+        required: false
+    },
     monuments: [MonumentSchema],
+    comments: [CommentSchema],
     createdAt: {
         type: Date,
         required: true,

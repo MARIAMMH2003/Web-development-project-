@@ -5,8 +5,8 @@ const path = require('path');
 
 const addMuseum = async (req, res) => {
     try {
-        const { title, slogan, date, overview } = req.body;
-        const newMuseum = new Museum({ title, slogan, date, overview });
+        const { title, slogan, date, overview,price } = req.body;
+        const newMuseum = new Museum({ title, slogan, date, overview ,price});
 
         if (req.files && req.files.picture) {
             const pictureFile = req.files.picture;

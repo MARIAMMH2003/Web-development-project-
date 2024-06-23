@@ -44,6 +44,9 @@
               </h3>
               <a href="/admin/museums/edit/<%= museum._id %>" class="button-link">Edit</a>
             </div>
+            <div class="price">
+              <%= museum.price %>$
+            </div>
           </div>
         <% }); %>
       </div>
@@ -64,6 +67,8 @@
         <input type="text" id="editTitle" name="title" required>
         <label for="editSlogan">Slogan:</label>
         <input type="text" id="editSlogan" name="slogan" required>
+        <label for="editSlogan">Price:</label>
+        <input type="text" id="editPrice" name="price" required>
         <label for="editDate">Date:</label>
         <input type="text" id="editDate" name="date" required>
         <label for="editDate">Overview:</label>
