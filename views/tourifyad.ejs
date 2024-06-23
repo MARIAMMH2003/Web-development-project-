@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TourifyAd</title>
-    <link rel="stylesheet" href="../css/tourifyad.css">
+    <link rel="stylesheet" href="/css/tourifyad.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap">
 
 </head>
@@ -28,9 +28,9 @@
         <div class="card-slider-container">
             <div class="card-slider">
                 <div class="cards-wrapper">
-                    <div class="card active" data-function="Manage Museums" onclick="openAdminPage()">
+                    <a class="card active" data-function="Manage Museums" href="/admin/museums">
                         <img src="../images/museumsad.png" alt="Museum">
-                    </div>
+                    </a>
                 
                     <div class="card active" data-function="Manage Museums" onclick="openHighPage()">
                         <img src="../images/highlightsad.png" alt="Highlights">
@@ -44,6 +44,6 @@
     </div>
     <button class="prev-btn">&lt;</button>
     <button class="next-btn">&gt;</button>
-    <script src="..\public\js\tourifyad.js"></script>
+    <script src="/js/tourifyad.js"></script>
 </body>
 </html>

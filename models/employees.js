@@ -18,7 +18,7 @@ const userSchema = new Schema({
   usertype:{
     type:String,
     required:true,
-    enum:['client','tour-guide'] 
+    enum:['client','tour-guide', 'admin'] 
   }
 }, { timestamps: true });
 

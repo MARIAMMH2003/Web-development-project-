@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/petra1.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    overflow:visible;
+    background-attachment: fixed; /* Fix background */
+}
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    padding: 10px; 
+}
+
+.container-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo {
+    font-size: 24px;
+    color: beige; 
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: 1px solid beige; 
+    color: beige; 
+    font-size: 16px;
+    padding: 8px 16px; 
+    border-radius: 20px; 
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.logout-btn:hover {
+    background-color: beige; 
+    color: black; 
+}
+
+
+.title {
+    text-align: bottom; 
+    font-size: 36px;
+    color: beige; 
+    margin-top: 100px; 
+    font-family: 'Sedan SC', sans-serif; 
+    position: relative; 
+    left: 50px; 
+}
+
+
+
+
+.container {
+    position: relative;
+    width: 20%;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-left: 20px;
+    z-index: 2; 
+}
+
+.card-slider-container {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden; 
+}
+.card-slider {
+   width: 100%; 
+    height: 80%; 
+    overflow: visible;
+margin-bottom: 5%;
+
+}
+
+
+
+.cards-wrapper {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+    margin-left: 630px;
+    overflow: visible;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    overflow: hidden; /* Hide overflow within the card */
+    border-radius: 20px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1; /* Ensure cards are above background */
+}
+.card:hover {
+    transform: scale(1.1); 
+    z-index: 1; 
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev-btn,
+.next-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3; /* Ensure buttons are above cards */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.card.active {
+    opacity: 1;
+}
+
+.card.inactive {
+    opacity: 0;
+}
+
+
+.function-description {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}

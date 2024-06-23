@@ -2,6 +2,7 @@
 const express = require('express');
 const session = require('express-session')
 const fileUpload = require('express-fileupload');
+const path = require('path');
 const mongoose = require('mongoose');
 const User = require('./models/employees');
 const bcrypt = require('bcrypt');
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(fileUpload());
 app.use(express.static('public'));
+app.use('/Content', express.static(path.join(__dirname, 'Content')));
 app.use(session({
   secret: 'zeina123mohammed',
   resave: false,
@@ -28,11 +30,14 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 
+
 const indexRoutes = require("./routes/index");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const museumRoutes = require('./routes/museums');
 app.use('/museums', museumRoutes);
+app.use('/admin/museums', museumRoutes);
+
 
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
@@ -42,6 +47,10 @@ app.get('/profile', (req, res) => {
   res.render('profile', { user });
 });
 
+app.use((req, res, next) => {
+  console.log(`Request URL: ${req.url}`);
+  next();
+});
 
 app.post('/signup', async (req, res) => {
   const { name, email, password, usertype } = req.body;
@@ -115,6 +124,7 @@ app.set('view engine', 'ejs');
 // Routes
 const tourGuideRoutes = require('./routes/tourGuideRoutes');
 app.use('/tourGuides', tourGuideRoutes);
+
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');

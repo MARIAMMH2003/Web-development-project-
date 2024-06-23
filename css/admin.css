@@ -343,7 +343,9 @@ height: 650px;
   text-decoration: none;
   cursor: pointer;
 }
-
+.modal-open {
+  display: block;
+}
 /* Image preview in modal */
 .image-preview {
   display: flex;

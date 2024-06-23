@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Admin Page</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+
+
+
+
+  <section id="museums">
+
+    <h1 class="text-header">Museums</h1>
+
+    <div class="container-museum">
+
+      <div class="slide">
+       <% museums.forEach(museum => { %>
+          <div class="item" style="background-image: url('<%= museum.picture %>');">
+            <div class="delete-icon">
+              <ion-icon name="trash"></ion-icon>
+              <span class="delete-text">Delete</span>
+            </div>
+            <div class="content">
+              <div class="name"><%= museum.title %></div>
+              <h3 class="museum-rating">
+                <span><%= museum.rating %></span>
+                <div class="rating">
+                  <% for (let i = 0; i < museum.rating; i++) { %>
+                    <ion-icon name="star"></ion-icon>
+                  <% } %>
+                </div>
+              </h3>
+              <a href="/admin/museums/edit/<%= museum._id %>" class="button-link">Edit</a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+
+      <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+  <div id="addModal2" class="modal1">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Add Museum</h2>
+          <form id="addMuseumForm" enctype="multipart/form-data">
+        <label for="editTitle">Title:</label>
+        <input type="text" id="editTitle" name="title" required>
+        <label for="editSlogan">Slogan:</label>
+        <input type="text" id="editSlogan" name="slogan" required>
+        <label for="editDate">Date:</label>
+        <input type="text" id="editDate" name="date" required>
+        <label for="editDate">Overview:</label>
+        <textarea id="editOverview" name="overview" required> </textarea>
+        <div>
+          <label for="picture">Picture:</label>
+          <input type="file" id="picture" name="picture">
+        </div>
+        <button type="submit"id="">Save</button>
+      </form>
+    </div>
+  </div>
+  <div id="addMuseumModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn1">&times;</span>
+      <h2>Add Museum</h2>
+      <form id="addMuseumForm" enctype="multipart/form-data">
+        <label for="editTitle">Title:</label>
+        <input type="text" id="editTitle" name="title" required>
+        <label for="editSlogan">Slogan:</label>
+        <input type="text" id="editSlogan" name="slogan" required>
+        <label for="editDate">Date:</label>
+        <input type="text" id="editDate" name="date" required>
+        <label for="editDate">Overview:</label>
+        <textarea id="editOverview" name="overview" required> </textarea>
+        <div>
+          <label for="picture">Picture:</label>
+          <input type="file" id="picture" name="picture">
+        </div>
+       
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/js/museumsAdmin.js"></script>
+</body>
+
+</html>

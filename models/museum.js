@@ -31,7 +31,7 @@ const MuseumSchema = new Schema({
     },
     picture: {
         type: String,
-        required: true
+        required: false
     },
     monuments: [MonumentSchema],
     createdAt: {

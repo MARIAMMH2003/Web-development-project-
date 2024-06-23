@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else if (result.usertype === 'tour-guide') {
                     window.location.href = "../html/TourGuide.html";
                 } else if (result.usertype === 'admin') {
-                    window.location.href = "../html/Tourifyad.html";
+                    window.location.href = "/admin";
                 } else {
                     alert('Unknown user type');
                 }
