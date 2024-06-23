@@ -82,166 +82,44 @@
     </section>
 
     <section id="museums">
-    
-          <h1 class="text-header">Museums</h1>
-  
+        <h1 class="text-header">Museums</h1>
         <div class="container-museum">
-
             <div class="slide">
-    
-                
-                <div class="item" style="background-image: url(https://i.pinimg.com/564x/52/26/fb/5226fb81560b1145afc4bea0e8919bff.jpg);">
-                    <div class="content">
-                        <div class="name">The Egyptian Museum in Cairo </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/EgyptianMuseumInCairo" class="button-link">See More</a>
+                <% museums.forEach(museum => { %>
+                    <div class="item" style="background-image: url('<%= museum.picture %>');">
+                        <div class="content">
+                            <div class="name"><%= museum.title %></div>
+                            <h3 class="museum-rating">
+                                <span><%= museum.rating %></span>
+                                <div class="rating">
+                                    <% for(let i = 0; i < Math.floor(museum.rating); i++) { %>
+                                        <ion-icon name="star"></ion-icon>
+                                    <% } %>
+                                    <% if (museum.rating % 1 !== 0) { %>
+                                        <ion-icon name="star-half"></ion-icon>
+                                    <% } %>
+                                </div>
+                            </h3>
+                            <a href="/museums/<%= museum._id %>" class="button-link">See More</a>
+                        </div>
                     </div>
-                </div>
-                <div class="item" style="background-image: url(https://images.squarespace-cdn.com/content/v1/56c13cc00442627a08632989/1589748843269-75TRXGEE5UBOBUH1BRTE/luxormuseum.jpg);">
-                    <div class="content">
-                        <div class="name">   Luxor Museum </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/LuxorMuseum" class="button-link">See More</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(https://i.pinimg.com/564x/42/89/fa/4289fa5c99f2bf1c0e99c67ae742ed5e.jpg);">
-                    <div class="content">
-                        <div class="name">Alexandria National Museum </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/AlexandriaNationalMuseum" class="button-link">See More</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(https://www.abpan.com/wp-content/uploads/2013/05/natural-history-elephant-1024x682.jpg);">
-                    <div class="content">
-                        <div class="name">Smithsonian Museum </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/SmithsonianMuseum" class="button-link">See More</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(https://d3rr2gvhjw0wwy.cloudfront.net/uploads/mandators/49581/file-manager/karnak-temple.jpg);">
-                    <div class="content">
-                        <div class="name">   Karnak Temple </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/KarnakTemple" class="button-link">See More</a>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url(https://i.pinimg.com/564x/01/9b/a3/019ba3b1dd0e6a58c87d37074c259bc6.jpg);">
-                    <div class="content">
-                        <div class="name">Greco-Roman Museum Of Alexandria </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/Greco-RomanMuseumOfAlexandria" class="button-link">See More</a>
-
-                    </div>
-                </div>                <div class="item" style="background-image: url(https://i.pinimg.com/564x/b7/f7/0f/b7f70fe84c747c2a8d451e8e07db6caf.jpg);">
-                    <div class="content">
-                        <div class="name">    The Coptic Museum</div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/TheCopticMuseum" class="button-link">See More</a>
-                    </div>
-                </div>                <div class="item" style="background-image: url(https://images.museumwnf.org/full/museums/eg/1/2.jpg);">
-                    <div class="content">
-                        <div class="name">   Museum of Islamic Art in Cairo </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/MuseumofIslamicArtinCairo" class="button-link">See More</a>
-                    </div>
-                </div>                <div class="item" style="background-image: url(https://cdn.londonandpartners.com/asset/british-museum_museum-frontage-image-courtesy-of-the-british-museum_f0b0a5a3c53f8fc1564868c561bd167c.jpg);">
-                    <div class="content">
-                        <div class="name">  British Museum </div>
-                        <h3 class="museum-rating">
-                            <span>4.5</span>
-                            <div class="rating">
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                            </div>
-                          </h3>
-                          <a href="/BritishMuseum" class="button-link">See More</a>
-                    </div>
-                </div>
-    
+                <% }) %>
             </div>
-    
             <div class="button">
                 <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
                 <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
-    
         </div>
-      </section>
+    </section>
+    
+    <section class="wide-card-section">
+        <div class="wide-card">
+            <a href="map-tetsing.html">
+                <img src="../images/earth.png" alt="Wide Image" id="map">
+            </a>
+        </div>
+    </section>
+    
  
     <section class="wide-card-section">
         <div class="wide-card">

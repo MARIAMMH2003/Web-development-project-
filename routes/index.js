@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
+const Museum = require('../models/museum'); 
 
-// router.get("/", (req, res)=> {
-//   res.render('index', { title:"home page" });
-// });
-router.get('/', (req, res) => {
-  console.log("OK")
-  res.render('index', { title: 'Home Page' });
+router.get('/', async (req, res) => {
+  console.log("Homepage route hit");
+  try {
+    const museums = await Museum.find(); // Fetch museums from MongoDB
+    res.render('index', { museums, title: 'Home Page' }); // Pass museums data to the 'index' template
+  } catch (error) {
+    console.error('Error fetching museums:', error);
+    res.status(500).json({ message: 'Error fetching museums' }); // Respond with an error JSON if fetching museums fails
+  }
 });
 
 router.get('/login', (req, res) => {
