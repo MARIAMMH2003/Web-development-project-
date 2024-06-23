@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const tourGuideController = require('../controllers/tourGuideController');
+const tourGuideController = require('../controllers/tourguideController');
 
 router.get('/', tourGuideController.getTourGuides);
 router.post('/', tourGuideController.createTourGuide);
