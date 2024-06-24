@@ -8,7 +8,7 @@ const User = require('./models/employees');
 const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 const app = express();
-const dbURI = 'mongodb+srv://<username>:<password>@web-proj.ndib7gv.mongodb.net/?retryWrites=true&w=majority&appName=Web-proj'
+const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj'
 
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
