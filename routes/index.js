@@ -34,7 +34,7 @@ router.get('/museum/:id', async (req, res) => {
     res.status(500).json({ message: 'Error fetching museum' });
   }
 });
-router.get('/:id/booking', async (req, res) => {
+router.get('/museum/:id/booking', async (req, res) => {
   try {
     const museum = await Museum.findById(req.params.id);
     if (!museum) {
