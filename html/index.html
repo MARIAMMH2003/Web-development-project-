@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="Icon"  href="../images/Screenshot 2024-04-27 214041-fotor-20240427214821.png">
+        <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <nav>
@@ -29,6 +31,27 @@
             <button id="search-button">Search</button>
         </div>
     </nav>
+    
+    <div class="x">
+       <div class="cart">
+        <i class="bi bi-ticket"></i>
+        <div class="cartamount">0</div>
+       </div>
+    </div>
+
+    <script>
+        document.querySelector('.bi-ticket').addEventListener('click', function() {
+            window.location.href = 'cart.html';
+        });
+
+        function updateCartAmount() {
+            let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+            let totalTickets = bookings.reduce((sum, booking) => sum + booking.quantity, 0);
+            document.querySelector('.cartamount').textContent = totalTickets;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartAmount);
+    </script>
 <section id="home" class="parallax">
     <div class="parallax-container">
         <div class="header">
