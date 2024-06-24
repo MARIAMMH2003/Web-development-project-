@@ -265,18 +265,18 @@ prev.addEventListener('click', function(){
 
   
   
-  document.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('scroll', function() {
-      var images = document.querySelectorAll(".container-museum .box img");
-      var topOfWindow = window.scrollY + window.innerHeight;
-      images.forEach(function(image) {
-        var imagePos = image.offsetTop;
-        if (imagePos < topOfWindow) {
-          image.classList.add("fade-in");
-        }
-      });
-    });
-  });
+//   document.addEventListener('DOMContentLoaded', function() {
+//     window.addEventListener('scroll', function() {
+//       var images = document.querySelectorAll(".container-museum .box img");
+//       var topOfWindow = window.scrollY + window.innerHeight;
+//       images.forEach(function(image) {
+//         var imagePos = image.offsetTop;
+//         if (imagePos < topOfWindow) {
+//           image.classList.add("fade-in");
+//         }
+//       });
+//     });
+//   });
   
   
   const allStar = document.querySelectorAll('.rating .star')
@@ -304,20 +304,20 @@ prev.addEventListener('click', function(){
   })
   
 
-  window.onscroll = function() {scrollFunction()};
+//   window.onscroll = function() {scrollFunction()};
   
-  function scrollFunction() {
-    var nav = document.getElementById("bar");
-    var image = document.querySelector(".blurry-container");
-    var navTopOffset = image.offsetHeight;
+//   function scrollFunction() {
+//     var nav = document.getElementById("bar");
+//     var image = document.querySelector(".blurry-container");
+//     var navTopOffset = image.offsetHeight;
   
-    if (document.body.scrollTop > navTopOffset || document.documentElement.scrollTop > navTopOffset) {
-      nav.style.position = "fixed";
-      nav.style.top = "0";
-    } else {
-      nav.style.position = "static";
-    }
-  }
+//     if (document.body.scrollTop > navTopOffset || document.documentElement.scrollTop > navTopOffset) {
+//       nav.style.position = "fixed";
+//       nav.style.top = "0";
+//     } else {
+//       nav.style.position = "static";
+//     }
+//   }
   
   document.addEventListener('DOMContentLoaded', function() {
     const search = document.getElementById('searchInput');

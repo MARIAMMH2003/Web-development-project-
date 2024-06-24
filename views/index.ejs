@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title><%= title %></title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- <link rel="stylesheet"href="m.css"> -->
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="Icon"  href="../images/Screenshot 2024-04-27 214041-fotor-20240427214821.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    
-   <!-- <title>Tourify - Home</title>-->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link rel="stylesheet" href="../css/styles.css?v=1.0">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" href="../images/Screenshot 2024-04-27 214041-fotor-20240427214821.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 <body>
     
     <%- include('partials/nav.ejs') %>
@@ -25,26 +20,21 @@
 
     <section id="home" class="parallax">
         <div class="parallax-container">
-            <img src="../images/sky.png" id="background" class="parallax-img">
-            <img src="../images/saharabg.png" id="sah2" class="parallax-img">
-            
-
-            <img src="../images/pyramid.png" id="2p" class="parallax-img">
-
-
-            <img src="../images/saharagr.png" id="sah1" class="parallax-img">
-            <img src="../images/sphinx0.png" id="sphinx" class="parallax-img">
-
-            <img src="../images/door.png" id="door" class="parallax-img">
-            <div class="text-container" id="text1">
-                <h2 id="text">Welcome <br>to Tourify
-                </h2>
-                <h4 id="text">Your door to the world</4>
+            <div class="header">
+                <h1>Tourify</h1>
+                <h3>Explore Historical Wonders</h3>
+                <button class="rounded-button" onclick="scrollToSection('museums')">Get Started</button>
             </div>
-
+            <img src="../images/sun.png" class="sun" alt="Sun">
+            <img src="../images/cloud1.png" class="cloud1" alt="Cloud 1">
+            <img src="../images/cloud2.png" class="cloud2" alt="Cloud 2">
+            <img src="../images/cloud3.png" class="cloud3" alt="Cloud 3">
+            <img src="../images/mountains.png" class="mountains" alt="Mountains">
+            <img src="../images/building.png" class="building" alt="Building">
+            <img src="../images/liberty.png" class="liberty" alt="Statue of Liberty">
         </div>
     </section>
-
+    
     <section id="museums">
         <h1 class="text-header">Museums</h1>
         <div class="container-museum">
@@ -422,15 +412,13 @@
     
     
     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../javascript/booking.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- External Script -->
     <script src="../js/script.js" defer></script>
     <script src="../js/search.js" defer></script>
-    <script src="../public/js/aimohem.js" defer></script>
-    
 </body>
 </html>

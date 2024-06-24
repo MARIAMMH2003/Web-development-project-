@@ -77,8 +77,6 @@ body {
     overflow: hidden;
 }
 
-
-
 .parallax-img {
     position: absolute;
     top: 0;
@@ -148,7 +146,6 @@ body {
     font-size: 1em;
 }
 
-
 .parallax-img {
     position: absolute;
     top: 50%;
@@ -212,6 +209,7 @@ body {
     position: absolute;
     transition: transform 0.3s ease-in-out;
 }
+
 .text-header {
     font-size: 3rem;
     color: #8a6252;
@@ -418,23 +416,6 @@ nav {
     padding: 0 20px;
     text-align: center;
 }
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links.active {
-    display: block;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background-color: beige;
-    flex-direction: column;
-    text-align: center;
-}
-
 
 .lll {
     height: 50px;
@@ -719,7 +700,7 @@ footer {
     justify-content: center;
     color: #fff;
     padding: 20px;
-    background:transparent;
+    background: #000;
     width: 100%;
 }
 
