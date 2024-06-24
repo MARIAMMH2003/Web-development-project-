@@ -359,3 +359,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             tourGuidesContainer.appendChild(card);
         });
     });
+
+    
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelector('.menu-toggle').classList.toggle('active');
+    });
+    
