@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Guides</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/tourrrG.css">
 </head>
 <body>
     <h1>Tour Guides</h1>
@@ -17,7 +17,6 @@
         <input type="text" name="socialMedia[twitter]" placeholder="Twitter URL">
         <input type="text" name="socialMedia[instagram]" placeholder="Instagram URL">
         <input type="text" name="socialMedia[whatsapp]" placeholder="WhatsApp URL">
-        <input type="number" name="rating" placeholder="Rating" min="1" max="5">
         <button type="submit">Add Tour Guide</button>
     </form>
 
@@ -28,7 +27,6 @@
                 <h2><%= tourGuide.name %></h2>
                 <p><%= tourGuide.profession %></p>
                 <p><%= tourGuide.about %></p>
-                <p>Rating: <%= tourGuide.rating %></p>
                 <form action="/tourGuides/update/<%= tourGuide._id %>" method="POST">
                     <button type="submit">Edit</button>
                 </form>
