@@ -1,37 +1,25 @@
 const TourGuide = require('../models/tourguide');
 
-// Get all tour guides
-exports.getTourGuides = async (req, res) => {
-  const tourGuides = await TourGuide.find();
-  res.render('index', { tourGuides });
+const createTourGuide = async (req, res) => {
+    const { name, profession, about, image, socialMedia } = req.body;
+
+    try {
+        const newTourGuide = new TourGuide({
+            name,
+            profession,
+            about,
+            image,
+            socialMedia,
+        });
+
+        await newTourGuide.save();
+        res.status(201).json({ message: 'Tour guide profile updated!' });
+    } catch (error) {
+        console.error('Error saving tour guide:', error);
+        res.status(500).json({ error: 'Failed to save tour guide' });
+    }
 };
 
-// Create a new tour guide
-exports.createTourGuide = async (req, res) => {
-  const tourGuide = new TourGuide(req.body);
-  await tourGuide.save();
-  res.redirect('/tourGuides');
+module.exports = {
+    createTourGuide,
 };
-
-// Update a tour guide
-exports.updateTourGuide = async (req, res) => {
-  await TourGuide.findByIdAndUpdate(req.params.id, req.body);
-  res.redirect('/tourGuides');
-};
-
-// Delete a tour guide
-exports.deleteTourGuide = async (req, res) => {
-  await TourGuide.findByIdAndDelete(req.params.id);
-  res.redirect('/tourGuides');
-};
-
-const express = require('express');
-const router = express.Router();
-const tourGuideController = require('../controllers/tourguideController.js');
-
-router.get('/', tourGuideController.getTourGuides);
-router.post('/', tourGuideController.createTourGuide);
-router.post('/update/:id', tourGuideController.updateTourGuide);
-router.post('/delete/:id', tourGuideController.deleteTourGuide);
-
-module.exports = router;
