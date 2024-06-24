@@ -6,7 +6,6 @@
     <title>TourifyAd</title>
     <link rel="stylesheet" href="/css/tourifyad.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap">
-
 </head>
 <body>
     <header>
@@ -24,20 +23,25 @@
     <div class="title-wrapper">
         <h1 class="title">Welcome, Admin!</h1>
     </div>
-        <div class="container">
+    <div class="container">
         <div class="card-slider-container">
             <div class="card-slider">
                 <div class="cards-wrapper">
                     <a class="card active" data-function="Manage Museums" href="/admin/museums">
-                        <img src="../images/museumsad.png" alt="Museum">
+                        <img src="/images/museumsad.png" alt="Museum">
                     </a>
-                
-                    <div class="card active" data-function="Manage Museums" onclick="openHighPage()">
-                        <img src="../images/highlightsad.png" alt="Highlights">
-                    </div>
-                    <div class="card active" data-function="Manage Tour Guides"><img src="../images/tourguidead.png"></div>
-                    <div class="card active" data-function="Manage Map"><img src="../images/Location.png"></div>
-                    <div class="card active" data-function="Manage categories"><img src="../images/categories.png"></div>
+                    <a class="card active" data-function="Manage Highlights" href="/admin/highlights">
+                        <img src="/images/highlightsad.png" alt="Highlights">
+                    </a>
+                    <a class="card active" data-function="Manage Tour Guides" href="/admin/tourguides">
+                        <img src="/images/tourguidead.png" alt="Tour Guides">
+                    </a>
+                    <a class="card active" data-function="Manage Map" href="/admin/map">
+                        <img src="/images/Location.png" alt="Map">
+                    </a>
+                    <a class="card active" data-function="Manage Categories" href="/admin/categories">
+                        <img src="/images/categories.png" alt="Categories">
+                    </a>
                 </div>
             </div>
         </div>
