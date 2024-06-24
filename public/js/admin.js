@@ -1,3 +1,4 @@
+
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -160,90 +161,6 @@ function openImagePreview() {
 
     imageTab.document.write(imageHTML);
 }
-var modals = document.querySelectorAll(".modal");
-var spans = document.querySelectorAll(".close");
-var editBtns = document.querySelectorAll(".edit-btn");
-
-var closeBtn = document.querySelector(".close-btn");
-
-document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("close-btn")) {
-        var addModal = document.getElementById("addModal");
-        addModal.style.display = "none"; 
-    }
-});
-document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("close-btn")) {
-        var addModal = document.getElementById("addModal2");
-        addModal.style.display = "none"; 
-    }
-});
-
-document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("close-picture")) {
-        pictureModal = document.getElementById("picture-edit");
-        pictureModal.style.display = "none"; 
-    }
-});document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("close-paragraph")) {
-        var paragraphModal = document.getElementById("paragraph-edit");
-        paragraphModal.style.display = "none"; 
-    }
-});document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("close-title")) {
-        var titleModal = document.getElementById("title-edit");
-        titleModal.style.display = "none"; 
-    }
-});
-function editPicturePopup() {
-    var editPicture = document.getElementById("picture-edit");
-
-    editPicture.style.display = "block";
-}
-function editParagraphPopup() {
-    var editParagraph = document.getElementById("paragraph-edit");
-
-    editParagraph .style.display = "block";
-}function ediTitlePopup() {
-    var editTitle = document.getElementById("title-edit");
-
-    editTitle.style.display = "block";
-}
-
-
-function openAddPopup() {
-    var addModal = document.getElementById("addModal");
-
-    addModal.style.display = "block";
-}
-
-function openAddPopupMonuments() {
-    var addModal2 = document.getElementById("addModal2");
-
-    addModal2.style.display = "block";
-}
-editBtns.forEach(function(btn, index) {
-    btn.addEventListener("click", function() {
-        modals[index].style.display = "block";
-    });
-});
-
-
-
-spans.forEach(function(span, index) {
-    span.onclick = function() {
-        modals[index].style.display = "none";
-    };
-});
-
-window.onclick = function(event) {
-    modals.forEach(function(modal) {
-        if (event.target == modal ) {
-            modal.style.display = "none";
-        }
-    
-    });
-};
 
 var previews = document.querySelectorAll("#preview");
 var fileInputs = document.querySelectorAll("#image");
@@ -356,24 +273,7 @@ function scrollFunction() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const search = document.getElementById('searchInput');
-  const museum = document.querySelectorAll('.museums-slide');
-  const bullets = document.querySelectorAll('.swiper-pagination-bullet');
 
-  search.addEventListener('input', function() {
-    const searchTerm = search.value.toLowerCase().trim();
-    museum.forEach((slide, index) => {
-      const museumName = slide.querySelector('.museum-name').innerText.toLowerCase();
-      if (museumName.includes(searchTerm)) {
-        slide.classList.add('highlighted');
-        bullets[index].click(); 
-      } else {
-        slide.classList.remove('highlighted');
-      }
-    });
-  });
-});
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
       var images = document.querySelectorAll(".container .box img");
@@ -389,3 +289,197 @@ document.addEventListener('DOMContentLoaded', function() {
   
  
 
+  
+
+
+  document.getElementById('addMonumentForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    addNewMonument(event.target);
+});
+
+async function addNewMonument(formElement) {
+    const formData = new FormData(formElement);
+
+    try {
+        const response = await fetch('/museums/addmonument', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to add monument');
+        }
+
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            console.log('Success:', data);
+            alert('Monument added successfully!');
+        } else {
+            throw new Error('Unexpected response from server');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred while adding the monument.');
+    }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const museumId = '<%= museum._id %>'; // Get the current museum ID from the template
+    const monumentsContainer = document.getElementById('monumentsContainer');
+    const addMonumentForm = document.getElementById('addMonumentForm');
+
+    // Function to fetch monuments for the current museum
+    const fetchMonuments = () => {
+        fetch(`/monuments?museumId=${museumId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(monuments => {
+                monumentsContainer.innerHTML = ''; // Clear existing content
+                monuments.forEach(monument => {
+                    appendMonument(monument);
+                });
+            })
+            .catch(error => console.error('Error fetching monuments:', error));
+    };
+
+    // Function to append a monument to the monuments container
+    const appendMonument = (monument) => {
+        const swiperSlide = document.createElement('div');
+        swiperSlide.classList.add('swiper-slide');
+
+        const imageMargin = document.createElement('div');
+        imageMargin.classList.add('image-margin');
+
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+        imageContainer.style.backgroundImage = `url('${monument.picture}')`;
+
+        const removeIcon = document.createElement('div');
+        removeIcon.classList.add('remove-icon');
+        removeIcon.innerHTML = `<ion-icon name="trash"></ion-icon><span class="remove-text">Delete</span>`;
+        removeIcon.addEventListener('click', () => {
+            deleteMonument(monument._id); // Function to handle delete monument
+        });
+
+        const editIcon = document.createElement('div');
+        editIcon.classList.add('edit-icon');
+        editIcon.innerHTML = `<ion-icon name="create-outline"></ion-icon><span class="edit-text">Edit</span>`;
+        editIcon.addEventListener('click', () => {
+            // Function to handle edit monument, if needed
+        });
+
+        imageContainer.appendChild(removeIcon);
+        imageContainer.appendChild(editIcon);
+
+        const swiperText = document.createElement('div');
+        swiperText.classList.add('swiper-text');
+        swiperText.innerHTML = `<p>${monument.description}</p>`;
+
+        imageMargin.appendChild(imageContainer);
+        imageMargin.appendChild(swiperText);
+
+        swiperSlide.appendChild(imageMargin);
+        monumentsContainer.appendChild(swiperSlide);
+    };
+
+    // Initial fetch of monuments when the page loads
+    fetchMonuments();
+
+    // Function to handle form submission for adding a new monument
+    addMonumentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(addMonumentForm);
+        const monumentData = {
+            museumId: museumId,
+            name: formData.get('name'),
+            description: formData.get('description'),
+            picture: formData.get('picture'),
+        };
+
+        fetch('/monuments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(monumentData),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(newMonument => {
+                appendMonument(newMonument); // Add the new monument to the UI
+                addMonumentForm.reset(); // Clear the form fields after successful addition
+            })
+            .catch(error => console.error('Error adding monument:', error));
+    });
+
+    // Initial fetch of monuments when the page loads
+    fetchMonuments();
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const museumId = '<%= museum._id %>'; // Get the current museum ID from the template
+    fetch(`/monuments?museumId=${museumId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(monuments => {
+            const monumentsContainer = document.getElementById('monumentsContainer');
+            monuments.forEach(monument => {
+                const swiperSlide = document.createElement('div');
+                swiperSlide.classList.add('swiper-slide');
+
+                const imageMargin = document.createElement('div');
+                imageMargin.classList.add('image-margin');
+
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('image-container');
+                imageContainer.style.backgroundImage = `url('${monument.picture}')`;
+
+                const removeIcon = document.createElement('div');
+                removeIcon.classList.add('remove-icon');
+                removeIcon.innerHTML = `<ion-icon name="trash"></ion-icon><span class="remove-text">Delete</span>`;
+
+                const editIcon = document.createElement('div');
+                editIcon.classList.add('edit-icon');
+                editIcon.innerHTML = `<ion-icon name="create-outline"></ion-icon><span class="edit-text">Edit</span>`;
+
+                imageContainer.appendChild(removeIcon);
+                imageContainer.appendChild(editIcon);
+
+                const swiperText = document.createElement('div');
+                swiperText.classList.add('swiper-text');
+                swiperText.innerHTML = `<p>${monument.description}</p>`;
+
+                imageMargin.appendChild(imageContainer);
+                imageMargin.appendChild(swiperText);
+
+                swiperSlide.appendChild(imageMargin);
+                monumentsContainer.appendChild(swiperSlide);
+            });
+
+            // Initialize Swiper after dynamically adding slides
+            const swiper = new Swiper('.swiper-container', {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        })
+        .catch(error => console.error('Error fetching monuments:', error));
+});

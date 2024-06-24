@@ -1,8 +1,23 @@
 const express = require('express');
-const { addMuseum, addMonument, upload,getAllMuseums,searchMuseumsByName } = require('../controllers/Museum');
+const { addMuseum, upload,getAllMuseums,searchMuseumsByName } = require('../controllers/Museum');
 const router = express.Router();
+const Monument = require('../models/monument'); 
 const Museum = require('../models/museum'); 
 
+
+museumController=require('../controllers/Museum');
+
+
+// Example route to get monuments
+router.get('/monuments', async (req, res) => {
+    try {
+        const monuments = await Monument.find();
+        res.status(200).json(monuments);
+    } catch (error) {
+        console.error('Error fetching monuments:', error);
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    }
+});
 router.get('/', async (req, res) => {
   try {
     const museums = await Museum.find(); // Fetch museums from MongoDB
@@ -40,10 +55,17 @@ router.get('/add', (req, res) => {
   res.render("newMuseum");
 });
 
-router.get('/edit/:id', (req, res) => {
-  console.log(req.params.id);
-  // TODO: Fetch and render museum data by ID
-  res.render("museums");
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const museum = await Museum.findById(req.params.id);
+    if (!museum) {
+      return res.status(404).json({ message: 'Museum not found' });
+    }
+    res.render('editMuseum', { museum });
+  } catch (error) {
+    console.error('Error fetching museum:', error);
+    res.status(500).json({ message: 'Error fetching museum' });
+  }
 });
 
 router.get('/allMuseums', async (req, res) => {
@@ -60,7 +82,7 @@ router.get('/allMuseums', async (req, res) => {
 
 
 router.post('/add', addMuseum);
-router.post('/addmonument', addMonument);
+router.post('/addmonument', museumController.addMonument);
 router.get('/allMuseums', getAllMuseums);
 router.get('/search', searchMuseumsByName);
 

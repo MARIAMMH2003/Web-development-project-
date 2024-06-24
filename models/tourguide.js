@@ -43,4 +43,4 @@ const tourGuideSchema = new Schema({
 });
 
 const TourGuide = mongoose.model('tourguides', tourGuideSchema);
-module.exports = tourguide;
+//module.exports = tourguide;

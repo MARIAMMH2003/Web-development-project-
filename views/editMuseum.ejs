@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= museum.title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <section>
+        <div class="blurry-container">
+            <div class="blurry-background" style="background-image: url('<%= museum.picture %>');"></div>
+            <div class="text-overlay">
+                <h1 style="color: beige; font-size: 20px;"><%= museum.title %></h1><br>
+                <h2 style="color: beige; font-size: 15px;"><%= museum.slogan %></h2><br>
+                <p style="color: beige; font-size: 10px;"><%= museum.date %></p>
+            </div>
+        </div>
+        <div id="bar" style="position: fixed; top: 0px;">
+            <nav id="ahh">
+                <a href="#overview">Overview</a>
+                <a href="#details">Famous Monuments</a>
+            </nav>
+        </div>
+        <hr>
+    </section>
+    <br><br>
+    <section id="overview" class="section-content">
+        <div id="text-over">
+            <h1><%= museum.title %></h1><br>
+            <h2><%= museum.slogan %></h2><br>
+            <p><%= museum.date %></p><br>
+            <p id="paragraph1"><%= museum.overview %></p>
+        </div>
+        <a id="edit-new-page" class="inner-buttons" href="#">Edit Museum</a>
+    </section>
+    <section class="famous-monuments" id="details">
+        <br>
+        <span class="before-hr">Famous Monuments</span>
+        <hr id="line">
+        <br><br><br>
+
+        <div class="swiper-container">
+          <div id="monumentsContainer" class="swiper-wrapper">
+              <!-- Swiper slides will be dynamically added here -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- Modal for adding monuments -->
+    <div id="addMonumentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Monument</h2>
+            <form id="addMonumentForm" enctype="multipart/form-data">
+                <input type="hidden" id="museumId" name="museumId" value="<%= museum._id %>">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea><br>
+                <div>
+                    <label for="picture">Picture:</label>
+                    <input type="file" id="picture" name="picture">
+                </div>
+                <button type="submit" class="inner-buttons">Save Monument</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

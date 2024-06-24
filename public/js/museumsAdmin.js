@@ -432,53 +432,38 @@ document.querySelectorAll('.delete-icon').forEach(icon => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const removeIcons = document.querySelectorAll('.remove-icon');
+// Get the modal
+const modal = document.getElementById("addModal");
 
-    removeIcons.forEach(icon => {
-        icon.addEventListener('click', function () {
-            const slide = this.closest('.swiper-slide');
-            slide.remove();
-            // Update the Swiper instance if necessary
-            swiper.update();
-        });
-    });
-});
-function createNewPage() {
-    const newWindow = window.open('', '_blank');
-    const newDocument = newWindow.document.open();
-    const content = `
-     `;
-    newDocument.write(content);
-    newDocument.close();
+// Get the button that opens the modal
+const btn = document.getElementById("create-new-page");
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function(event) {
+    event.preventDefault(); // Prevent the default action
+    modal.style.display = "block";
 }
 
-if (createNewPageBtn) {
-    createNewPageBtn.addEventListener('click', createNewPage);
-} else {
-    console.error('Create New Page button not found');
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
 }
-ddocument.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM content loaded");
-    var openModalDiv = document.getElementById('openModalDiv');
-    var modal = document.getElementById('addMuseumModal');
-    var closeModal = modal.querySelector('.close-btn');
 
-    openModalDiv.addEventListener('click', function() {
-        console.log("Open modal clicked");
-        modal.classList.add('modal-open');
-    });
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
-    closeModal.addEventListener('click', function() {
-        console.log("Close modal clicked");
-        modal.classList.remove('modal-open');
-    });
+// Optional: Add form submit handling
+document.getElementById("addMuseumForm").onsubmit = function(event) {
+    event.preventDefault();
+    // Add your form submission logic here
 
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            console.log("Clicked outside modal");
-            modal.classList.remove('modal-open');
-        }
-    });
-});
-
+    // Close the modal after submission
+    modal.style.display = "none";
+}

@@ -6,16 +6,18 @@ const path = require('path');
 const mongoose = require('mongoose');
 const User = require('./models/employees');
 const bcrypt = require('bcrypt');
+const Monument = require('./models/monument');
+const Museum = require('./models/museum');
 const bodyParser = require('body-parser');
 const app = express();
 const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj'
-
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
     app.listen(8080);
     console.log('mongodb connected successfully');
   })
+
   .catch(err => console.log(err));
 
   app.use(express.urlencoded({ extended: true }));
@@ -39,6 +41,7 @@ const adminRoutes = require("./routes/admin");
 const museumRoutes = require('./routes/museums');
 const tourGuideRoutes = require('./routes/tourguideRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
+app.use('/', museumRoutes);
 
 app.use('/museums', museumRoutes);
 app.use('/admin/museums', museumRoutes);

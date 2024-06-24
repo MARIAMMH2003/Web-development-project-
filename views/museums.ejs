@@ -26,6 +26,13 @@
     <div class="container-museum">
 
       <div class="slide">
+        <div class="item" style="background-image: url(https://www.svgrepo.com/show/114383/white-plus-inside-a-black-square-symbol.svg);">
+          <div class="content">
+              <div class="name">  Add museum </div>
+         
+              <a id="create-new-page" class="inner-buttons" href="#">Add</a>
+            </div>
+      </div>
        <% museums.forEach(museum => { %>
           <div class="item" style="background-image: url('<%= museum.picture %>');">
             <div class="delete-icon">
@@ -58,9 +65,10 @@
 
     </div>
   </section>
-  <div id="addModal2" class="modal1">
+
+  <div id="addModal" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
+      <span class="close">&times;</span>
       <h2>Add Museum</h2>
           <form id="addMuseumForm" enctype="multipart/form-data">
         <label for="editTitle">Title:</label>
@@ -77,27 +85,9 @@
           <label for="picture">Picture:</label>
           <input type="file" id="picture" name="picture">
         </div>
-        <button type="submit"id="">Save</button>
+        <button type="submit"id=""class="inner-buttons">Save</button>
       </form>
-    </div>
-  </div>
-  <div id="addMuseumModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn1">&times;</span>
-      <h2>Add Museum</h2>
-      <form id="addMuseumForm" enctype="multipart/form-data">
-        <label for="editTitle">Title:</label>
-        <input type="text" id="editTitle" name="title" required>
-        <label for="editSlogan">Slogan:</label>
-        <input type="text" id="editSlogan" name="slogan" required>
-        <label for="editDate">Date:</label>
-        <input type="text" id="editDate" name="date" required>
-        <label for="editDate">Overview:</label>
-        <textarea id="editOverview" name="overview" required> </textarea>
-        <div>
-          <label for="picture">Picture:</label>
-          <input type="file" id="picture" name="picture">
-        </div>
+    </div> 
        
     </div>
   </div>
