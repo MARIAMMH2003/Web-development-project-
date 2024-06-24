@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.title2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(145, 94, 18);
+    font-size: 3.7em;
+    font-weight: 1000;
+    margin-bottom: 60px;
+}
+.new{
+    background-color: #000000;
+}
+.title1 {
+    display: flex;
+    justify-content: left;
+    color: rgb(185, 118, 16);
+    font-size: 4em;
+    font-weight: 1000;
+    margin-top: 88px;
+    margin-bottom: 100px;
+    margin-left: 30px;
+}
+
+.pro1 {
+    background: url('https://preview.redd.it/some-islamic-civilization-ai-art-i-made-v0-s4dd866uwmdb1.png?width=640&crop=smart&auto=webp&s=955c32677640a21ec9dd1302b65456567f9a1df5') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 48.3vw;
+    padding: 100px 40px;
+}
+.pro2 {
+    background: url(https://www.cleopatraegypttours.com/wp-content/uploads/2020/01/Tuthmosis-the-Third.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 48.3vw;
+    padding: 100px 40px;
+}
+.circle {
+    justify-content: left;
+    padding-top: 56px;
+    width: 460px;
+    height: 240px;
+    font-size: 0.9em;
+    border-radius: 24%;
+    color: rgb(233, 187, 156);
+    text-align: center;
+    background-color: #000000;
+    margin-top: 7.2vw;
+}
+
+
+.typ {
+    font-size: 2.1em;
+    margin-bottom: 35px;
+}
+
+.peoject1 {
+    background-color: #000000;
+    padding: 100px 40px;
+}
+
+.civi1 {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-top: 50px;
+}
+
+.info3 {
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    width: 60%;
+}
+
+.infom {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    margin-bottom: 0.3em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.change-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+.imag img {
+    width: 22em;
+    height: 15em;
+    margin-left: 40%;
+    margin-top: 2.8em;
+    border-radius: 20px;
+}
+
+#add-btn {
+    background-color: #008CBA;
+    color: white;
+    margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+}
+.con1 {
+    display: flex;
+    min-width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.cla1 {
+    margin-left: 25px;
+    background-color: rgb(253, 158, 81);
+    border: 3px solid rgb(253, 158, 81);
+    min-height: 16em;
+    width: 24em;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    box-shadow: 0 5px 25px black;
+}
+
+.cla1:hover {
+    transform: scale(1.1);
+}
+
+.image1 img {
+    width: 100%;
+    height: 16em;
+}
+
+.info5 {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 700;
+    color: rgba(48, 30, 6, 0.664);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+    .title, .most {
+        font-size: 3.5em;
+        margin-left: 100px;
+    }
+    
+    .title1 {
+        font-size: 3.5em;
+        margin-left: 20px;
+    }
+
+    .title2 {
+        font-size: 3.2em;
+    }
+
+    .im img {
+        width: 28em;
+        height: 15em;
+    }
+
+    .con1, .civi {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .title, .most {
+        font-size: 3em;
+        margin-left: 80px;
+    }
+
+    .title1 {
+        font-size: 3em;
+        margin-left: 15px;
+    }
+
+    .title2 {
+        font-size: 2.8em;
+    }
+
+    .im img {
+        width: 25em;
+        height: 13em;
+    }
+
+    .con1, .civi {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cla1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .image1 img {
+        height: auto;
+    }
+
+    .info2, .info3 {
+        width: 80%;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title, .most {
+        font-size: 2.5em;
+        margin-left: 60px;
+    }
+
+    .title1 {
+        font-size: 2.5em;
+        margin-left: 10px;
+    }
+
+    .title2 {
+        font-size: 2.4em;
+    }
+
+    .im img {
+        width: 20em;
+        height: 10em;
+    }
+
+    .con1, .civi {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cla1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .image1 img {
+        height: auto;
+    }
+
+    .info2, .info3 {
+        width: 80%;
+        margin-left: 5px;
+    }
+
+    .circle {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    .typ, .infom, .info5 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .title, .most {
+        font-size: 2em;
+        margin-left: 40px;
+    }
+
+    .title1 {
+        font-size: 2em;
+        margin-left: 5px;
+    }
+
+    .title2 {
+        font-size: 2em;
+    }
+
+    .im img {
+        width: 15em;
+        height: 7.5em;
+    }
+
+    .con1, .civi {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .cla1 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 13px;
+      
+    }
+
+    .image1 img {
+        height: auto;
+    }
+
+    .info2, .info3 {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .circle {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .typ, .infom, .info5 {
+        font-size: 1em;
+    }
+}
+
+.con1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cla1 {
+    flex: 1 1 calc(33.333% - 20px); 
+    margin: 10px;
+}
+
+@media (max-width: 900px) {
+    .cla1 {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 600px) {
+    .cla1 {
+        flex: 1 1 calc(100% - 20px); 
+    }
+}
+
+.new {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+#add-new-btn {
+    background-color: #008CBA;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
