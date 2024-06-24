@@ -5,6 +5,7 @@ const router = express.Router();
 router.use(bodyParser.json());
 const MuseumRouter = require('./museums');
 
+
 const Admin = require("../controllers/Admin");
 
 // check if admin
@@ -18,6 +19,7 @@ router.use((req, res, next) => {
 });
 
 router.use('/museums', MuseumRouter);
+
 
 router.get('/', (req, res) => {
     res.render('tourifyad');

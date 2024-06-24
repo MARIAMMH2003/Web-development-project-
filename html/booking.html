@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="stylesheet" href="booking.css">
     <link rel="stylesheet" type="text/css" href="booking.js">
-    <script src="../javascript/booking.js" defer></script>
+    <script src="booking.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -27,21 +27,30 @@
             <form id="booking-form" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name" required>
- 
+                <span id="name-error" class="error-message"></span>
+
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
-           
+                <span id="email-error" class="error-message"></span>
+
                 <label for="destination">Destination:</label>
                 <input type="text" name="destination" id="destination" required>
-           
+                <span id="destination-error" class="error-message"></span>
+
                 <label for="departure-date">Departure Date:</label>
                 <input type="date" name="departure-date" id="departure-date" required>
-               
+                <span id="departure-date-error" class="error-message"></span>
+
                 <label for="return-date">Time:</label>
                 <input type="time" name="return-date" id="return-date" required>
+                <span id="return-date-error" class="error-message"></span>
+
+                <label for="return-date">Price:</label>
+                <input type="number" name="price" id="price" value="200" readonly>
 
                 <button type="submit">Book Now</button>
             </form>
+            <div id="success-message" class="success-message"></div>
         </div>
     </div>
 

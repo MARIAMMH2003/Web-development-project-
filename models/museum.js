@@ -1,27 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const MonumentSchema = new Schema({
-    description: {
-        type: String,
-        required: true
-    },
-    picture: {
-        type: String,
-        required: true
-    }
-});
 
-const CommentSchema = new Schema({
-    content: {
-        type: String,
-        required: true
-    },
-    rating: {
-        type: String,
-        required: true
-    }
-});
 const MuseumSchema = new Schema({
     title: {
         type: String,
@@ -47,8 +27,8 @@ const MuseumSchema = new Schema({
         type: Number,
         required: false
     },
-    monuments: [MonumentSchema],
-    comments: [CommentSchema],
+    monuments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Monument' }],
+
     createdAt: {
         type: Date,
         required: true,

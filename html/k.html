@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="m.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Civilization</title> 
+</head>
+<body>
+   
+    <section class="pro1">
+        <div class="circle"></div>
+        <button class="add-title-btn" onclick="showTitleInput()">Add Title</button>
+        <button class="add-description-btn" onclick="showDescriptionInput()">Add Description</button>
+        <div class="input-container">
+            <textarea id="description-input" placeholder="Enter title" style="display: none;"></textarea>
+            <button class="save-title-btn" onclick="saveTitle()">Save Title</button>
+            <textarea id="description-input" placeholder="Enter description" style="display: none;"></textarea>
+            <button class="save-description-btn" onclick="saveDescription()" style="display: none;">Save Description</button>
+        </div>
+    </section>
+    
+    <section class="cop">
+        <button class="add-btn" onclick="addTitleAndParagraph()">Add Title and Paragraph</button>
+        <div class="input-container">
+            <input type="text" id="section2-title-input" placeholder="Enter title">
+            <textarea id="section2-paragraph-input" placeholder="Enter paragraph"></textarea>
+            <button class="save-btn" onclick="saveTitleAndParagraph()">Save</button>
+            <button class="add-img-btn" onclick="triggerImageUpload('section2-image-input')">Add Image</button>
+            <input type="file" id="section2-image-input" accept="image/*" style="display: none;" onchange="previewImage(event, 'section2-image-preview')">
+            <img id="section2-image-preview" style="display: none; margin-top: 10px;">
+        </div>
+    </section>
+    
+    <section class="peoject1">
+        <button class="add-btn" onclick="addMuseum()">Add Museum</button>
+        <div class="input-container">
+            <button class="add-img-btn" onclick="triggerImageUpload('museum-image-input')">Add Image</button>
+            <input type="file" id="museum-image-input" accept="image/*" style="display: none;" onchange="previewImage(event, 'museum-image-preview')">
+            <img id="museum-image-preview" style="display: none; margin-top: 10px;">
+            <input type="text" id="museum-name-input" placeholder="Enter museum name">
+            <button class="save-btn" onclick="saveMuseum()">Save</button>
+            <button class="add-museum-name-btn" onclick="addMuseumName()">Add Museum Name</button>
+        </div>
+    </section>
+
+    <script>
+        function showTitleInput() {
+            document.getElementById('title-input').style.display = 'block';
+            document.querySelector('.save-title-btn').style.display = 'block';
+        }
+
+        function showDescriptionInput() {
+            document.getElementById('description-input').style.display = 'block';
+            document.querySelector('.save-description-btn').style.display = 'block';
+        }
+
+        function saveTitle() {
+            const title = document.getElementById('title-input').value;
+            const circle = document.querySelector('.circle');
+            circle.innerHTML = `<h1 class="typ">${title}</h1>`;
+            document.getElementById('title-input').style.display = 'none';
+            document.querySelector('.save-title-btn').style.display = 'none';
+        }
+
+        function saveDescription() {
+            const description = document.getElementById('description-input').value;
+            const circle = document.querySelector('.circle');
+            circle.innerHTML += `<h3>${description}</h3>`;
+            document.getElementById('description-input').style.display = 'none';
+            document.querySelector('.save-description-btn').style.display = 'none';
+        }
+
+        function addTitleAndParagraph() {
+            document.querySelectorAll('.input-container')[1].style.display = 'block';
+        }
+
+        function saveTitleAndParagraph() {
+            const title = document.getElementById('section2-title-input').value;
+            const paragraph = document.getElementById('section2-paragraph-input').value;
+            const imageSrc = document.getElementById('section2-image-preview').src;
+
+            const section = document.querySelector('.cop');
+            section.innerHTML += `<h2 class="title1">${title}</h2><div class="content"><img src="${imageSrc}" alt="${title}"><p>${paragraph}</p></div>`;
+            document.querySelectorAll('.input-container')[1].style.display = 'none';
+        }
+
+        function addMuseum() {
+            document.querySelectorAll('.input-container')[2].style.display = 'block';
+        }
+
+        function saveMuseum() {
+            const museumImage = document.getElementById('museum-image-preview').src;
+            const section = document.querySelector('.peoject1');
+            section.innerHTML += `<div class="cla1"><div class="image1"><img src="${museumImage}" alt="Museum Image"></div><div class="info5"><p id="museum-name-placeholder"></p></div></div>`;
+            document.querySelectorAll('.input-container')[2].style.display = 'none';
+        }
+
+        function addMuseumName() {
+            const museumName = document.getElementById('museum-name-input').value;
+            document.getElementById('museum-name-placeholder').textContent = museumName;
+        }
+
+        function triggerImageUpload(inputId) {
+            document.getElementById(inputId).click();
+        }
+
+        function previewImage(event, previewId) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const preview = document.getElementById(previewId);
+                preview.src = reader.result;
+                preview.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+
+</body>
+</html>

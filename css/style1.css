@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+}
+i {
+  cursor: pointer;
+}
+.x {
+  display: flex;
+  padding: 25px 60px;
+}
+.cart {
+  position: relative;
+  background-color: rgb(240, 62, 62);
+  color: black;
+  margin-top: 10px;
+  font-size: 30px;
+  padding: 5px;
+  justify-content: center;
+  border-radius: 6px;
+}
+.cartamount {
+  position: absolute;
+  top: -12px;
+  right: -5px;
+  font-size: 16px;
+  background-color: aqua;
+  color: aliceblue;
+  padding: 2px;
+  border-radius: 11px;
+}

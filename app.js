@@ -5,18 +5,21 @@ const session = require('express-session');
 const fileUpload = require('express-fileupload');
 const path = require('path');
 const mongoose = require('mongoose');
+const User = require('./models/employees');
 const bcrypt = require('bcrypt');
+const Monument = require('./models/monument');
+const Museum = require('./models/museum');
 const bodyParser = require('body-parser');
 const app = express();
+const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj'
 
-// Replace this with process.env.MONGO_URI after creating the .env file
-const dbURI = 'mongodb+srv://new-user:abc@cluster0.ndib7gv.mongodb.net/Web-proj?retryWrites=true&w=majority&appName=Web-proj';
 
 mongoose.connect(dbURI)
   .then(result => {
     app.listen(process.env.PORT || 8080);
     console.log('mongodb connected successfully');
   })
+
   .catch(err => console.log(err));
 
 app.use(express.urlencoded({ extended: true }));
@@ -38,14 +41,16 @@ const indexRoutes = require("./routes/index");
 const userRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const museumRoutes = require('./routes/museums');
-const highlightRoutes = require('./routes/highlights'); // Add your highlight routes here
+//const tourGuideRoutes = require('./routes/tourguideRoutes');
+//const bookingRoutes = require('./routes/bookingRoutes');
 
 app.use('/museums', museumRoutes);
-app.use('/highlights', highlightRoutes); // Use the highlight routes
+//app.use('/admin/museums', museumRoutes);
 app.use("/", indexRoutes);
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
-
+//app.use('/tourGuides', tourGuideRoutes);
+//app.use('/bookings', bookingRoutes);
 app.get('/profile', (req, res) => {
   const user = req.session.user || { Image: 'default.jpg', name: 'Unknown' };
   res.render('profile', { user });
@@ -112,6 +117,46 @@ app.use((req, res) => {
   const user = req.session.user || { Image: 'default.jpg', name: 'Unknown' };
   res.status(404).render('404', { user });
 });
+
+//tourGuide
+
+app.post('/tourGuide', async (req, res) => {
+  console.log('Received a POST request to /tourGuide');
+  const { name, profession, about, image, facebook, twitter, instagram, whatsapp } = req.body;
+
+  // Validate the form data
+  if (!name || !profession || !about || !image || !facebook || !twitter || !instagram || !whatsapp) {
+      return res.status(400).json({ error: 'All fields are required' });
+  }
+
+  try {
+      // Here you would typically save the form data to a database
+      // For example, using Mongoose to save to a MongoDB database
+      const newTourGuide = new tourGuide({
+          name,
+          profession,
+          about,
+          image,
+          facebook,
+          twitter,
+          instagram,
+          whatsapp
+          // socialMedia: {
+          //     facebook,
+          //     twitter,
+          //     instagram,
+          //     whatsapp
+          // }
+      });
+      await newTourGuide.save();
+
+      res.status(201).json({ message: 'Tour guide created successfully' });
+  } catch (error) {
+      console.error('Error creating tour guide:', error);
+      res.status(500).json({ error: 'Failed to create tour guide' });
+  }
+});
+
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
