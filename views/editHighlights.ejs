@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Highlights</title>
+    <link rel="stylesheet" href="/css/tourifyad.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-logo">
+                <div class="logo">
+                    <span class="logo-icon">☥</span> 
+                    <span class="logo-text">Tourify</span>
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="highlights-edit-section">
+        <div class="container">
+            <h2 class="section-title">Edit Highlights</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <% highlights.forEach(highlight => { %>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <div class="card-title"><%= highlight.title %></div>
+                                <div class="card-content">
+                                    <img src="<%= highlight.imageUrl %>" alt="<%= highlight.title %>">
+                                    <p><%= highlight.text %></p>
+                                </div>
+                                <div class="card-actions">
+                                    <a href="/highlights/edit/<%= highlight._id %>" class="edit-btn">Edit</a>
+                                    <form action="/highlights/delete/<%= highlight._id %>" method="POST" style="display:inline;">
+                                        <button type="submit" class="delete-btn">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
