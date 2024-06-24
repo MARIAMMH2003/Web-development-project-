@@ -7,7 +7,7 @@
    
 
     <title>Admin Category</title>
-    <link rel="stylesheet" href="../css/admin3.css">
+    <link rel="stylesheet" href="admin3.css">
 </head>
 <body>
  
@@ -27,7 +27,7 @@
         
             
                     <a href="islamic.html">
-                    <div class="civi">
+                    <div class="civi" >
                         <div class="im">
                             <img src="https://preview.redd.it/some-islamic-civilization-ai-art-i-made-v0-s4dd866uwmdb1.png?width=640&crop=smart&auto=webp&s=955c32677640a21ec9dd1302b65456567f9a1df5" alt="Islamic Civilization" >
                         </div></a>
@@ -53,11 +53,11 @@
                           <label for="title">Title:</label>
                             <input id="inp" type="text" id="title" name="title">
                             <label for="paragraph">description:</label>
-                            <input id="input3" type="text" id="title1" name="title">
+                            <input id="input3" type="text" id="para1" name="title">
                             <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
+                            <input type="file" class="image" name="image" accept="image/*">
                             <div class="image6" id="image7">
-                            <img class="view" src="#" alt="Image view"></div>
+                            <img class="view" src="https://i.pinimg.com/736x/cd/e5/a3/cde5a323ccf3f1fc848ab64e6df49b2d.jpg" alt="Image view"></div>
                             <button class="innerButton" type="submit">Save Changes</button>
                         </form>
                     </div>
@@ -65,8 +65,9 @@
                
               </div>
             </div>
-              <a href="pharaonic.html">
-                <div class="civi">
+            <div class="civi">
+              <a href="pharaonic-admin.html">
+               
                     <div class="im">
                         <img src="https://www.cleopatraegypttours.com/wp-content/uploads/2020/01/Tuthmosis-the-Third.jpg" alt="Pharaonic Civilization">
                     </div> </a>     
@@ -90,11 +91,49 @@
                             <label for="title">Title:</label>
                             <input id="inp" type="text" id="title" name="title">
                             <label for="paragraph">description:</label>
-                            <input id="input3" type="text" id="title" name="title">
+                            <input id="input3" type="text" id="para1" name="title">
                             <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
+                            <input type="file" class="image" name="image" accept="image/*">
                             <div class="image6" id="image7">
-                            <img class="view" src="#" alt="Image view"></div>
+                            <img class="view" src="https://i.pinimg.com/736x/cd/e5/a3/cde5a323ccf3f1fc848ab64e6df49b2d.jpg" alt="Image view"></div>
+                            <button class="innerButton" type="submit">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+               
+              </div>
+            </div>
+
+            <a href="romanian.html">
+                <div class="civi">
+                    <div class="im">
+                        <img src="https://i0.wp.com/ancienttheatrearchive.com/wp-content/uploads/2022/05/alexandria-1-Edit.jpg?fit=1936%2C1288&ssl=1" alt="Romanian Civilization">
+                    </div> </a>     
+                    <div class="info2">
+                        <h2 class="proinfo"> Romanian Civilization</h2>
+                        <p>Rich tapestry of history culuture, and resilience</p>
+                      
+                    
+                  
+                    <div class="buttons">
+                        <button class="edit-button">Edit</button>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+           
+                <div id="edit-m2"  class="exm">
+                    <div class="exm-con">
+                        <span class="close">&times;</span>
+                        <h2>Edit Category</h2>
+                        <form id="edits" action="edit.php" method="post" enctype="multipart/form-data">
+                            <label for="title">Title:</label>
+                            <input id="inp" type="text" id="title" name="title">
+                            <label for="paragraph">description:</label>
+                            <input id="input3" type="text" id="para1" name="title">
+                            <label for="image">Image:</label>
+                            <input type="file" class="image" name="image" accept="image/*">
+                            <div class="image6" id="image7">
+                            <img class="view" src="https://i.pinimg.com/736x/cd/e5/a3/cde5a323ccf3f1fc848ab64e6df49b2d.jpg" alt="Image view"></div>
                             <button class="innerButton" type="submit">Save Changes</button>
                         </form>
                     </div>
@@ -125,10 +164,12 @@
                         <form id="edits" action="edit.php" method="post" enctype="multipart/form-data">
                             <label for="title">Title:</label>
                             <input id="inp" type="text" id="title" name="title">
+                            <label for="paragraph">description:</label>
+                            <input id="input3" type="text" id="para1" name="title">
                             <label for="image">Image:</label>
-                            <input type="file" class="image" name="image">
+                            <input type="file" class="image" name="image" accept="image/*">
                             <div class="image6" id="image7">
-                            <img class="view" src="#" alt="Image view"></div>
+                            <img class="view" src="https://i.pinimg.com/736x/cd/e5/a3/cde5a323ccf3f1fc848ab64e6df49b2d.jpg" alt="Image view"></div>
                             <button class="innerButton" type="submit">Save Changes</button>
                         </form>
                     </div>
@@ -139,30 +180,32 @@
         
         
         </div>
-        <h1>Add Category</h1>
-        
-                        <button class="add-button" onclick="openAddPopup()">Add</button>
-               
+     
+        <div class="lopa">
+            <h1 class="lopa1">Add Category:</h1>
+            <button class="add-button" onclick="openAddPopup()">Add</button>
         </div>
-   
+    
         <div id="exmp" class="exm">
             <div class="exmp-con">
                 <span class="close-button">&times;</span>
                 <h2>Add Category</h2>
                 <form id="adds" action="add.php" method="post" enctype="multipart/form-data">
                     <label for="title">Title:</label>
-                    <input id="inp1" type="text" id="title" name="title">
+                    <input id="inp1" type="text" name="title">
+                    <label for="paragraph">Description:</label>
+                    <input id="input4" type="text" name="description">
                     <label for="image">Image:</label>
-                    <input type="file" class="image" name="image">
-                    <div class="image6" id="image7">
-                        <img class="view" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMZ9TQdRkyrRbxzRe7n31LwsxbbQ5_U8CAd3HMFg_lA&s" alt="Image view">
+                    <input type="file" class="image" name="image" accept="image/*">
+                    <div class="image6">
+                        <img class="view" id="imagePreview" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMZ9TQdRkyrRbxzRe7n31LwsxbbQ5_U8CAd3HMFg_lA&s" alt="Image view">
                     </div>
-                    <button class="innerButton" type="submit">Save Changes </button>
+                    <button class="innerButton" type="submit">Save Changes</button>
                 </form>
             </div>
         </div>
     </section>
     
-    <script src="../javascript/admin1.js" defer></script>
+    <script src="admin2.js" defer></script>
     </body>
     </html>
