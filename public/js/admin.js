@@ -323,8 +323,7 @@ async function addNewMonument(formElement) {
         console.error('Error:', error);
         alert('An error occurred while adding the monument.');
     }
-}
-document.addEventListener('DOMContentLoaded', () => {
+}document.addEventListener('DOMContentLoaded', () => {
     const museumId = '<%= museum._id %>'; // Get the current museum ID from the template
     const monumentsContainer = document.getElementById('monumentsContainer');
     const addMonumentForm = document.getElementById('addMonumentForm');
@@ -387,9 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
         monumentsContainer.appendChild(swiperSlide);
     };
 
-    // Initial fetch of monuments when the page loads
-    fetchMonuments();
-
     // Function to handle form submission for adding a new monument
     addMonumentForm.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -423,63 +419,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial fetch of monuments when the page loads
     fetchMonuments();
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const museumId = '<%= museum._id %>'; // Get the current museum ID from the template
-    fetch(`/monuments?museumId=${museumId}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(monuments => {
-            const monumentsContainer = document.getElementById('monumentsContainer');
-            monuments.forEach(monument => {
-                const swiperSlide = document.createElement('div');
-                swiperSlide.classList.add('swiper-slide');
-
-                const imageMargin = document.createElement('div');
-                imageMargin.classList.add('image-margin');
-
-                const imageContainer = document.createElement('div');
-                imageContainer.classList.add('image-container');
-                imageContainer.style.backgroundImage = `url('${monument.picture}')`;
-
-                const removeIcon = document.createElement('div');
-                removeIcon.classList.add('remove-icon');
-                removeIcon.innerHTML = `<ion-icon name="trash"></ion-icon><span class="remove-text">Delete</span>`;
-
-                const editIcon = document.createElement('div');
-                editIcon.classList.add('edit-icon');
-                editIcon.innerHTML = `<ion-icon name="create-outline"></ion-icon><span class="edit-text">Edit</span>`;
-
-                imageContainer.appendChild(removeIcon);
-                imageContainer.appendChild(editIcon);
-
-                const swiperText = document.createElement('div');
-                swiperText.classList.add('swiper-text');
-                swiperText.innerHTML = `<p>${monument.description}</p>`;
-
-                imageMargin.appendChild(imageContainer);
-                imageMargin.appendChild(swiperText);
-
-                swiperSlide.appendChild(imageMargin);
-                monumentsContainer.appendChild(swiperSlide);
-            });
-
-            // Initialize Swiper after dynamically adding slides
-            const swiper = new Swiper('.swiper-container', {
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-            });
-        })
-        .catch(error => console.error('Error fetching monuments:', error));
 });

@@ -1,7 +1,29 @@
 const Museum = require('../models/museum');
 const Monument = require('../models/monument');
+const Comment = require('../models/comment');
+const Employees = require('../models/employees');
+
 const path = require('path');
 
+
+const addComment = async (req, res) => {
+    try {
+        const {  username, museumId ,content} = req.body; // Assuming museumId is passed in req.body
+        
+        // Create a new Comment instance
+        const newComment = new Comment({ username, museum: museumId ,content });
+
+
+        // Save the new comment to the database
+        await newComment.save();
+
+        // Respond with the created comment
+        res.status(201).json(newComment);
+    } catch (error) {
+        // Handle errors
+        res.status(500).send({ message: error.message });
+    }
+};
 
 const addMuseum = async (req, res) => {
     try {
@@ -129,6 +151,6 @@ module.exports = {
     addMuseum,
     addMonument,
     getMuseumById,
-    getMuseumByIdMonuments,
+    getMuseumByIdMonuments,addComment,
     getAllMuseums,searchMuseumsByName,getAllMonuments
 };

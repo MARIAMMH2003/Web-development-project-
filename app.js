@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const User = require('./models/employees');
 const bcrypt = require('bcrypt');
 const Monument = require('./models/monument');
+const Comment = require('./models/comment');
+
 const Museum = require('./models/museum');
 const bodyParser = require('body-parser');
 const app = express();
