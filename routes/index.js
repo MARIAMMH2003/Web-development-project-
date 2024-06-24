@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Museum = require('../models/museum'); 
+const Comment=require('../models/comment')
 
 router.get('/', async (req, res) => {
   console.log("Homepage route hit");
@@ -34,7 +35,16 @@ router.get('/museum/:id', async (req, res) => {
     res.status(500).json({ message: 'Error fetching museum' });
   }
 });
-router.get('/:id/booking', async (req, res) => {
+router.get('/comments', async (req, res) => {
+  try {
+      const comments = await Comment.find();
+      res.status(200).json(monuments);
+  } catch (error) {
+      console.error('Error fetching monuments:', error);
+      res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  }
+});
+router.get('/museum/:id/booking', async (req, res) => {
   try {
     const museum = await Museum.findById(req.params.id);
     if (!museum) {

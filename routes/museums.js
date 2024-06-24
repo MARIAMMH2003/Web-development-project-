@@ -18,6 +18,7 @@ router.get('/monuments', async (req, res) => {
         res.status(500).json({ message: 'Internal Server Error', error: error.message });
     }
 });
+
 router.get('/', async (req, res) => {
   try {
     const museums = await Museum.find(); // Fetch museums from MongoDB

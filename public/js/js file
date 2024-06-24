@@ -59,6 +59,46 @@ allStar.forEach((item, idx)=> {
 		}
 	})
 })
+document.addEventListener('DOMContentLoaded', function() {
+  const stars = document.querySelectorAll('.bx-star');
+
+  stars.forEach((star, index) => {
+      star.addEventListener('click', function() {
+          const ratingValue = index + 1; // index is zero-based, so add 1
+          document.getElementById('ratingInput').value = ratingValue;
+
+          // Highlight selected stars
+          stars.forEach((s, i) => {
+              if (i <= index) {
+                  s.classList.add('selected');
+              } else {
+                  s.classList.remove('selected');
+              }
+          });
+      });
+  });
+
+  const form = document.getElementById('commentForm');
+  form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const formData = new FormData(form);
+
+      // Simulate form submission (you can replace this with your actual AJAX submission)
+      console.log({
+          rating: formData.get('rating'),
+          opinion: formData.get('opinion')
+      });
+
+      // Reset form after submission (if needed)
+      form.reset();
+  });
+
+  const cancelBtn = document.querySelector('.cancel');
+  cancelBtn.addEventListener('click', function() {
+      form.reset(); // Reset form on cancel button click
+  });
+});
+
 
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 'auto',
@@ -104,4 +144,116 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+});document.addEventListener("DOMContentLoaded", function () {
+  handleImagePreview(); // Assuming this is a function for image preview
+
+  document.getElementById('addMuseumForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      addNewMuseum(event.target);
+  });
+
+  document.getElementById('addCommentForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+      addNewComment(event.target);
+  });
 });
+
+async function addNewMuseum(formElement) {
+  const formData = new FormData(formElement);
+
+  fetch('/admin/museums/add', {
+      method: 'POST',
+      body: formData
+  })
+      .then(response => response.json())
+      .then(data => {
+          console.log('Success (Museum):', data);
+          alert('Museum added successfully!');
+      })
+      .catch((error) => {
+          console.error('Error (Museum):', error);
+          alert('An error occurred while adding the museum.');
+      });
+}
+
+async function addNewComment(formElement) {
+  const formData = new FormData(formElement);
+
+  fetch('/comments', {
+      method: 'POST',
+      body: formData
+  })
+      .then(response => response.json())
+      .then(data => {
+          console.log('Success (Comment):', data);
+          alert('Comment added successfully!');
+      })
+      .catch((error) => {
+          console.error('Error (Comment):', error);
+          alert('An error occurred while adding the comment.');
+      });
+}
+
+const modal = document.getElementById("addModal");
+const btn = document.getElementById("create-new-page");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function(event) {
+  event.preventDefault();
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+
+
+
+document.getElementById("addCommentForm").onsubmit = function(event) {
+  event.preventDefault();
+  modal.style.display = "none";
+}
+const appendMonument = (monument) => {
+  const swiperSlide = document.createElement('div');
+  swiperSlide.classList.add('swiper-slide');
+
+  const imageMargin = document.createElement('div');
+  imageMargin.classList.add('image-margin');
+
+  const imageContainer = document.createElement('div');
+  imageContainer.classList.add('image-container');
+  imageContainer.style.backgroundImage = `url('${monument.picture}')`;
+
+  const removeIcon = document.createElement('div');
+  removeIcon.classList.add('remove-icon');
+  removeIcon.innerHTML = `<ion-icon name="trash"></ion-icon><span class="remove-text">Delete</span>`;
+  removeIcon.addEventListener('click', () => {
+      deleteMonument(monument._id); // Function to handle delete monument
+  });
+
+  const editIcon = document.createElement('div');
+  editIcon.classList.add('edit-icon');
+  editIcon.innerHTML = `<ion-icon name="create-outline"></ion-icon><span class="edit-text">Edit</span>`;
+  editIcon.addEventListener('click', () => {
+      // Function to handle edit monument, if needed
+  });
+
+  imageContainer.appendChild(removeIcon);
+  imageContainer.appendChild(editIcon);
+
+  const swiperText = document.createElement('div');
+  swiperText.classList.add('swiper-text');
+  swiperText.innerHTML = `<p>${monument.description}</p>`;
+
+  imageMargin.appendChild(imageContainer);
+  imageMargin.appendChild(swiperText);
+
+  swiperSlide.appendChild(imageMargin);
+  monumentsContainer.appendChild(swiperSlide);
+};

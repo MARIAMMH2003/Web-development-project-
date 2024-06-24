@@ -40,38 +40,29 @@
     <section class="famous-monuments" id="details">
         <br>
         <span class="before-hr">Famous Monuments</span>
-        <hr id="line">
-        <br><br><br>
-
-        <div class="swiper-container">
-          <div id="monumentsContainer" class="swiper-wrapper">
-              <!-- Swiper slides will be dynamically added here -->
+        <div id="addMonumentModal" class="modal1">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Add Monument</h2>
+              <form id="addMonumentForm" enctype="multipart/form-data">
+                  <input type="hidden" id="museumId" name="museumId" value="<%= museum._id %>">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required><br>
+                  <label for="description">Description:</label>
+                  <textarea id="description" name="description" required></textarea><br>
+                  <div>
+                      <label for="picture">Picture:</label>
+                      <input type="file" id="picture" name="picture">
+                  </div>
+                  <button type="submit" class="inner-buttons">Save Monument</button>
+              </form>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+      </div>
       </div>
     </section>
 
     <!-- Modal for adding monuments -->
-    <div id="addMonumentModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Add Monument</h2>
-            <form id="addMonumentForm" enctype="multipart/form-data">
-                <input type="hidden" id="museumId" name="museumId" value="<%= museum._id %>">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea><br>
-                <div>
-                    <label for="picture">Picture:</label>
-                    <input type="file" id="picture" name="picture">
-                </div>
-                <button type="submit" class="inner-buttons">Save Monument</button>
-            </form>
-        </div>
-    </div>
+ 
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
