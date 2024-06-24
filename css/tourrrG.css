@@ -1,110 +1,479 @@
-body {
-    background: #f5f5f5;
-    margin-top: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.ui-w-80 {
-    width : 80px !important;
-    height: auto;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn-default {
-    border-color: rgba(24, 28, 33, 0.1);
-    background  : rgba(0, 0, 0, 0);
-    color       : #4E5155;
+nav {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    margin: 0px;
+    background-color: beige;
+    z-index: 200;
+    height: 50px;
+    top: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-label.btn {
-    margin-bottom: 0;
+.nav-a {
+    display: flex;
+    position: relative;
+    top: 10px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 0px;
+    text-align: center;
+    margin: 6px;
+    border: 10px;
 }
 
-.btn-outline-primary {
-    border-color: #26B4FF;
-    background  : transparent;
-    color       : #26B4FF;
+.nav-span {
+    color: rgb(215, 154, 0);
+    transition: all 0.5s ease-out;
 }
 
-.btn {
+.lll {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    position: absolute;
+    right: 0;
+}
+
+input {
+    display: none;
+    visibility: hidden;
+}
+
+#tourGuideForm
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(232, 232, 232, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#tourGuideForm h1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+.backgroundForm{
+    background-image: url('../public/images/224261-download-wallpaper-3840x2400-colosseum-architecture-building.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em;
+}
+
+.input2
+{
+    display: flex;
+    visibility: visible;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2em;
+    background-color: rgb(246, 232, 214);
+    color: #000000;
+    border-style: none;
+}
+
+.lab2
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.saveForm
+{
+    display: inline;
+    justify-content: right;
+    justify-items: right;
+    visibility: visible;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2em;
+    background-color: rgb(246, 232, 214);
+    color: #000000;
+    border-style: none;
+    transition: background-color 0.3s ease;
     cursor: pointer;
 }
 
-.text-light {
-    color: #babbbc !important;
+.saveForm:hover
+{
+    background-color: rgba(254, 195, 129, 0.722);
 }
 
-.btn-facebook {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #3B5998;
-    color       : #fff;
+.nav1
+{
+    height: 100%;
+    width: 220px;
+    position: absolute;
+    background-color: #000000;
+    transition: 0.4s ease;
+    transform: translateX(-220px);
+    left: 0; 
+    top: 0;
+    display: flex;
+    position: fixed;
+    z-index: 500;
+    height: min-content;
+} 
+.n
+{
+    color:rgb(185, 118, 16);
+    background: #000000;
+    font-weight: 2000;
+    font-size: 3em;
+    text-align: right;
+    padding: 10px 10px;
+    padding-right: 20px;
+    pointer-events: none;
+    z-index: 50;
+}  
+.nav1 ul
+{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
-
-.btn-instagram {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #000;
-    color       : #fff;
+ul li .a-toggle
+{
+    color: #ffffff;
+    background: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 5px 0;
+    width: 9.80em;
+    display: flex;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.05s ease-out;
+    z-index: 50000;
 }
-
-.card {
-    background-clip: padding-box;
-    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+ul li:hover .a-toggle
+{
+    color: #ffffff;
+    background-color:rgb(185, 118, 16) ;
 }
-
-.row-bordered {
-    overflow: hidden;
-}
-
-.account-settings-fileinput {
-    position  : absolute;
+input
+{
+    display: none;
     visibility: hidden;
-    width     : 1px;
-    height    : 1px;
-    opacity   : 0;
+}
+.toggle
+{
+    position:fixed;
+    height: 2em;
+    width: 2em;
+    top: 10px;
+    left:15px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    z-index: 50000;
+}
+.toggle .common
+{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(185, 118, 16);
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.toggle .top_line
+{
+   top: 30%;
+   left:50%;
+   transform: translate(-50%,-50%);
+}
+.toggle .mid_line
+{
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line
+{
+    top: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line
+{
+    left:2px;
+    top:14px;
+    width:25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .mid_line
+{
+   left:2px;
+   top:14px;
+   width:25px;
+   transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line
+{
+   left:2px;
+   top:14px;
+   width:25px;
+   transform: rotate(45deg);
+}
+input:checked ~ .nav1
+{
+    transform: translateX(0);
 }
 
-.account-settings-links .list-group-item.active {
-    font-weight: bold !important;
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60%;
 }
 
-html:not(.dark-style) .account-settings-links .list-group-item.active {
-    background: transparent !important;
+.background {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh; 
+    background-image: url('../public/images/image1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.account-settings-multiselect~.select2-container {
-    width: 100% !important;
+@keyframes slideBackground {
+    0% {
+        background-image: url('../public/images/image1.jpeg');
+        background-position: 0 0;
+    }
+    25% {
+        background-image: url('../public/images/image2.jpeg');
+        background-position: 0 0;
+    }
+    50% {
+        background-image: url('../public/images/image3.jpeg');
+        background-position: 0 0;
+    }
+    75% {
+        background-image: url('../public/images/image4.jpeg');
+        background-position: 0 0;
+    }
+    100% {
+        background-image: url('../public/images/image1.jpeg');
+        background-position: 0 0;
+    }
 }
 
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
+.background:hover {
+    opacity: 0.8; 
+    color: rgba(127, 129, 131,  0.546);
 }
 
-.light-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
+.foreground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 85%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url('../public/images/TourGuide2.jpeg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.material-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
+.foreground:hover {
+    opacity: 0.8;
+    color: rgba(127, 129, 131, 0.546); 
 }
 
-.material-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
+@media (max-width: 768px) {
+    .foreground {
+        width: 150px;
+        height: 150px;
+    }
 }
 
-.dark-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(255, 255, 255, 0.03) !important;
+@media (max-width: 480px) {
+    .foreground {
+        width: 100px;
+        height: 100px;
+    }
 }
 
-.dark-style .account-settings-links .list-group-item.active {
-    color: #fff !important;
+.secondPart
+{
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.light-style .account-settings-links .list-group-item.active {
-    color: #4E5155 !important;
+h1
+{
+    color: #000000;
 }
 
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
+#bio-container {
+    margin-bottom: 20px;
+}
+
+#bio-text, #bio-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#bio-input {
+    resize: vertical;
+}
+
+.bio-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.bio-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(215, 154, 0);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.bio-buttons button:hover {
+    background-color: rgb(169, 122, 2);
+}
+
+.bio-buttons button#save-bio {
+    background-color: #4caf50;
+}
+
+.bio-buttons button#save-bio:hover {
+    background-color: #357a38;
+}
+
+.Thirdbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em 2em;
+}
+
+.Thirdbuttons button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-content: center;
+    background-color: rgb(215, 154, 0);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-size: 2em; 
+    width: 400px; 
+    height: 100px; 
+}
+
+.Thirdbuttons button:hover {
+    background-color: rgb(169, 122, 2);
+}
+
+.labcont
+{
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .Thirdbuttons {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .lab2 {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .Thirdbuttons button {
+        width: 150px; 
+        height: 80px; 
+        font-size: 1.5em; 
+        padding: 0.75em 1.5em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .Thirdbuttons button {
+        width: 120px; 
+        height: 60px; 
+        font-size: 1.2em; 
+        padding: 0.5em 1em; 
+    }
+    .input2 {
+        width: 100px;
+    }
+    .nav1 {
+        font-size: 10px;
+        width: min-content;
+        padding: 3em 1.44em;
+    }
+    .a-toggle
+    {
+        width: 5px;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
 }
