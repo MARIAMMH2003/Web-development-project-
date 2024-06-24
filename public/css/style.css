@@ -149,6 +149,25 @@ transform: scale(1.1);
   color: rgba(255, 217, 0, 0.759) ;
 
 }
+.button-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #8a6252;
+  color: beige;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  animation: animate 1s ease-in-out;
+  font-size: 1rem;
+
+}
+
+.button-link:hover {
+  background-color: #725144;
+}
 
 #museums {
   position: relative;

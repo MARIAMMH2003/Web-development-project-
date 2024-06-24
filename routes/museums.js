@@ -28,6 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 // new
 // router.get('/search', async (req, res) => {
 //   const query = req.query.name ? req.query.name.toLowerCase() : '';

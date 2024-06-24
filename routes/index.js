@@ -22,7 +22,30 @@ router.get('/map-tetsing', async (req, res) => {
     res.status(500).json({ message: 'Error fetching museums' }); // Respond with an error JSON if fetching museums fails
   }
 });
-
+router.get('/museum/:id', async (req, res) => {
+  try {
+    const museum = await Museum.findById(req.params.id);
+    if (!museum) {
+      return res.status(404).json({ message: 'Museum not found' });
+    }
+    res.render('templateMuseum', { museum });
+  } catch (error) {
+    console.error('Error fetching museum:', error);
+    res.status(500).json({ message: 'Error fetching museum' });
+  }
+});
+router.get('/:id/booking', async (req, res) => {
+  try {
+    const museum = await Museum.findById(req.params.id);
+    if (!museum) {
+      return res.status(404).json({ message: 'Museum not found' });
+    }
+    res.render('booking', { museum });
+  } catch (error) {
+    console.error('Error fetching museum:', error);
+    res.status(500).json({ message: 'Error fetching museum' });
+  }
+});
 // new
 
 
