@@ -1,110 +1,100 @@
-body {
-    background: #f5f5f5;
-    margin-top: 20px;
-}
-
-.ui-w-80 {
-    width : 80px !important;
-    height: auto;
-}
-
-.btn-default {
-    border-color: rgba(24, 28, 33, 0.1);
-    background  : rgba(0, 0, 0, 0);
-    color       : #4E5155;
-}
-
-label.btn {
-    margin-bottom: 0;
-}
-
-.btn-outline-primary {
-    border-color: #26B4FF;
-    background  : transparent;
-    color       : #26B4FF;
-}
-
-.btn {
-    cursor: pointer;
-}
-
-.text-light {
-    color: #babbbc !important;
-}
-
-.btn-facebook {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #3B5998;
-    color       : #fff;
-}
-
-.btn-instagram {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #000;
-    color       : #fff;
-}
-
-.card {
-    background-clip: padding-box;
-    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
-}
-
-.row-bordered {
-    overflow: hidden;
-}
-
-.account-settings-fileinput {
-    position  : absolute;
-    visibility: hidden;
-    width     : 1px;
-    height    : 1px;
-    opacity   : 0;
-}
-
-.account-settings-links .list-group-item.active {
-    font-weight: bold !important;
-}
-
-html:not(.dark-style) .account-settings-links .list-group-item.active {
-    background: transparent !important;
-}
-
-.account-settings-multiselect~.select2-container {
-    width: 100% !important;
-}
-
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
-
-.light-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
-
-.material-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
-
-.material-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
-
-.dark-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-.dark-style .account-settings-links .list-group-item.active {
-    color: #fff !important;
-}
-
-.light-style .account-settings-links .list-group-item.active {
-    color: #4E5155 !important;
-}
-
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tourrrG.css">
+    <title>Tour Guide</title>
+</head>
+<body>
+    <nav>
+        <h1 class="nav-a"><span class="nav-span">T</span>ourify</h1>
+        <img src="Screenshot 2024-04-27 214041-fotor-20240427214821.png" alt="Museum logo" class="lll">
+    </nav>
+    <label>
+        <div class="labcont">
+            <input type="checkbox">
+            <div class="toggle">
+                <span class="top_line common"></span>
+                <span class="mid_line common"></span>
+                <span class="bottom_line common"></span>
+            </div>
+            <div class="nav1">
+                <h1 class="n">Menu</h1>
+                <ul>
+                    <li><a href="chats.html" class="a-toggle">Chat</a></li>
+                    <li><a href="tourGuide.html" class="a-toggle">Account</a></li>
+                    <li><a href="login.html" class="a-toggle">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </label>
+    <div class="container">
+        <div class="background">
+            <input type="file" id="background-input" accept="image/*" style="display: none;">
+        </div>
+        <div class="foreground">
+            <input type="file" id="foreground-input" accept="image/*" style="display: none;">
+        </div>
+    </div>
+    <div class="secondPart">
+        <h1>Tour Guide Bio</h1>
+        <div id="bio-container">
+            <p id="bio-text">This is your bio that appears to users in chat area. Click the Edit button to modify it.</p>
+            <textarea id="bio-input" style="display:none;"></textarea> 
+        </div>
+        <div class="bio-buttons">
+            <button id="edit-bio">Edit</button>
+            <button id="save-bio" style="display:none;">Save</button>
+        </div>
+        <div class="backgroundForm">
+            <form id="tourGuideForm" method="POST">
+                <h1>Tour Guide Card Details</h1>
+                <label class="lab2">Name: 
+                    <input class="input2" type="text" id="name" placeholder="Name" required>
+                    <span id="name-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Profession: 
+                    <input class="input2" type="text" id="profession" placeholder="Profession" required>
+                    <span id="profession-error" class="error-message"></span>
+                </label>
+                <label class="lab2">About: 
+                    <textarea class="input2" id="about" placeholder="About"></textarea>
+                    <span id="about-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Image: 
+                    <input class="input2" type="text" id="image" placeholder="Image URL">
+                    <span id="image-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Facebook URL: 
+                    <input class="input2" type="text" id="facebook" placeholder="Facebook URL">
+                    <span id="facebook-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Twitter URL: 
+                    <input class="input2" type="text" id="twitter" placeholder="Twitter URL">
+                    <span id="twitter-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Instagram URL: 
+                    <input class="input2" type="text" id="instagram" placeholder="Instagram URL">
+                    <span id="instagram-error" class="error-message"></span>
+                </label>
+                <label class="lab2">Whatsapp URL: 
+                    <input class="input2" type="text" id="whatsapp" placeholder="WhatsApp URL">
+                    <span id="whatsapp-error" class="error-message"></span>
+                </label>
+                <button class="saveForm" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="Thirdbuttons">
+        <button id="Requests">Requests</button>
+        <button id="CardPreview">Card Preview</button>
+    </div>
+    <script src="tourGuide.js"></script>
+    <script src="./controllers/tourguideController.js"></script>
+    <script src="./models/tourguide.js"></script>
+    <script src="./routes/tourguideRoutes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
